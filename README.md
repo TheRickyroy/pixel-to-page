@@ -1,131 +1,428 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Pixel To Page](documentation/Placeholder.png)
 
-Welcome Ricky Smithson,
+<p align="center">
+| <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
+  <a href="#">Admin Panel</a> |
+  <a href="#">Project Board</a> |
+</p>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+This _README Template_ serves as boilerplate placeholder for your new GitHub repo.
 
-## Gitpod Reminders
+Developed for personal use on _Code Institute: Full Stack Software Developer Bootcamp_ projects with intention of future expanding of the scope to _support other students and developers_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
 
-`python3 -m http.server`
+- [Project Name](#)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Project Outline](#project-outline)
+    - [Key Objectives](#key-objectives)
 
-A blue button should appear to click: _Make Public_,
+- [UX - User Experience](#ux---user-experience)
+  - [Design Ideation](#design-ideation)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
+    - [Imagery](#imagery)
 
-Another blue button should appear to click: _Open Browser_.
+- [Project Planning](#project-planning)
+  - [Agile Methodologies](#agile-methodologies)
+    - [MoSCoW Prioritisation](#moscow-prioritisation)
+ - [User Stories](#user-stories)
+    - [Epic - Feature 1](#epic---feature-1)
+    - [Epic - Feature 2](#epic---feature-2)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+  - [Strategy Plane](#strategy-plane)
 
-A blue button should appear to click: _Make Public_,
+  - [Scope Plane](#scope-plane)
 
-Another blue button should appear to click: _Open Browser_.
+  - [Structure Plane](#structure-plane)
+  
+  - [Skeleton Plane](#skeleton-plane)
+    - [Wireframes](#wireframes)
+        - [Low Fidelity](#low-fidelity)
+        - [High Fidelity](#high-fidelity)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - [Surface Plane](#surface-plane)
+    
+- [Database Schema](#database-schema)
 
-To log into the Heroku toolbelt CLI:
+- [Security](#security)
+  - [AllAuth](#allauth)
+  - [Defensive Design](#defensive-design)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- [Features](#)
+  - [Feature](#)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- [Future Scope]()
+  - [Future - Feature](#)
 
-### Connecting your Mongo database
+- [Built With](#built-with)
+  - [Technology & Languages](#technology-and-languages)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+- [Deployment](#deployment)
+  - [GitHub]()
+  - [Django]()
+  - [PostgreSQL]()
+  - [Heroku]()
+  - [Clone Repo]()
+  - [Fork Repo]()
 
-------
+- [Testing](#testing)
+  - [Code Validation](#code-validation)
+  - [Accessibility](#accessibility)
+  - [Lighthouse Performance](#lighthouse-performance)
 
-## Release History
+- [Credits](#credits)
+  - [Code](#code)
+  - [Acknowledgements](#acknowledgements)
+  - [Appendices](#appendices)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<p align="right"><a href="#">🔺 Back To Top</a></p>
 
-**June 18, 2024,** Add Mongo back into template
+## UX - User Experience
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Provide detail about the UX principles employed within the _project_ and describe how they have been implemented in order to improve user experience. 
 
-**May 28 2024:** Fix Mongo and Links installs
+### Design Ideation
 
-**April 26 2024:** Update node version to 16
+Expanding upon the UX section above, describe how these best practices were combined with inspiration to be effectively implemented into the design of the final _project_.
 
-**September 20 2023:** Update Python version to 3.9.17.
+Reference any specific inspirations that heavily influenced this process.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<p align="right"><a href="#">🔺 Back To Top</a></p>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Colors
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Description and reasoning for the colors selected as part of the _project_ as well as any additional details.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Repeat for additional palettes that may be included as part of light / dark mode or alternate themes.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Color Palette
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Color Swatch](documentation/Placeholder.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Explain the naming convention used for the project to aid with clean maintainable code.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+| ID | Name | Type | CSS Variable | HSL | HEX |
+|:-:|:-|:-|:-:|:-:|:-:|
+| 1 | White | Primary Brand | `--color-primary` | hsl(0, 0%, 100%) | #ffffff |
+| 2 | Gunmetal | background | `--color-background` | hsl(180, 8%, 16%) | #272D2D |
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Contrast
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Provide details about the process used to ensure contrast compliance.\
+Include reference to validation testing and screenshots where appropriate. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Potential tools for contrast compliance checks.
+- [Colour Contrast Checker](https://colourcontrast.cc/) also has [Chrome Extension](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)
+- [WebAIM](https://webaim.org/resources/contrastchecker/)
+- [Adobe](https://color.adobe.com/create/color-contrast-analyzer)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Contrast GIF](documentation/Placeholder.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Color Contrast Score Table
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+| | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **1** | - |  |  |  |  |  |  |
+| **2** |  | - |  |  |  |  |  |
+| **3** |  |  | - |  |  |  |  |
+| **4** |  |  |  | - |  |  |  |
+| **5** |  |  |  |  | - |  |  |
+| **6** |  |  |  |  |  | - |  |
+| **7** |  |  |  |  |  |  | - |
 
-------
+<p align="right"><a href="#">🔺 Back To Top</a></p>
 
-## FAQ about the uptime script
+## Typefaces
 
-**Why have you added this script?**
+Describe the selection process and reasoning behind the typefaces used in the _project_.\
+Identify any specific requirements, inspirations or difficulties faced. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[Primary](https://fonts.google.com/) - Default typeface, a reflection of brand identity.\
+[Secondary](https://fonts.google.com/) - Complementary to the main typeface.\
+[Tertiary](https://fonts.google.com/) - Used for accents.
 
-**How will this affect me?**
+Alternate typefaces may also be included as part of additional themes or accessibility features.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Font Usage
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Specific reference to font usage would include decisions that influence accompanying CSS for the _project_
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<p align="right"><a href="#">🔺 Back To Top</a></p>
 
-**So….?**
+## Imagery
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Description of the images and reason for their inclusion within the _project_.\
+If credit is required, refence to these within the credit section of the README.
 
-**Can I opt out?**
+![Images](documentation/Placeholder.png)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<p align="right"><a href="#">🔺 Back To Top</a></p>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Strategy Plane
 
-**Anything more?**
+This _README Template_ provides the essential information necessary for documenting the _project_.\
+This includes file & folder structure, basic placeholder information such as section headings, images, text, tables and shield buttons with links to common resources.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Once implemented the _README Template_ can be easily amended to suit the _project_ needs.
 
----
+_Project Name_ was developed with the intention of - provide description of the project and scope expanding upon the introduction summary and lead into the key objectives listed below.
 
-Happy coding!
+### Key Objectives
+
+A brief bullet point list of the key objectives for _Project Name_.\
+This could include _learning outcomes_, _stakeholder requirements_, _personal goals_ and more.
+
+- Fulfil the primary [Learning Objectives](#) as defined by _Code Institute_.
+- Objective 2
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Agile Methodologies
+
+Agile Methodologies were followed and implemented via [GitHub Project](link)
+
+Buttons display current status of project issues using GitHub purple and green\
+Ensure you update the `user/repo` in both the button and link
+
+[![GitHub Issues - Closed](https://img.shields.io/github/issues-closed/TheRickyroy/pixel-to-page?logo=GitHub&labelColor=grey&color=8957e5)](https://github.com/user/repo/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub Issues - Open](https://img.shields.io/github/issues/TheRickyroy/pixel-to-page?logo=GitHub&labelColor=grey&color=238636)](https://github.com/user/repo/issues?q=is%3Aopen+is%3Aissue)
+
+### Project Prioritisation
+
+After ideation establish required prioritisation of tasks for **MVP** delivery.
+
+<details>
+<summary>RICE Priority Assignment Method</summary>
+
+| ID | Reach | Impact | Confidence | Effort | Score |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| #1 | User Count | 1 to 5 | % | 1 to 5 | ( R x I x C ) / E |
+
+</details>
+
+<details>
+<summary>MoSCoW Priority Color Key</summary>
+
+| Color | Priority | MoSCoW Priority Description | Implementation % |
+|:-:|:-|:-|-:|
+| 🟢 | **Must Have** | Absolutely **essential** elements that must be included at any cost. | Max 60% |
+| 🟡 | **Should Have** | **Important** elements that should only be included with careful consideration. | Further 20% |
+| 🟠 | **Could Have** | **Desirable** elements that would ideally be included if resources allow. | Final 20% |
+| 🔴 | **Won't Have** | Elements that are **out-of-scope**, **unfeasible** or actively **counterproductive** | None | 
+
+</details>
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+### Sprint Cycle
+
+| No. | Objective | Start | End |
+|:-:|:-|:-:|:-:|
+| #1 | Intended Objective | YYYY-MM-DD | YYYY-MM-DD |
+| #2 | Intended Objective | YYYY-MM-DD | YYYY-MM-DD |
+
+Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## User Stories
+
+### Epic - 
+
+| ID | User Story | RICE | MoSCoW |
+|:-:|:-|:-:|:-:|
+| #1 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🟢 |
+| #2 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🟡 |
+| #3 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🟠 |
+| #4 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🔴 |
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Scope Plane
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Structure Plane
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Skeleton Plane
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+### Wireframes
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Surface Plane
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Database Schema
+
+Provide a full breakdown of the _project_ database including the entity relationship diagram (ERD)
+
+![ERD](documentation/Placeholder.png)
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Security
+
+Fully describe all measures taken to ensure security and safety within the _project_.\
+Reference all implementations for front end and back end to project all users and stakeholders.
+
+### AllAuth
+
+### Defensive Design
+
+### CSFR Tokens
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Features
+
+This section should be used to showcase the features of the final _project_.
+
+### Feature - Example
+
+This heading provides an overview of a general feature group, providing context and description.
+
+<details>
+<summary>Specific Feature</summary>
+
+Include detail about the specific feature, purpose and implementation.
+
+Add screenshots where appropriate.
+![Feature](documentation/Placeholder.png)
+
+</details>
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Future Scope & Features
+
+With the completion of the project describe potential future implementations.\
+These could be outstanding issues, or new ideas that developed over the course of the project.
+
+| Title | Description |
+|:-:|:-|
+| Feature | A desirable feature to be included in future scope implementation |
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Built With
+
+### Technologies & Languages
+
+[![Static Badge](https://img.shields.io/badge/Django-v4.2.16-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://www.djangoproject.com/)
+[![Static Badge](https://img.shields.io/badge/PostgreSQL-v17-grey?logo=postgresql&logoColor=%23ffffff&color=%234169E1)](https://www.postgresql.org/docs/release/)
+
+[![Static Badge](https://img.shields.io/badge/HTML-v5-grey?logo=html5&logoColor=%23ffffff&color=%23E34F26)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Static Badge](https://img.shields.io/badge/CSS-v3-grey?logo=css3&logoColor=%23ffffff&color=%23663399)](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+[![Static Badge](https://img.shields.io/badge/JavaScript-ES6-grey?logo=javascript&logoColor=%23ffffff&color=%23F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Static Badge](https://img.shields.io/badge/Python-v3.13.0-grey?logo=python&logoColor=%23ffffff&color=%233776AB)](https://www.python.org/doc/)
+
+
+### Frameworks & Libraries
+
+[![Static Badge](https://img.shields.io/badge/cloudinary-v1.41.0-grey?logo=cloudinary&logoColor=%23ffffff&color=%233448C5)](https://pypi.org/project/cloudinary/)
+[![Static Badge](https://img.shields.io/badge/gunicorn-v20.1.0-grey?logo=gunicorn&logoColor=%23ffffff&color=%23499848)](https://gunicorn.org/)
+[![Static Badge](https://img.shields.io/badge/psycopg2-v3.2.3-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
+[![Static Badge](https://img.shields.io/badge/WhiteNoise-v5.3.0-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://whitenoise.readthedocs.io/en/stable/index.html)
+
+### Developer Tools
+[![Static Badge](https://img.shields.io/badge/Gitpod-IDE-grey?logo=gitpod&logoColor=%23ffffff&color=%23FFAE33)](https://www.gitpod.io/)
+[![Static Badge](https://img.shields.io/badge/GitHub-Repo_Host-grey?logo=github&logoColor=%23ffffff&color=%23181717)](https://github.com/)
+[![Static Badge](https://img.shields.io/badge/Heroku-App_Host-grey?logo=heroku&logoColor=%23ffffff&color=%23430098)](https://www.heroku.com/)
+
+[![Static Badge](https://img.shields.io/badge/Obsidian-Notes-grey?logo=obsidian&logoColor=%23ffffff&color=%237C3AED)](https://obsidian.md)
+[![Static Badge](https://img.shields.io/badge/Slack-Messaging-grey?logo=slack&logoColor=%23ffffff&color=%234A154B)](https://slack.com)
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Deployment
+
+Include detailed deployment instructions for each stage of the process involved in launching the project. 
+
+## GitHub
+
+### Repo Deployment
+
+### Fork Repo
+
+### Clone Repo
+
+<p align="right"><a href="#">🔺 Back To Top</a></p><hr>
+
+### Django
+
+<p align="right"><a href="#">🔺 Back To Top</a></p><hr>
+
+### PostgreSQL
+
+<p align="right"><a href="#">🔺 Back To Top</a></p><hr>
+
+### Heroku
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+
+## Testing
+
+Describe the testing process, include screenshots of results and any detail error corrections required.
+
+### Code Validation
+
+- [W3C - Markup Validation](https://validator.w3.org/)
+- [W3C - CSS Validation](https://jigsaw.w3.org/css-validator/)
+- [JSHint](https://jshint.com/)
+
+### Accessibility
+
+- [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/)\
+
+### Lighthouse Performance
+
+- [Lighthouse Audit](https://developer.chrome.com/docs/lighthouse/overview)
+
+<p align="right"><a href="#">🔺 Back To Top</a></p>
+
+## Credits
+
+### Code
+
+Provide reference to all sources used for coding the project, including sources used as part of debugging. 
+
+**General Resources / Learning**
+
+- [Code Institute - LMS](https://codeinstitute.net/)
+- [W3Schools](https://www.w3schools.com/)
+
+**Specific Code Used Within Project**
+
+- 
+
+### Media
+
+Generic source accreditation with specific [Media Credits](documentation/credits.md) included in an appendix document. 
+
+- [Source](#) - Media Sources Requiring General Credit
+
+### Appendices
+
+Additional documentation included as part of the project.\
+Listed alphabetically. 
+
+- [Additional Research](documentation/research.md)
+- [Media Credits](documentation/credits.md)
+- [Testing & Validation](documentation/testing.md) 
+
+### Acknowledgements
+
+Space to thank those that helped with the projects both directly and indirectly. 
+
+<p align="right"><a href="#">🔺 Back To Top</a></p><hr>
