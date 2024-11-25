@@ -1,9 +1,9 @@
-![Pixel To Page](documentation/Placeholder.png)
+![Pixel To Page](documentation/images/Placeholder.png)
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
   <a href="#">Admin Panel</a> |
-  <a href="#">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
 </p>
 
 ## Introduction
@@ -101,7 +101,7 @@ Repeat for additional palettes that may be included as part of light / dark mode
 
 ### Color Palette
 
-![Color Swatch](documentation/Placeholder.png)
+![Color Swatch](documentation/images/Placeholder.png)
 
 Explain the naming convention used for the project to aid with clean maintainable code.
 
@@ -120,7 +120,7 @@ Potential tools for contrast compliance checks.
 - [WebAIM](https://webaim.org/resources/contrastchecker/)
 - [Adobe](https://color.adobe.com/create/color-contrast-analyzer)
 
-![Contrast GIF](documentation/Placeholder.png)
+![Contrast GIF](documentation/images/Placeholder.png)
 
 ### Color Contrast Score Table
 
@@ -158,7 +158,7 @@ Specific reference to font usage would include decisions that influence accompan
 Description of the images and reason for their inclusion within the _project_.\
 If credit is required, refence to these within the credit section of the README.
 
-![Images](documentation/Placeholder.png)
+![Images](documentation/images/Placeholder.png)
 
 <p align="right"><a href="#">🔺 Back To Top</a></p>
 
@@ -183,7 +183,7 @@ This could include _learning outcomes_, _stakeholder requirements_, _personal go
 
 ## Agile Methodologies
 
-Agile Methodologies were followed and implemented via [GitHub Project](link)
+Agile Methodologies were followed and implemented via [GitHub Project](https://github.com/users/TheRickyroy/projects/3)
 
 Buttons display current status of project issues using GitHub purple and green\
 Ensure you update the `user/repo` in both the button and link
@@ -266,7 +266,7 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 Provide a full breakdown of the _project_ database including the entity relationship diagram (ERD)
 
-![ERD](documentation/Placeholder.png)
+![ERD](documentation/images/Placeholder.png)
 
 <p align="right"><a href="#">🔺 Back To Top</a></p>
 
@@ -297,7 +297,7 @@ This heading provides an overview of a general feature group, providing context 
 Include detail about the specific feature, purpose and implementation.
 
 Add screenshots where appropriate.
-![Feature](documentation/Placeholder.png)
+![Feature](documentation/images/Placeholder.png)
 
 </details>
 
