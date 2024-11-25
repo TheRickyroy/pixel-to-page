@@ -30,6 +30,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# Automatic DEBUG status - Provided by John during coding coach
+# DEBUG = 'DEBUG' in os.environ
+
 ALLOWED_HOSTS = ['8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net', 
                 '.herokuapp.com']
 

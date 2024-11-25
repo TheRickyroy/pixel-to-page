@@ -1,1 +1,1 @@
-web: gunicorn pixel-to-page.wsgi
+web: gunicorn pixel_to_page.wsgi
