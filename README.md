@@ -785,9 +785,34 @@ pip3 freeze --local > requirements.txt
 'whitenoise.middleware.WhiteNoiseMiddleware',
 ```
 - **Note:** The **Whitenoise Middleware** must be placed directly after the **Django SecurityMiddleware**
+<br><br>
 
+5. Save and commit changes. 
 
-In **Heroku**
+- **IMPORTANT**
+Set DEBUG in `settings.py` to False (line 31 in this project)
+
+- Add all Changes
+```
+git add .
+```
+
+- Confirm all changes have been stged
+```
+git status
+```
+
+- Add your commit message
+```
+git commit -m "add: install django, project, blog and deployment requirements"
+```
+
+- Push to the remote repo
+```
+git push
+```
+
+## Deploy to Heroku
 
 1. Navigate to your [Heroku Dashboard](https://dashboard.heroku.com/apps)
 <br><br>
@@ -795,6 +820,9 @@ In **Heroku**
 3. Enabling collection of static files.
 - Navigate to app settings .
 - Click **X** to delete the `DISABLE_COLLECTSTATIC` config.
+
+4. Deploy Tab > Manual Deploy
+- Choose `main` in the branch to deploy and click `Deploy Branch`
 
 <p align="right"><a href="#">🔺 Back To Top</a></p><hr>
 
