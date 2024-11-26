@@ -2,14 +2,9 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="#">Admin Panel</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
   <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
 </p>
-
-
-This is the TESTING file for the [Project](#) website.
-
-Return back to the [README.md](#) file.
 
 ## Table of Contents  
   
@@ -78,7 +73,9 @@ Using [statcounter](https://gs.statcounter.com/screen-resolution-stats) to attai
 
 ## Bugs
 
-As this is my first Full Stack project 
+This being my first Full Stack Project, I anticipated running into bugs and issues offering opportunity to debug and problem solve.\
+As part of my learning experience, and for future reference, I chose to fully document all bugs encountered and the steps taken during the debugging process.\
+By doing so I hope to continue developing my understanding and thus increase my efficiency by having effective solutions to refer back to, but just as importantly, failed solutions to potential avoid in future. 
 
 ### Bug Status
 
@@ -103,6 +100,7 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 2 | Database Migration - Syntax Error | 🟢 | Bash Terminal Error | [ef4ef38](https://github.com/TheRickyroy/pixel-to-page/commit/ef4ef3867d31ea2762afa447bfe4ef8849102eb9) |
 | 3 | Heroku Application Error | 🟢 | Debugging & Slack Coding Coach Channel | [f1efeb0](https://github.com/TheRickyroy/pixel-to-page/commit/f1efeb0e2f6fe703e79bf5fdab7953d8ed85f6ce) |
 | 4 | Procfile - Syntax Error | 🟢 | Identified as part of Bug #3 | [aa63bd6](https://github.com/TheRickyroy/pixel-to-page/commit/aa63bd6bd083caf5125419e8955d9354af4d07c8) |
+| 5 | Commit Push Failure | 🟢 | [Medium](https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2) & [Graphite](https://graphite.dev/guides/understanding-your-branch-is-ahead-of-origin-main-by-1-commit) | [923e65f](https://github.com/TheRickyroy/pixel-to-page/commit/923e65fcb58a6436f1f6540841b7aac3c78fe630) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -171,10 +169,82 @@ Correct - `web: gunicorn pixel_to_page.wsgi`
 
 </details>
 
-<details><summary>Bug #</summary>
+<details><summary>Bug #5 - Commit Push Failure</summary>
+
+Commit [923e65f](https://github.com/TheRickyroy/pixel-to-page/commit/923e65fcb58a6436f1f6540841b7aac3c78fe630)
+
+**Identification**
+
+Discussion during guided session highlighted **runtime.txt** requirement absent from the walkthrough documentation, but present within the LMS.
+
+Upon creation of this file I attempted a `git add .` `git commit` and `git push` at which point I received an error in the terminal.
+
+**Resolution Steps**
+
+`git pull main`
+```
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+`git pull`
+```
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+```
+
+Sourced a possible [solution](https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2)
+
+`git pull --rebase origin main`
+
+```
+From https://github.com/TheRickyroy/pixel-to-page
+ * branch            main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+```
+
+`git status`
+```
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+
+Sourced actual [solution](https://graphite.dev/guides/understanding-your-branch-is-ahead-of-origin-main-by-1-commit)
+
+`git push origin main`
+```
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/TheRickyroy/pixel-to-page.git
+   ff76d71..923e65f  main -> main
+```
 
 </details>
 
+<details><summary>Bug #</summary>
 
+</details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
