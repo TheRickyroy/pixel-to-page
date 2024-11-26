@@ -15,52 +15,63 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
 
 ## Table of Contents
 
-- [Project Name](#pixel-to-page)
+- [Pixel To Page](#pixel-to-page)
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
-  - [Project Outline](#project-outline)
-    - [Key Objectives](#key-objectives)
 
 - [UX - User Experience](#ux---user-experience)
   - [Design Ideation](#design-ideation)
-    - [Colors](#colors)
-    - [Fonts](#fonts)
-    - [Imagery](#imagery)
 
-- [Project Planning](#project-planning)
+- [Colors](#colors)
+  - [Color Palette](#color-palette)
+  - [Color Contrast](#contrast)
+  - [Color Contrast Score Table](#color-contrast-score-table)
+- [Typfaces](#typefaces)
+  - [Font Usage](#font-usage)
+
+- [Imagery](#imagery)
+
+- [Strategy Plane](#strategy-plane)
+  - [Key Objectives](#key-objectives)
   - [Agile Methodologies](#agile-methodologies)
-    - [MoSCoW Prioritisation](#moscow-prioritisation)
- - [User Stories](#user-stories)
-    - [Epic - Feature 1](#epic---feature-1)
-    - [Epic - Feature 2](#epic---feature-2)
+    - [Project Issue Status](#project-issue-status)
+    - [Project Prioritisation](#project-prioritisation)
+    - [Sprint Cycle](#sprint-cycle)
 
-  - [Strategy Plane](#strategy-plane)
+  - [User Stories](#user-stories)
+    - [Epic: User Profile](#epic-user-profile)
+    - [Epic: Home Page](#epic-home-page)
+    - [Epic: About Page](#epic-about-page)
+    - [Epic: Blog Content](#epic-blog-content)
+    - [Epic: Comments](#epic-comments)
+    - [Epic: Resources](#epic-resources)
+    - [Epic: Community Content](#epic-community-content)
 
-  - [Scope Plane](#scope-plane)
+- [Scope Plane](#scope-plane)
 
-  - [Structure Plane](#structure-plane)
+- [Structure Plane](#structure-plane)
   
-  - [Skeleton Plane](#skeleton-plane)
-    - [Wireframes](#wireframes)
-        - [Low Fidelity](#low-fidelity)
-        - [High Fidelity](#high-fidelity)
+- [Skeleton Plane](#skeleton-plane)
+  - [Wireframes](#wireframes)
 
-  - [Surface Plane](#surface-plane)
+- [Surface Plane](#surface-plane)
     
 - [Database Schema](#database-schema)
 
 - [Security](#security)
   - [AllAuth](#allauth)
   - [Defensive Design](#defensive-design)
+  - [CSFR Tokens](#csfr-tokens)
 
-- [Features](#)
+- [Features](#features)
   - [Feature](#)
 
-- [Future Scope]()
-  - [Future - Feature](#)
+- [Future Scope & Features](#future-scope--features)
 
 - [Built With](#built-with)
   - [Technology & Languages](#technology-and-languages)
+  - [Frameworks & Libraries](#frameworks--libraries)
+  - [Developer Tools](#developer-tools)
 
 - [Deployment](#deployment)
   - [GitHub](#github)
@@ -90,8 +101,9 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
 
 - [Credits](#credits)
   - [Code](#code)
-  - [Acknowledgements](#acknowledgements)
+  - [Media](#media)
   - [Appendices](#appendices)
+  - [Acknowledgements](#acknowledgements)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -199,10 +211,11 @@ This could include _learning outcomes_, _stakeholder requirements_, _personal go
 
 ## Agile Methodologies
 
-Agile Methodologies were followed and implemented via [GitHub Project](https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D)
+Following Agile Methodologies user stories were generated and compiled into a [GitHub Project Board](https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D)
 
-Buttons display current status of project issues using GitHub purple and green\
-Ensure you update the `user/repo` in both the button and link
+Each story was assigned relevant labels for **MoSCoW Prioritisation**, **Epic** and **Users**
+
+### Project Issue Status
 
 [![GitHub Issues - Closed](https://img.shields.io/github/issues-closed/TheRickyroy/pixel-to-page?logo=GitHub&labelColor=grey&color=8957e5)](https://github.com/user/repo/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub Issues - Open](https://img.shields.io/github/issues/TheRickyroy/pixel-to-page?logo=GitHub&labelColor=grey&color=238636)](https://github.com/user/repo/issues?q=is%3Aopen+is%3Aissue)
@@ -242,58 +255,58 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #1 | As a _User_ I can _sign up or login_ so that _I can engage with full site functionality_. | 🟢 |
-| #2 | As a _Registered User_, I can _login to my profile page_ so that _I can update my details and see previous activity_. | 🟢 |
-| #3 | As a _Registered User_, I can _select notification preferences_ so that _I can be alerted about relevant content_. | 🟠 |
+| [#1](https://github.com/TheRickyroy/pixel-to-page/issues/1) | As a _User_ I can _sign up or login_ so that _I can engage with full site functionality_. | 🟢 |
+| [#2](https://github.com/TheRickyroy/pixel-to-page/issues/2) | As a _Registered User_, I can _login to my profile page_ so that _I can update my details and see previous activity_. | 🟢 |
+| [#3](https://github.com/TheRickyroy/pixel-to-page/issues/3) | As a _Registered User_, I can _select notification preferences_ so that _I can be alerted about relevant content_. | 🟠 |
 
 ### Epic: Home Page
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #4 | As a _Site Admin_, I can _update my home page_ so that _I can present users with the latest content and engage them using appropriate call to action functionality_. | 🟢 |
-| #5 | As a _User_, I can _read the home page_ so that _I can easily identify new and noteworthy content_. | 🟢 |
-| #6 | As a _User_, I can _toggle theme_ so that _I can have a more enjoyable experience_ | 🟡 |
-| #7 | As a _User_, I can _access the website using stored theme preferences_ so that _I do not have to manually toggle each time_ | 🟠 |
+| [#4](https://github.com/TheRickyroy/pixel-to-page/issues/4) | As a _Site Admin_, I can _update my home page_ so that _I can present users with the latest content and engage them using appropriate call to action functionality_. | 🟢 |
+| [#5](https://github.com/TheRickyroy/pixel-to-page/issues/5) | As a _User_, I can _read the home page_ so that _I can easily identify new and noteworthy content_. | 🟢 |
+| [#6](https://github.com/TheRickyroy/pixel-to-page/issues/6) | As a _User_, I can _toggle theme_ so that _I can have a more enjoyable experience_ | 🟡 |
+| [#7](https://github.com/TheRickyroy/pixel-to-page/issues/7) | As a _User_, I can _access the website using stored theme preferences_ so that _I do not have to manually toggle each time_ | 🟠 |
 
 ### Epic: About Page
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #8 | As a _Site Admin_, I can _update my about page_ so that _users can access and view the content I share_ | 🟢 |
-| #9 | As a _User_, I can _access and read an bout page_ so that I can _better understand the author and content_ | 🟢 |
+| [#8](https://github.com/TheRickyroy/pixel-to-page/issues/8) | As a _Site Admin_, I can _update my about page_ so that _users can access and view the content I share_ | 🟢 |
+| [#9](https://github.com/TheRickyroy/pixel-to-page/issues/9) | As a _User_, I can _access and read an bout page_ so that I can _better understand the author and content_ | 🟢 |
 
 ### Epic: Blog Content
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #10 | As a _Site Admin_, I can _draft, post, update and delete blog posts_ so that _I can share my content and update as necessary_. | 🟢 |
-| #11 | As a _Site Admin_, I can _categorise my blog posts_ so that _I can feature specific posts as necessary_ | 🟢 |
-| #12 | As a _User_, I can _view, filter and navigate a summary of blog posts_ so that _I can access relevant content_ | 🟡 |
-| #13 | As a _User_, I can _read blog posts_ so that _I can engage with relevant content_.| 🟢 |
-| #14 | As a _Registered User_, I can _like & share blog posts_ so that _I can easily find previously liked posts and share content with the wider community_. | 🟠 |
-| #15 | As a _User_, I can _share blog posts_ so that _I can easily share content with the wider community_. | 🟠 |
+| [#10](https://github.com/TheRickyroy/pixel-to-page/issues/10) | As a _Site Admin_, I can _draft, post, update and delete blog posts_ so that _I can share my content and update as necessary_. | 🟢 |
+| [#11](https://github.com/TheRickyroy/pixel-to-page/issues/11) | As a _Site Admin_, I can _categorise my blog posts_ so that _I can feature specific posts as necessary_ | 🟢 |
+| [#12](https://github.com/TheRickyroy/pixel-to-page/issues/12) | As a _User_, I can _view, filter and navigate a summary of blog posts_ so that _I can access relevant content_ | 🟡 |
+| [#13](https://github.com/TheRickyroy/pixel-to-page/issues/13) | As a _User_, I can _read blog posts_ so that _I can engage with relevant content_.| 🟢 |
+| [#14](https://github.com/TheRickyroy/pixel-to-page/issues/14) | As a _Registered User_, I can _like & share blog posts_ so that _I can easily find previously liked posts and share content with the wider community_. | 🟠 |
+| [#15](https://github.com/TheRickyroy/pixel-to-page/issues/15) | As a _User_, I can _share blog posts_ so that _I can easily share content with the wider community_. | 🟠 |
 
 ### Epic: Comments
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #16 | As a _Site Admin_, I can _approve, deny and delete comments_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🟢 |
-| #17 | As a _Registered User_, I can _comment on blog posts_ so that _I can contribute to the community and conversation_. | 🟢 |
-| #18 | As a _User_, I can _read comments on blog posts_ so that _I can read the ongoing conversations_. | 🟢 |
+| [#16](https://github.com/TheRickyroy/pixel-to-page/issues/16) | As a _Site Admin_, I can _approve, deny and delete comments_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🟢 |
+| [#17](https://github.com/TheRickyroy/pixel-to-page/issues/17) | As a _Registered User_, I can _comment on blog posts_ so that _I can contribute to the community and conversation_. | 🟢 |
+| [#18](https://github.com/TheRickyroy/pixel-to-page/issues/18) | As a _User_, I can _read comments on blog posts_ so that _I can read the ongoing conversations_. | 🟢 |
 
 ### Epic: Resources
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #19 | As a _Site Admin_, I can _upload resources_ so that _users can download for their own journal_. | 🔴 |
-| #20 | As a _User_, I can _download resources_ so that _I can use them to improve my own journal experience_. | 🔴 |
+| [#19](https://github.com/TheRickyroy/pixel-to-page/issues/19) | As a _Site Admin_, I can _upload resources_ so that _users can download for their own journal_. | 🔴 |
+| [#20](https://github.com/TheRickyroy/pixel-to-page/issues/20) | As a _User_, I can _download resources_ so that _I can use them to improve my own journal experience_. | 🔴 |
 
 ### Epic: Community Content
 
 | ID | User Story | MoSCoW |
 |:-:|:-|:-:|
-| #21 | As a _Site Admin_, I can _approve, deny and delete community posts_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🔴 |
-| #22 | As a _Registered User_, I can _upload my journal images_ so that _I can share my ideas with the community and engage in feedback and conversation_. | 🔴 |
+| [#21](https://github.com/TheRickyroy/pixel-to-page/issues/21) | As a _Site Admin_, I can _approve, deny and delete community posts_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🔴 |
+| [#22](https://github.com/TheRickyroy/pixel-to-page/issues/22) | As a _Registered User_, I can _upload my journal images_ so that _I can share my ideas with the community and engage in feedback and conversation_. | 🔴 |
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -335,6 +348,19 @@ Reference all implementations for front end and back end to project all users an
 ### Defensive Design
 
 ### CSFR Tokens
+
+CSRF (Cross-Site Request Forgery) tokens have been included as part of the project to prevent vulnerabilities to malicious attacks and ensure that only forms from trusted domains can be used to POST data back into the database. 
+
+The code below is included as part of the deployment process on this page. 
+
+For more information please consult the [Django Documentation](https://docs.djangoproject.com/en/5.1/ref/csrf/). 
+
+``` Python
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net",
+    "https://*.herokuapp.com"
+]
+```
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
