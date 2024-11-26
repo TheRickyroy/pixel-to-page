@@ -4,7 +4,7 @@
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
   <a href="#">Admin Panel</a> |
-  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
 </p>
 
 ## Introduction
@@ -199,7 +199,7 @@ This could include _learning outcomes_, _stakeholder requirements_, _personal go
 
 ## Agile Methodologies
 
-Agile Methodologies were followed and implemented via [GitHub Project](https://github.com/users/TheRickyroy/projects/3)
+Agile Methodologies were followed and implemented via [GitHub Project](https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D)
 
 Buttons display current status of project issues using GitHub purple and green\
 Ensure you update the `user/repo` in both the button and link
@@ -210,15 +210,6 @@ Ensure you update the `user/repo` in both the button and link
 ### Project Prioritisation
 
 After ideation establish required prioritisation of tasks for **MVP** delivery.
-
-<details>
-<summary>RICE Priority Assignment Method</summary>
-
-| ID | Reach | Impact | Confidence | Effort | Score |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| #1 | User Count | 1 to 5 | % | 1 to 5 | ( R x I x C ) / E |
-
-</details>
 
 <details>
 <summary>MoSCoW Priority Color Key</summary>
@@ -247,14 +238,62 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 ## User Stories
 
-### Epic - 
+### Epic: User Profile
 
-| ID | User Story | RICE | MoSCoW |
-|:-:|:-|:-:|:-:|
-| #1 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🟢 |
-| #2 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🟡 |
-| #3 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🟠 |
-| #4 | As a _role_ I can _capability_ so that _received benefit_ | Score | 🔴 |
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #1 | As a _User_ I can _sign up or login_ so that _I can engage with full site functionality_. | 🟢 |
+| #2 | As a _Registered User_, I can _login to my profile page_ so that _I can update my details and see previous activity_. | 🟢 |
+| #3 | As a _Registered User_, I can _select notification preferences_ so that _I can be alerted about relevant content_. | 🟠 |
+
+### Epic: Home Page
+
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #4 | As a _Site Admin_, I can _update my home page_ so that _I can present users with the latest content and engage them using appropriate call to action functionality_. | 🟢 |
+| #5 | As a _User_, I can _read the home page_ so that _I can easily identify new and noteworthy content_. | 🟢 |
+| #6 | As a _User_, I can _toggle theme_ so that _I can have a more enjoyable experience_ | 🟡 |
+| #7 | As a _User_, I can _access the website using stored theme preferences_ so that _I do not have to manually toggle each time_ | 🟠 |
+
+### Epic: About Page
+
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #8 | As a _Site Admin_, I can _update my about page_ so that _users can access and view the content I share_ | 🟢 |
+| #9 | As a _User_, I can _access and read an bout page_ so that I can _better understand the author and content_ | 🟢 |
+
+### Epic: Blog Content
+
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #10 | As a _Site Admin_, I can _draft, post, update and delete blog posts_ so that _I can share my content and update as necessary_. | 🟢 |
+| #11 | As a _Site Admin_, I can _categorise my blog posts_ so that _I can feature specific posts as necessary_ | 🟢 |
+| #12 | As a _User_, I can _view, filter and navigate a summary of blog posts_ so that _I can access relevant content_ | 🟡 |
+| #13 | As a _User_, I can _read blog posts_ so that _I can engage with relevant content_.| 🟢 |
+| #14 | As a _Registered User_, I can _like & share blog posts_ so that _I can easily find previously liked posts and share content with the wider community_. | 🟠 |
+| #15 | As a _User_, I can _share blog posts_ so that _I can easily share content with the wider community_. | 🟠 |
+
+### Epic: Comments
+
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #16 | As a _Site Admin_, I can _approve, deny and delete comments_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🟢 |
+| #17 | As a _Registered User_, I can _comment on blog posts_ so that _I can contribute to the community and conversation_. | 🟢 |
+| #18 | As a _User_, I can _read comments on blog posts_ so that _I can read the ongoing conversations_. | 🟢 |
+
+### Epic: Resources
+
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #19 | As a _Site Admin_, I can _upload resources_ so that _users can download for their own journal_. | 🔴 |
+| #20 | As a _User_, I can _download resources_ so that _I can use them to improve my own journal experience_. | 🔴 |
+
+### Epic: Community Content
+
+| ID | User Story | MoSCoW |
+|:-:|:-|:-:|
+| #21 | As a _Site Admin_, I can _approve, deny and delete community posts_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🔴 |
+| #22 | As a _Registered User_, I can _upload my journal images_ so that _I can share my ideas with the community and engage in feedback and conversation_. | 🔴 |
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
