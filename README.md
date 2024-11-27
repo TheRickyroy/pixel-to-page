@@ -332,9 +332,15 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 ## Database Schema
 
-Provide a full breakdown of the _project_ database including the entity relationship diagram (ERD)
+As part of the development process for _Paper To Pixels_ it was important to understand and fully develop the architecture in advance in hopes of minimising potential issues during the PostgreSQL Database implementation avoid retrofitting requirements.
 
-![ERD](documentation/images/Placeholder.png)
+I used [Lucid Chart](www.lucidchart.com/) to compile my **Entity Relationship Diagram (ERD)**.
+
+Within the ERD I identified each of the models and their relationships required for my MVP.
+
+I have also included models that were part of my user stories for features of future scope for the project, and as such have given each table an appropriate label that corresponds to the [MoSCoW Prioritisation](#project-prioritisation).
+
+![ERD](documentation/images/ERD%20Pixel%20To%20Paper.webp)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
