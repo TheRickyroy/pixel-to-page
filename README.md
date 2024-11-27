@@ -72,6 +72,7 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
   - [Technology & Languages](#technology-and-languages)
   - [Frameworks & Libraries](#frameworks--libraries)
   - [Developer Tools](#developer-tools)
+  - [Design Tools](#design-tools)
 
 - [Deployment](#deployment)
   - [GitHub](#github)
@@ -342,7 +343,7 @@ I have also included models that were part of my user stories for features of fu
 
 After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
 
-![ERD](documentation/images/ERD%20Pixel%20To%20Paper.webp)
+![ERD](documentation/images/ERD%20Pixel%20To%20Page.webp)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
