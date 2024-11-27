@@ -340,6 +340,8 @@ Within the ERD I identified each of the models and their relationships required 
 
 I have also included models that were part of my user stories for features of future scope for the project, and as such have given each table an appropriate label that corresponds to the [MoSCoW Prioritisation](#project-prioritisation).
 
+After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
+
 ![ERD](documentation/images/ERD%20Pixel%20To%20Paper.webp)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
@@ -428,6 +430,12 @@ These could be outstanding issues, or new ideas that developed over the course o
 
 [![Static Badge](https://img.shields.io/badge/Obsidian-Notes-grey?logo=obsidian&logoColor=%23ffffff&color=%237C3AED)](https://obsidian.md)
 [![Static Badge](https://img.shields.io/badge/Slack-Messaging-grey?logo=slack&logoColor=%23ffffff&color=%234A154B)](https://slack.com)
+[![Static Badge](https://img.shields.io/badge/Lucid-Charts-grey?logo=slack&logoColor=%23ffffff&color=%23282C33)](https://www.lucidchart.com)
+
+### Design Tools
+[![Static Badge](https://img.shields.io/badge/Affinity-Photo_2-grey?logo=affinityphoto&logoColor=%23ffffff&color=%234E3188)](https://affinity.serif.com/en-gb/)
+[![Static Badge](https://img.shields.io/badge/Affinity-Designer_2-grey?logo=affinitydesigner&logoColor=%23ffffff&color=%23134881)](https://affinity.serif.com/en-gb/)
+[![Static Badge](https://img.shields.io/badge/Figma-UI3-grey?logo=figma&logoColor=%23ffffff&color=%23F24E1E)](https://www.figma.com/release-notes/)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
