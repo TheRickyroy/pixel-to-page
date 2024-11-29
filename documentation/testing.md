@@ -101,6 +101,8 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 3 | Heroku Application Error | 🟢 | Debugging & Slack Coding Coach Channel | [f1efeb0](https://github.com/TheRickyroy/pixel-to-page/commit/f1efeb0e2f6fe703e79bf5fdab7953d8ed85f6ce) |
 | 4 | Procfile - Syntax Error | 🟢 | Identified as part of Bug #3 | [aa63bd6](https://github.com/TheRickyroy/pixel-to-page/commit/aa63bd6bd083caf5125419e8955d9354af4d07c8) |
 | 5 | Commit Push Failure | 🟢 | [Medium](https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2) & [Graphite](https://graphite.dev/guides/understanding-your-branch-is-ahead-of-origin-main-by-1-commit) | [923e65f](https://github.com/TheRickyroy/pixel-to-page/commit/923e65fcb58a6436f1f6540841b7aac3c78fe630) |
+| 6 | Admin Panel Access | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
+| 7 | Post Title Links | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -239,6 +241,47 @@ Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/TheRickyroy/pixel-to-page.git
    ff76d71..923e65f  main -> main
+```
+
+</details>
+
+<details><summary>Bug #6 - Admin Panel Access</summary>
+
+Commit [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204)
+
+**Identification**
+Upon adding the post view I was unable to access the admin panel.
+
+**Solution**
+I checked through my files and code and realised that **pixel_to_page** > **urls.py** required `path('admin/', admin.site.urls),` moving prior to `path("", include("blog.urls"), name="blog-urls"),`. 
+
+Doing this resolved the issue and granted access to admin again within my development workspace. 
+
+</details>
+
+<details><summary>Bug #7 - Post Title Links</summary>
+
+Commit [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204)
+
+**Identification**
+After rectifying the admin panel in bug #6 I found to I was unable to access the **post_detail** view via the title hyperlink.
+
+**Solution**
+Upon inspection of **index.html** I realised I had the original `<href>` was still in place preventing correct linking. 
+
+Incorrect Code
+```
+<a href="{% url 'post_detail' post.slug %}" class="post-link"></a>
+	<a href="#" class="post-link">
+	<h2 class="card-title">{{ post.title }}</h2>
+</a>
+```
+
+Corrected Code 
+```
+<a href="{% url 'post_detail' post.slug %}" class="post-link">
+	<h2 class="card-title">{{ post.title }}</h2>
+</a>
 ```
 
 </details>
