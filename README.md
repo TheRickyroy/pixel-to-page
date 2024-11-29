@@ -422,7 +422,10 @@ These could be outstanding issues, or new ideas that developed over the course o
 [![Static Badge](https://img.shields.io/badge/cloudinary-v1.41.0-grey?logo=cloudinary&logoColor=%23ffffff&color=%233448C5)](https://pypi.org/project/cloudinary/)
 [![Static Badge](https://img.shields.io/badge/gunicorn-v20.1.0-grey?logo=gunicorn&logoColor=%23ffffff&color=%23499848)](https://gunicorn.org/)
 [![Static Badge](https://img.shields.io/badge/psycopg2-v3.2.3-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
+[![Static Badge](https://img.shields.io/badge/summernote-v0.8.20.0-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
 [![Static Badge](https://img.shields.io/badge/WhiteNoise-v5.3.0-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://whitenoise.readthedocs.io/en/stable/index.html)
+
+[![Static Badge](https://img.shields.io/badge/Code_Institute-Template_(2024/06/18)-grey?logo=okta&logoColor=%23ffffff&color=%23ff6400)](https://github.com/Code-Institute-Org/ci-full-template)
 
 ### Developer Tools
 [![Static Badge](https://img.shields.io/badge/Gitpod-IDE-grey?logo=gitpod&logoColor=%23ffffff&color=%23FFAE33)](https://www.gitpod.io/)
@@ -453,7 +456,8 @@ The following deployment process uses guidelines and tools as provided by [Code 
 ### Repo Deployment
 
 1. Login / Signup at [GitHub](https://github.com/).
-2. Navigate to the [Code Institute Full Template](https://github.com/Code-Institute-Org/ci-full-template).
+2. Navigate to the [Code Institute Full Template](https://github.com/Code-Institute-Org/ci-full-template).\
+_NOTE:_ Version used for this project last updated **2024-06-18**
 3. Click **'Use this template'** followed by **'Create a new repository'** in the drop-down menu.
 
 4. Input the details for your repository.
