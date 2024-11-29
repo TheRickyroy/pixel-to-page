@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
+{% load static %}
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
@@ -14,17 +14,13 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
+                                <img src="{% static 'images/default-post.webp' %}" class="img-fluid" alt="placeholder">
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
-
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
-                            </p>
+                            <hr>
+                            <p class="author">Author: {{ post.author }} | Posted: {{ post.created_on}}</p>
                         </div>
                     </div>
                 </div>
