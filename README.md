@@ -72,6 +72,7 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
   - [Technology & Languages](#technology-and-languages)
   - [Frameworks & Libraries](#frameworks--libraries)
   - [Developer Tools](#developer-tools)
+  - [Design Tools](#design-tools)
 
 - [Deployment](#deployment)
   - [GitHub](#github)
@@ -340,7 +341,9 @@ Within the ERD I identified each of the models and their relationships required 
 
 I have also included models that were part of my user stories for features of future scope for the project, and as such have given each table an appropriate label that corresponds to the [MoSCoW Prioritisation](#project-prioritisation).
 
-![ERD](documentation/images/ERD%20Pixel%20To%20Paper.webp)
+After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
+
+![ERD](documentation/images/ERD%20Pixel%20To%20Page.webp)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -419,7 +422,10 @@ These could be outstanding issues, or new ideas that developed over the course o
 [![Static Badge](https://img.shields.io/badge/cloudinary-v1.41.0-grey?logo=cloudinary&logoColor=%23ffffff&color=%233448C5)](https://pypi.org/project/cloudinary/)
 [![Static Badge](https://img.shields.io/badge/gunicorn-v20.1.0-grey?logo=gunicorn&logoColor=%23ffffff&color=%23499848)](https://gunicorn.org/)
 [![Static Badge](https://img.shields.io/badge/psycopg2-v3.2.3-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
+[![Static Badge](https://img.shields.io/badge/summernote-v0.8.20.0-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
 [![Static Badge](https://img.shields.io/badge/WhiteNoise-v5.3.0-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://whitenoise.readthedocs.io/en/stable/index.html)
+
+[![Static Badge](https://img.shields.io/badge/Code_Institute-Template_(2024/06/18)-grey?logo=okta&logoColor=%23ffffff&color=%23ff6400)](https://github.com/Code-Institute-Org/ci-full-template)
 
 ### Developer Tools
 [![Static Badge](https://img.shields.io/badge/Gitpod-IDE-grey?logo=gitpod&logoColor=%23ffffff&color=%23FFAE33)](https://www.gitpod.io/)
@@ -428,6 +434,12 @@ These could be outstanding issues, or new ideas that developed over the course o
 
 [![Static Badge](https://img.shields.io/badge/Obsidian-Notes-grey?logo=obsidian&logoColor=%23ffffff&color=%237C3AED)](https://obsidian.md)
 [![Static Badge](https://img.shields.io/badge/Slack-Messaging-grey?logo=slack&logoColor=%23ffffff&color=%234A154B)](https://slack.com)
+[![Static Badge](https://img.shields.io/badge/Lucid-Charts-grey?logo=slack&logoColor=%23ffffff&color=%23282C33)](https://www.lucidchart.com)
+
+### Design Tools
+[![Static Badge](https://img.shields.io/badge/Affinity-Photo_2-grey?logo=affinityphoto&logoColor=%23ffffff&color=%234E3188)](https://affinity.serif.com/en-gb/)
+[![Static Badge](https://img.shields.io/badge/Affinity-Designer_2-grey?logo=affinitydesigner&logoColor=%23ffffff&color=%23134881)](https://affinity.serif.com/en-gb/)
+[![Static Badge](https://img.shields.io/badge/Figma-UI3-grey?logo=figma&logoColor=%23ffffff&color=%23F24E1E)](https://www.figma.com/release-notes/)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -444,7 +456,8 @@ The following deployment process uses guidelines and tools as provided by [Code 
 ### Repo Deployment
 
 1. Login / Signup at [GitHub](https://github.com/).
-2. Navigate to the [Code Institute Full Template](https://github.com/Code-Institute-Org/ci-full-template).
+2. Navigate to the [Code Institute Full Template](https://github.com/Code-Institute-Org/ci-full-template).\
+_NOTE:_ Version used for this project last updated **2024-06-18**
 3. Click **'Use this template'** followed by **'Create a new repository'** in the drop-down menu.
 
 4. Input the details for your repository.
