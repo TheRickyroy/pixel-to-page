@@ -3,8 +3,9 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="#">Admin Panel</a> |
-  <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
 </p>
 
 ## Introduction
@@ -128,20 +129,50 @@ Repeat for additional palettes that may be included as part of light / dark mode
 
 ### Color Palette
 
+Through much deliberation, trial and error and sourcing of inspirational images and palettes, I finally chose this palette for a number of reasons. 
+
+**Preference & Inspiration**
+
+
+**Community Convention**\
+During my research it became apparent that the convention of using softer pastel colour palettes was very common, especially among _Bullet Journal_ blogs. Although the specific approach for the websites is aimed toward programmers, and thus this convention towards softer color schemes may not be necessary, I opted to pick one that struck a balance with the pastel and deeper colors.
+
+**Design Flexibility**
+
+
+**Accessibility**
 
 ![Winter Palette](<documentation/images/Winter Palette.webp>)
 
-Explain the naming convention used for the project to aid with clean maintainable code.
+| ID | Name | Type | CSS Variable | LCH | HSL | HEX |
+|:-:|:-|:-|:-|:-|:-|:-|
+| 1 | White | Primary Brand | `--color-` | lch(100% 0 0) | hsl(0, 0%, 100%) | #FFFFFF |
+| 2 | Seasalt /<br>Alabaster | background | `--color-` | lch(98.27% 0 0) | hsl(0, 0%, 98%) | #FAFAFA |
+| 3 | Celeste /<br>Charlotte| background | `--color-` | lch(93.26% 19.23 207.57) | hsl(186, 91%, 87%) | #BFF6FC |
+| 4 | Mauve /<br>Biloba Flower | background | `--color-` | lch(74.65% 42.62 295.44) |hsl(251, 100%, 84%) | #BDAEFF |
+| 5 | Prussian Blue /<br>Big Stone | background | `--color-` | lch(16.05% 15.32 257.06) | hsl(208, 49%, 16%) | #152A3D |
+| 6 | Rich Black /<br>Ebony | background | `--color-` | lch(6.14% 12.54 280.34) |hsl(229, 41%, 10%) | #0F1324 |
+| 7 | Black | background | `--color-` | lch(0% 0 0) | hsl(0, 0%, 0%) | #000000 |
 
-| ID | Name | Type | CSS Variable | HSL | HEX |
-|:-:|:-|:-|:-|:-|:-|
-| 1 | White | Primary Brand | `--color-` | hsl(0, 0%, 100%) | #FFFFFF |
-| 2 | Seasalt | background | `--color-` | hsl(0, 0%, 98%) | #FAFAFA |
-| 3 | Celeste | background | `--color-` | hsl(186, 91%, 87%) | #BFF6FC |
-| 4 | Mauve | background | `--color-` | hsl(251, 100%, 84%) | #BDAEFF |
-| 5 | Prussian Blue | background | `--color-` | hsl(208, 49%, 16%) | #152A3D |
-| 6 | Rich Black | background | `--color-` | hsl(229, 41%, 10%) | #0F1324 |
-| 7 | Black | background | `--color-` | hsl(0, 0%, 0%) | #000000 |
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+### Color Space
+
+Though HEX is a commonly used color space within programming, and one I am comfortable using after doing so for many years, I have opted to adopt a different approach for _Pixel To Page_ and shall be using HSL. This decision has been made as a result of my learning throughout the Bootcamp, as well as much supplemental reading and learning.
+
+After reading articles via [daily.dev](https://daily.dev/), particularly with regards to _UX_, _UI_, _CSS, _Front End_ and _Accessibility_ and many of the recent changes and aditions, I began to explore new posibilities opening up for developers in terms of styling and continued my research in hopes of learning more. 
+
+This brought me to the final decision of implementing HSL as my chosen color space, although I would like to pursue LCH in the future once I am more confident it is fully supported across all devices and broswers.
+
+**Design Flexibility**
+
+**Code Maintainability**
+
+**Learning Opportunity**
+
+- Personal preference and inspiration. T
+- The softer almost pastel palette is a very common theme within the Bullet Journal community.
+- The colors are representitive of the upcoming winter season with the intention of changing palette regularly in this way.
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -168,7 +199,7 @@ The table below provides the contrast ratio score for each color combination and
 | **Celeste** | [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FFFFFF) | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FAFAFA) | - | [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=BDAEFF) | [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=152A3D) | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324) | [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=000000) |
 | **Mauve** | [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FFFFFF) | [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FAFAFA) | [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=BFF6FC) | - | [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=152A3D) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324) | [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=000000) |
 | **Prussian Blue** | [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FFFFFF) | [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FAFAFA) | [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BFF6FC) | [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BDAEFF) | - | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=0F1324) | [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=000000) |
-| **Rich Black** | [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | [17.66:1]() | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
+| **Rich Black** | [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FAFAFA) | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
 | **Black** | [21:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FFFFFF) | [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FAFAFA) | [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BFF6FC) | [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BDAEFF) | [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=152A3D) | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=0F1324) | - |
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>

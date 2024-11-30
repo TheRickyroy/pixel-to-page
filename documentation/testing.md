@@ -1,30 +1,35 @@
 # Testing & Validation
+![Pixel To Page](images/Placeholder.png)
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
   <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
 </p>
 
 ## Table of Contents  
-  
+    
 - [Testing & Validation](#testing--validation)
   - [Table of Contents](#table-of-contents)
-  - [Validation](#validation)
-    - [HTML Validation](#html-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [Python Validation](#python-validation)
-    - [CSS Validation](#css-validation)
-    - [Lighthouse Scores](#lighthouse-scores)
-    - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
-  - [Manual Testing](#manual-testing)
-    - [User Input/Form Validation](#user-inputform-validation)
-    - [Browser Compatibility](#browser-compatibility)
-    - [Testing User Stories](#testing-user-stories)
-    - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
-  - [Bugs](#bugs)
-    - [Bug Status](#bug-status)
-    - [Bugs - Additional Detail](#bugs---additional-detail)
+
+- [Validation](#validation)
+  - [HTML Validation](#html-validation)
+  - [JavaScript Validation](#javascript-validation)
+  - [Python Validation](#python-validation)
+  - [CSS Validation](#css-validation)
+  - [Lighthouse Scores](#lighthouse-scores)
+  - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
+
+- [Manual Testing](#manual-testing)
+  - [User Input/Form Validation](#user-inputform-validation)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Testing User Stories](#testing-user-stories)
+  - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
+
+- [Bugs](#bugs)
+  - [Bug Status](#bug-status)
+  - [Bugs - Additional Detail](#bugs---additional-detail)
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
