@@ -128,14 +128,20 @@ Repeat for additional palettes that may be included as part of light / dark mode
 
 ### Color Palette
 
-![Color Swatch](documentation/images/Placeholder.png)
+
+![Winter Palette](<documentation/images/Winter Palette.webp>)
 
 Explain the naming convention used for the project to aid with clean maintainable code.
 
 | ID | Name | Type | CSS Variable | HSL | HEX |
-|:-:|:-|:-|:-:|:-:|:-:|
-| 1 | White | Primary Brand | `--color-primary` | hsl(0, 0%, 100%) | #ffffff |
-| 2 | Gunmetal | background | `--color-background` | hsl(180, 8%, 16%) | #272D2D |
+|:-:|:-|:-|:-|:-|:-|
+| 1 | White | Primary Brand | `--color-` | hsl(0, 0%, 100%) | #FFFFFF |
+| 2 | Seasalt | background | `--color-` | hsl(0, 0%, 98%) | #FAFAFA |
+| 3 | Celeste | background | `--color-` | hsl(186, 91%, 87%) | #BFF6FC |
+| 4 | Mauve | background | `--color-` | hsl(251, 100%, 84%) | #BDAEFF |
+| 5 | Prussian Blue | background | `--color-` | hsl(208, 49%, 16%) | #152A3D |
+| 6 | Rich Black | background | `--color-` | hsl(229, 41%, 10%) | #0F1324 |
+| 7 | Black | background | `--color-` | hsl(0, 0%, 0%) | #000000 |
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -146,22 +152,24 @@ Include reference to validation testing and screenshots where appropriate.
 
 Potential tools for contrast compliance checks.
 - [Colour Contrast Checker](https://colourcontrast.cc/) also has [Chrome Extension](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)
-- [WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Adobe](https://color.adobe.com/create/color-contrast-analyzer)
 
-![Contrast GIF](documentation/images/Placeholder.png)
+![Contrast GIF](<documentation/images/Contrast GIF.gif>)
 
 ### Color Contrast Score Table
 
-| | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **1** | - |  |  |  |  |  |  |
-| **2** |  | - |  |  |  |  |  |
-| **3** |  |  | - |  |  |  |  |
-| **4** |  |  |  | - |  |  |  |
-| **5** |  |  |  |  | - |  |  |
-| **6** |  |  |  |  |  | - |  |
-| **7** |  |  |  |  |  |  | - |
+To corroborate the results from [Colour Contrast Checker](https://colourcontrast.cc/), each combination has also be checked using [Adobe](https://color.adobe.com/create/color-contrast-analyzer) and [WebAIM](https://webaim.org/resources/contrastchecker/).
+
+The table below provides the contrast ratio score for each color combination and a link to the [WebAIM](https://webaim.org/resources/contrastchecker/) results page. 
+
+| | White | Seasalt | Celeste | Mauve | Prussian<br>Blue | Rich<br>Black | Black |
+|-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **White** | - | [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=FAFAFA) | [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BFF6FC) | [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BDAEFF) | [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=152A3D) | [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=0F1324) | [21:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=000000) |
+| **Seasalt** | [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=FFFFFF) | - | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BFF6FC) | [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BDAEFF) | [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=152A3D) | [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=0F1324) | [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=000000) |
+| **Celeste** | [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FFFFFF) | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FAFAFA) | - | [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=BDAEFF) | [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=152A3D) | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324) | [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=000000) |
+| **Mauve** | [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FFFFFF) | [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FAFAFA) | [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=BFF6FC) | - | [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=152A3D) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324) | [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=000000) |
+| **Prussian Blue** | [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FFFFFF) | [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FAFAFA) | [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BFF6FC) | [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BDAEFF) | - | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=0F1324) | [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=000000) |
+| **Rich Black** | [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | [17.66:1]() | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
+| **Black** | [21:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FFFFFF) | [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FAFAFA) | [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BFF6FC) | [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BDAEFF) | [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=152A3D) | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=0F1324) | - |
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
