@@ -121,115 +121,6 @@ Reference any specific inspirations that heavily influenced this process.
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
-## Colors
-
-Description and reasoning for the colors selected as part of the _project_ as well as any additional details.
-
-Repeat for additional palettes that may be included as part of light / dark mode or alternate themes.
-
-### Color Palette
-
-Through much deliberation, trial and error and sourcing of inspirational images and palettes, I finally chose this palette for a number of reasons. 
-
-**Preference & Inspiration**
-
-
-**Community Convention**\
-During my research it became apparent that the convention of using softer pastel colour palettes was very common, especially among _Bullet Journal_ blogs. Although the specific approach for the websites is aimed toward programmers, and thus this convention towards softer color schemes may not be necessary, I opted to pick one that struck a balance with the pastel and deeper colors.
-
-**Design Flexibility**
-
-
-**Accessibility**
-
-![Winter Palette](<documentation/images/Winter Palette.webp>)
-
-| ID | Name | Type | CSS Variable | LCH | HSL | HEX |
-|:-:|:-|:-|:-|:-|:-|:-|
-| 1 | White | Primary Brand | `--color-` | lch(100% 0 0) | hsl(0, 0%, 100%) | #FFFFFF |
-| 2 | Seasalt /<br>Alabaster | background | `--color-` | lch(98.27% 0 0) | hsl(0, 0%, 98%) | #FAFAFA |
-| 3 | Celeste /<br>Charlotte| background | `--color-` | lch(93.26% 19.23 207.57) | hsl(186, 91%, 87%) | #BFF6FC |
-| 4 | Mauve /<br>Biloba Flower | background | `--color-` | lch(74.65% 42.62 295.44) |hsl(251, 100%, 84%) | #BDAEFF |
-| 5 | Prussian Blue /<br>Big Stone | background | `--color-` | lch(16.05% 15.32 257.06) | hsl(208, 49%, 16%) | #152A3D |
-| 6 | Rich Black /<br>Ebony | background | `--color-` | lch(6.14% 12.54 280.34) |hsl(229, 41%, 10%) | #0F1324 |
-| 7 | Black | background | `--color-` | lch(0% 0 0) | hsl(0, 0%, 0%) | #000000 |
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-### Color Space
-
-Though HEX is a commonly used color space within programming, and one I am comfortable using after doing so for many years, I have opted to adopt a different approach for _Pixel To Page_ and shall be using HSL. This decision has been made as a result of my learning throughout the Bootcamp, as well as much supplemental reading and learning.
-
-After reading articles via [daily.dev](https://daily.dev/), particularly with regards to _UX_, _UI_, _CSS, _Front End_ and _Accessibility_ and many of the recent changes and aditions, I began to explore new posibilities opening up for developers in terms of styling and continued my research in hopes of learning more. 
-
-This brought me to the final decision of implementing HSL as my chosen color space, although I would like to pursue LCH in the future once I am more confident it is fully supported across all devices and broswers.
-
-**Design Flexibility**
-
-**Code Maintainability**
-
-**Learning Opportunity**
-
-- Personal preference and inspiration. T
-- The softer almost pastel palette is a very common theme within the Bullet Journal community.
-- The colors are representitive of the upcoming winter season with the intention of changing palette regularly in this way.
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-### Contrast
-
-Provide details about the process used to ensure contrast compliance.\
-Include reference to validation testing and screenshots where appropriate. 
-
-Potential tools for contrast compliance checks.
-- [Colour Contrast Checker](https://colourcontrast.cc/) also has [Chrome Extension](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)
-
-![Contrast GIF](<documentation/images/Contrast GIF.gif>)
-
-### Color Contrast Score Table
-
-To corroborate the results from [Colour Contrast Checker](https://colourcontrast.cc/), each combination has also be checked using [Adobe](https://color.adobe.com/create/color-contrast-analyzer) and [WebAIM](https://webaim.org/resources/contrastchecker/).
-
-The table below provides the contrast ratio score for each color combination and a link to the [WebAIM](https://webaim.org/resources/contrastchecker/) results page. 
-
-| | White | Seasalt | Celeste | Mauve | Prussian<br>Blue | Rich<br>Black | Black |
-|-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **White** | - | [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=FAFAFA) | [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BFF6FC) | [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BDAEFF) | [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=152A3D) | [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=0F1324) | [21:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=000000) |
-| **Seasalt** | [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=FFFFFF) | - | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BFF6FC) | [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BDAEFF) | [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=152A3D) | [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=0F1324) | [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=000000) |
-| **Celeste** | [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FFFFFF) | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FAFAFA) | - | [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=BDAEFF) | [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=152A3D) | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324) | [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=000000) |
-| **Mauve** | [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FFFFFF) | [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FAFAFA) | [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=BFF6FC) | - | [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=152A3D) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324) | [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=000000) |
-| **Prussian Blue** | [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FFFFFF) | [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FAFAFA) | [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BFF6FC) | [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BDAEFF) | - | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=0F1324) | [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=000000) |
-| **Rich Black** | [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FAFAFA) | [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
-| **Black** | [21:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FFFFFF) | [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FAFAFA) | [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BFF6FC) | [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BDAEFF) | [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=152A3D) | [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=0F1324) | - |
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Typefaces
-
-Describe the selection process and reasoning behind the typefaces used in the _project_.\
-Identify any specific requirements, inspirations or difficulties faced. 
-
-[Primary](https://fonts.google.com/) - Default typeface, a reflection of brand identity.\
-[Secondary](https://fonts.google.com/) - Complementary to the main typeface.\
-[Tertiary](https://fonts.google.com/) - Used for accents.
-
-Alternate typefaces may also be included as part of additional themes or accessibility features.
-
-### Font Usage
-
-Specific reference to font usage would include decisions that influence accompanying CSS for the _project_
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Imagery
-
-Description of the images and reason for their inclusion within the _project_.\
-If credit is required, refence to these within the credit section of the README.
-
-![Images](documentation/images/Placeholder.png)
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
 ## Strategy Plane
 
 This _README Template_ provides the essential information necessary for documenting the _project_.\
@@ -244,7 +135,7 @@ _Project Name_ was developed with the intention of - provide description of the 
 A brief bullet point list of the key objectives for _Project Name_.\
 This could include _learning outcomes_, _stakeholder requirements_, _personal goals_ and more.
 
-- Fulfil the primary [Learning Objectives](#) as defined by _Code Institute_.
+- Fulfil the primary [Learning Objectives](documentation/learning-objectives.md) as defined by _Code Institute_.
 - Objective 2
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
@@ -352,39 +243,6 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 ## Scope Plane
 
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Structure Plane
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Skeleton Plane
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-### Wireframes
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Surface Plane
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Database Schema
-
-As part of the development process for _Paper To Pixels_ it was important to understand and fully develop the architecture in advance in hopes of minimising potential issues during the PostgreSQL Database implementation avoid retrofitting requirements.
-
-I used [Lucid Chart](www.lucidchart.com/) to compile my **Entity Relationship Diagram (ERD)**.
-
-Within the ERD I identified each of the models and their relationships required for my MVP.
-
-I have also included models that were part of my user stories for features of future scope for the project, and as such have given each table an appropriate label that corresponds to the [MoSCoW Prioritisation](#project-prioritisation).
-
-After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
-
-![ERD](documentation/images/ERD%20Pixel%20To%20Page.webp)
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 ## Security
 
@@ -411,6 +269,159 @@ CSRF_TRUSTED_ORIGINS = [
 ```
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+## Structure Plane
+
+## Database Schema
+
+As part of the development process for _Paper To Pixels_ it was important to understand and fully develop the architecture in advance in hopes of minimising potential issues during the PostgreSQL Database implementation avoid retrofitting requirements.
+
+I used [Lucid Chart](www.lucidchart.com/) to compile my **Entity Relationship Diagram (ERD)**.
+
+Within the ERD I identified each of the models and their relationships required for my MVP.
+
+I have also included models that were part of my user stories for features of future scope for the project, and as such have given each table an appropriate label that corresponds to the [MoSCoW Prioritisation](#project-prioritisation).
+
+After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
+
+![ERD](documentation/images/ERD%20Pixel%20To%20Page.webp)
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+## Skeleton Plane
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+### Wireframes
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+## Surface Plane
+
+## Colors
+
+Description and reasoning for the colors selected as part of the _project_ as well as any additional details.
+
+Repeat for additional palettes that may be included as part of light / dark mode or alternate themes.
+
+### Color Palette
+
+Through much deliberation, trial and error and sourcing of inspirational images and palettes, I finally chose this palette for a number of reasons. 
+
+- Personal preference and inspiration. T
+- The softer almost pastel palette is a very common theme within the Bullet Journal community.
+- The colors are representitive of the upcoming winter season with the intention of changing palette regularly in this way.
+
+**Preference & Inspiration**
+
+
+**Community Convention**\
+During my research it became apparent that the convention of using softer pastel colour palettes was very common, especially among _Bullet Journal_ blogs. Although the specific approach for the websites is aimed toward programmers, and thus this convention towards softer color schemes may not be necessary, I opted to pick one that struck a balance with the pastel and deeper colors.
+
+**Design Flexibility**
+
+
+**Accessibility**
+
+![Winter Palette](<documentation/images/Winter Palette.webp>)
+
+| ID | Name | Type | CSS Variable | LCH | HSL | HEX |
+|:-:|:-|:-|:-|:-|:-|:-|
+| 1 | White | - | `--color-white` | lch(100% 0 0) | hsl(0, 0%, 100%) | #FFFFFF |
+| 2 | Seasalt | - | `--color-` | lch(98.27% 0 0) | hsl(0, 0%, 98%) | #FAFAFA |
+| 3 | Celeste | - | `--color-` | lch(93.26% 19.23 207.57) | hsl(186, 91%, 87%) | #BFF6FC |
+| 4 | Mauve | - | `--color-` | lch(74.65% 42.62 295.44) |hsl(251, 100%, 84%) | #BDAEFF |
+| 5 | Prussian Blue | - | `--color-` | lch(16.05% 15.32 257.06) | hsl(208, 49%, 16%) | #152A3D |
+| 6 | Rich Black | - | `--color-` | lch(6.14% 12.54 280.34) |hsl(229, 41%, 10%) | #0F1324 |
+| 7 | Black | - | `--color-black` | lch(0% 0 0) | hsl(0, 0%, 0%) | #000000 |
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+### Color Space
+
+Though HEX is a commonly used color space within programming, and one I am comfortable using after doing so for many years, I have opted to adopt a different approach for _Pixel To Page_ and shall be using HSL. This decision has been made as a result of my learning throughout the Bootcamp, as well as much supplemental reading and learning.
+
+Reading articles via [daily.dev](https://daily.dev/), particularly with regards to _UX_, _UI_, _CSS_, _Front End_ and _Accessibility_, I began finding more information about recent changes and aditions available ans began to explore new posibilities opening up for developers in terms of styling and continued my research in hopes of learning more. 
+
+This brought me to the final decision of implementing HSL as my chosen color space, although I would like to pursue LCH in the future once I am more confident it is fully supported across all devices and broswers due to its increased color range and flexability.
+
+**Design Flexibility**
+
+**Code Maintainability**
+
+**Learning Opportunity**
+
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+### Contrast
+
+Provide details about the process used to ensure contrast compliance.\
+Include reference to validation testing and screenshots where appropriate. 
+
+Potential tools for contrast compliance checks.
+- [Colour Contrast Checker](https://colourcontrast.cc/) also has [Chrome Extension](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)
+
+![Contrast GIF](<documentation/images/Contrast GIF.gif>)
+
+### Color Contrast Score Table
+
+To corroborate the results from [Colour Contrast Checker](https://colourcontrast.cc/), each combination has also be checked using [Adobe](https://color.adobe.com/create/color-contrast-analyzer) and [WebAIM](https://webaim.org/resources/contrastchecker/).
+
+The table below provides the contrast ratio score for each color combination and a link to the [WebAIM](https://webaim.org/resources/contrastchecker/) results page. I have also opted to include a key to quickly identify the pass rating of each color combination, which in this case due to the focus on accessiblity, has resulted in a full pass state for the intended combinations and no patial passes. 
+
+<details><summary>WCAG Color Contrast Score Key</summary>
+
+| | Pass All | | Pass ||:-:| Partial | Fail All |
+|-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| | > 7:1 | |:-:|:-:|:-:| > 4.5:1 | < 3:1 |
+| **Contrast Check** | 🟢 | |:-:|:-:|:-:|:-:| 🔴 |
+
+</details>
+
+| | White | Seasalt | Celeste | Mauve | Prussian<br>Blue | Rich<br>Black | Black |
+|-:|:-|:-|:-|:-|:-|:-|:-|
+| **White** | - | 🔴 [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=FAFAFA) | 🔴 [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BFF6FC) | 🔴 [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BDAEFF) | 🟢 [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=152A3D) | 🟢 [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=0F1324) | 🟢 [21:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=000000) |
+| **Seasalt** | 🔴 [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=FFFFFF) | - | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BFF6FC) | 🔴 [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BDAEFF) | 🟢 [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=152A3D) | 🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=0F1324) | 🟢 [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=000000)  |
+| **Celeste** | 🔴 [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FFFFFF) | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FAFAFA) | - | 🔴 [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=BDAEFF) | 🟢 [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=152A3D) | 🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324) | 🟢 [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=000000)  |
+| **Mauve** | 🔴 [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FFFFFF) | 🔴 [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FAFAFA) | 🔴 [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=BFF6FC) | - | 🟢 [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=152A3D) | 🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324) |🟢 [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=000000) |
+| **Prussian Blue** | 🟢 [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FFFFFF) | 🟢 [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FAFAFA) | 🟢 [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BFF6FC) | 🟢 [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BDAEFF) | - | 🔴 [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=0F1324) | 🔴 [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=000000) |
+| **Rich Black** | 🟢 [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | 🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FAFAFA) | 🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | 🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | 🔴 [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
+| **Black** | 🟢 [21:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FFFFFF) | 🟢 [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FAFAFA) | 🟢 [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BFF6FC) | 🟢 [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BDAEFF)  | 🔴 [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=152A3D) | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=0F1324) | - |
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+## Typefaces
+
+Describe the selection process and reasoning behind the typefaces used in the _project_.\
+Identify any specific requirements, inspirations or difficulties faced. 
+
+[Primary](https://fonts.google.com/) - Default typeface, a reflection of brand identity.\
+[Secondary](https://fonts.google.com/) - Complementary to the main typeface.\
+[Tertiary](https://fonts.google.com/) - Used for accents.
+
+Alternate typefaces may also be included as part of additional themes or accessibility features.
+
+### Font Usage
+
+Specific reference to font usage would include decisions that influence accompanying CSS for the _project_
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+## Imagery
+
+Description of the images and reason for their inclusion within the _project_.\
+If credit is required, refence to these within the credit section of the README.
+
+![Images](documentation/images/Placeholder.png)
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
+
+
 
 ## Features
 
@@ -924,7 +935,8 @@ git push
 
 ## Testing
 
-Describe the testing process, include screenshots of results and any detail error corrections required.
+This testing section contains a brief overview of essential regarding pass and compliance status.\
+All additional information regarding manual testing can be found within [Testing & Validation](documentation/testing.md).
 
 ### Code Validation
 
@@ -939,6 +951,10 @@ Describe the testing process, include screenshots of results and any detail erro
 ### Lighthouse Performance
 
 - [Lighthouse Audit](https://developer.chrome.com/docs/lighthouse/overview)
+
+### Bugs
+
+I have recorded these bugs, their solution status as well as documenting additional details in [Testing & Validation](documentation/testing.md).
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 

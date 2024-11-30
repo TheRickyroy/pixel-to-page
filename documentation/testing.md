@@ -1,5 +1,5 @@
 # Testing & Validation
-![Pixel To Page](images/Placeholder.png)
+![Testing & Validation](images/Testing.webp)
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
@@ -78,13 +78,15 @@ Using [statcounter](https://gs.statcounter.com/screen-resolution-stats) to attai
 
 ## Bugs
 
-This being my first Full Stack Project, I anticipated running into bugs and issues offering opportunity to debug and problem solve.\
+This being my first Full Stack Project, I anticipated running into bugs and issues throughout the process.\
+Though they caused difficulties at times, they have also offered up ample learning opportunity for debugging and grasping a better understanding of the core concepts and implementations required for developing a project such as _Pixel To Page_.
+
 As part of my learning experience, and for future reference, I chose to fully document all bugs encountered and the steps taken during the debugging process.\
-By doing so I hope to continue developing my understanding and thus increase my efficiency by having effective solutions to refer back to, but just as importantly, failed solutions to potential avoid in future. 
+By doing so I hope to continue developing my understanding and thus increase my efficiency by having effective solutions to refer back to, but just as importantly, failed solutions to potentially avoid in future. 
 
 ### Bug Status
 
-This table can be used to identify all bugs throughout the project including their resolution status.\
+This table can be used to identify all bugs throughout the project including their solution status.\
 Additional details about each bug, including screenshots, resolution steps and potential future solutions can be found [here](#bugs---additional-detail).
 
 <details>
