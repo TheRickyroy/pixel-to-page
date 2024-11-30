@@ -482,14 +482,20 @@ These could be outstanding issues, or new ideas that developed over the course o
 [![Static Badge](https://img.shields.io/badge/GitHub-Repo_Host-grey?logo=github&logoColor=%23ffffff&color=%23181717)](https://github.com/)
 [![Static Badge](https://img.shields.io/badge/Heroku-App_Host-grey?logo=heroku&logoColor=%23ffffff&color=%23430098)](https://www.heroku.com/)
 
+[![Static Badge](https://img.shields.io/badge/Perplexity-AI-grey?logo=perplexity&logoColor=%23ffffff&color=%231FB8CD)](https://www.perplexity.ai/)
 [![Static Badge](https://img.shields.io/badge/Obsidian-Notes-grey?logo=obsidian&logoColor=%23ffffff&color=%237C3AED)](https://obsidian.md)
 [![Static Badge](https://img.shields.io/badge/Slack-Messaging-grey?logo=slack&logoColor=%23ffffff&color=%234A154B)](https://slack.com)
 [![Static Badge](https://img.shields.io/badge/Lucid-Charts-grey?logo=slack&logoColor=%23ffffff&color=%23282C33)](https://www.lucidchart.com)
+
+[![Static Badge](https://img.shields.io/badge/Microsoft-Power_Toys-grey?logo=&logoColor=%23ffffff&color=%237fba00)](https://learn.microsoft.com/en-us/windows/powertoys/)
+[![Static Badge](https://img.shields.io/badge/Elgato-Stream_Deck-grey?logo=elgato&logoColor=%23ffffff&color=%23101010)](https://www.elgato.com/uk/en/s/downloads)
+
 
 ### Design Tools
 [![Static Badge](https://img.shields.io/badge/Affinity-Photo_2-grey?logo=affinityphoto&logoColor=%23ffffff&color=%234E3188)](https://affinity.serif.com/en-gb/)
 [![Static Badge](https://img.shields.io/badge/Affinity-Designer_2-grey?logo=affinitydesigner&logoColor=%23ffffff&color=%23134881)](https://affinity.serif.com/en-gb/)
 [![Static Badge](https://img.shields.io/badge/Figma-UI3-grey?logo=figma&logoColor=%23ffffff&color=%23F24E1E)](https://www.figma.com/release-notes/)
+[![Static Badge](https://img.shields.io/badge/Ezgif-GIF_Maker-grey?logo=&logoColor=%23ffffff&color=%23292929)](https://learn.microsoft.com/en-us/windows/powertoys/)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -977,6 +983,7 @@ Provide reference to all sources used for coding the project, including sources 
 
 Generic source accreditation with specific [Media Credits](documentation/credits.md) included in an appendix document. 
 
+- [Freepik](http://www.freepik.com/) - Following [Attributation Policy](https://support.freepik.com/s/article/Attribution-How-when-and-where?language=en_US)
 - [Source](#) - Media Sources Requiring General Credit
 
 ### Appendices
