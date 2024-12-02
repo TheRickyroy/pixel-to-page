@@ -110,6 +110,8 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 5 | Commit Push Failure | 🟢 | [Medium](https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2) & [Graphite](https://graphite.dev/guides/understanding-your-branch-is-ahead-of-origin-main-by-1-commit) | [923e65f](https://github.com/TheRickyroy/pixel-to-page/commit/923e65fcb58a6436f1f6540841b7aac3c78fe630) |
 | 6 | Admin Panel Access | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
 | 7 | Post Title Links | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
+| 8 | Comment Code Inclusion | 🟢 | Mark Briscoe - SME Session | [630d636](https://github.com/TheRickyroy/pixel-to-page/commit/630d63681624cd2e2e5498e50523a58d3cbf9ee9) |
+| 9 | Bash Terminal Overwriting | 🟢 | Debugging | N/A |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -257,9 +259,11 @@ To https://github.com/TheRickyroy/pixel-to-page.git
 Commit [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204)
 
 **Identification**
+
 Upon adding the post view I was unable to access the admin panel.
 
 **Solution**
+
 I checked through my files and code and realised that **pixel_to_page** > **urls.py** required `path('admin/', admin.site.urls),` moving prior to `path("", include("blog.urls"), name="blog-urls"),`. 
 
 Doing this resolved the issue and granted access to admin again within my development workspace. 
@@ -290,6 +294,52 @@ Corrected Code
 	<h2 class="card-title">{{ post.title }}</h2>
 </a>
 ```
+
+</details>
+
+<details><summary>Bug #8 - Comment Including HTML</summary>
+
+Commit - [630d636](https://github.com/TheRickyroy/pixel-to-page/commit/630d63681624cd2e2e5498e50523a58d3cbf9ee9)
+
+**Identification**
+Upon testing the comment CRUD functionality the body of the content included additional HTML code that was used to provide structure to the layout within the admin panel.
+
+![bug 8](images/bugs/bug-8.webp)
+
+**Resolution**
+Amended code from including linebreaks to safe. 
+
+Incorrect code
+```
+<div id="comment{{ comment.id }}">
+  {{ comment.body | linebreaks }}
+</div>
+```
+
+```
+<div id="comment{{ comment.id }}">
+  {{ comment.body | safe }}
+</div>
+```
+
+This solution was provided by Mark Briscoe during an SME (subject matter expert) open door coding session (2024-12-02).
+
+</details>
+
+<details><summary>Bug #9 - Terminal Command Overwriting</summary>
+
+**Identification**
+
+Whilst typing the commit message for Bug #8 the bash terminal would begin overtyping the start of the line.
+
+![bug 9](images/bugs/bug-9.webp)
+
+**Resolution**
+
+- First Attempt - Retyping the command - produced the same result.
+- Second Attempt - Starting a new bash terminal and retyping the command. - Resolved issue.
+
+</details>
 
 </details>
 
