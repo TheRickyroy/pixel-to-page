@@ -1,11 +1,17 @@
-{% extends 'base.html' %}{% block content %}
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% block content %}
 {% load static %}
 
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="image-container">
+                {% if blog.post.featured_image %}
+                {% cloudinary blog.post.featured_image alt=post.title %}
+                {% else %}
                 <img src="{% static 'images/default-post.webp' %}" class="img-fluid" alt="placeholder">
+                {% endif %}
             </div>
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
