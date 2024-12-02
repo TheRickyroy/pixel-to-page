@@ -468,8 +468,9 @@ These could be outstanding issues, or new ideas that developed over the course o
 
 
 ### Frameworks & Libraries
-
+[![Static Badge](https://img.shields.io/badge/allauth-v0.57.2-grey?logo=cloudinary&logoColor=%23ffffff&color=%2314b012)](https://docs.allauth.org)
 [![Static Badge](https://img.shields.io/badge/cloudinary-v1.41.0-grey?logo=cloudinary&logoColor=%23ffffff&color=%233448C5)](https://pypi.org/project/cloudinary/)
+[![Static Badge](https://img.shields.io/badge/CrispyForms-v2.3-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://django-crispy-forms.readthedocs.io/en/latest/)
 [![Static Badge](https://img.shields.io/badge/gunicorn-v20.1.0-grey?logo=gunicorn&logoColor=%23ffffff&color=%23499848)](https://gunicorn.org/)
 [![Static Badge](https://img.shields.io/badge/psycopg2-v3.2.3-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
 [![Static Badge](https://img.shields.io/badge/summernote-v0.8.20.0-grey?logo=django&logoColor=%23ffffff&color=%23092E20)](https://pypi.org/project/psycopg2/)
@@ -984,6 +985,7 @@ Provide reference to all sources used for coding the project, including sources 
 Generic source accreditation with specific [Media Credits](documentation/credits.md) included in an appendix document. 
 
 - [Freepik](http://www.freepik.com/) - Following [Attributation Policy](https://support.freepik.com/s/article/Attribution-How-when-and-where?language=en_US)
+- [Unsplash](https://unsplash.com) - Following [Attribution Policy](https://unsplash.com/license)
 - [Source](#) - Media Sources Requiring General Credit
 
 ### Appendices
