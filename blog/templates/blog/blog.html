@@ -31,7 +31,14 @@
                                 {{ post.excerpt | safe }}
                             </p>
                             <hr>
-                            <p class="author">Author: {{ post.author }}<br>Posted: {{ post.created_on}}</p>
+                            <div class="row">
+                                <div class="col-6">
+                                  <p class="post-subtitle">Author: {{ post.author }}</p>
+                                </div>
+                                <div class="col-6 text-end">
+                                  <p class="post-subtitle">Posted: {{ post.created_on }}</p>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
