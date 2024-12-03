@@ -4,6 +4,10 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Post Detail -->
 <div class="masthead">
   <div class="container">
     <div class="row g-0">
@@ -43,6 +47,7 @@
     </div>
   </div>
 </div>
+
 <!-- Displaying Comments -->
 <div class="row">
   <div class="col-md-8 card mb-4  mt-3 ">
@@ -119,4 +124,5 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+<script src="{% static 'js/scroll_progress.js' %}"></script>
 {% endblock %}
