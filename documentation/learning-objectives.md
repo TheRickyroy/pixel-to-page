@@ -2,7 +2,7 @@
 ![Learning Objectives](<images/Learning Objectives.webp>)
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
 </p>
