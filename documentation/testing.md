@@ -3,7 +3,7 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
 </p>
@@ -17,6 +17,7 @@
   - [HTML Validation](#html-validation)
   - [JavaScript Validation](#javascript-validation)
   - [Python Validation](#python-validation)
+    - [Settings: Test 1](#settings-1)
   - [CSS Validation](#css-validation)
   - [Lighthouse Scores](#lighthouse-scores)
   - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
@@ -26,6 +27,7 @@
   - [Browser Compatibility](#browser-compatibility)
   - [Testing User Stories](#testing-user-stories)
   - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
+  - [Virtual Test Environment](#virtual-test-environment)
 
 - [Bugs](#bugs)
   - [Bug Status](#bug-status)
@@ -37,31 +39,85 @@
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-### HTML Validation
+## HTML Validation
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-### JavaScript Validation
+## JavaScript Validation
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-### Python Validation
+## Python Validation
+
+Validation of Python Code was performed using the [CI Python Linter](https://pep8ci.herokuapp.com/) as provided by Code Institute.
+
+#### Settings: Test 1
+
+Upon initially testing my **settings.py** file I found a number of minor errors that required correction.\
+This included:
+- E111 indentation is not a multiple of 4
+- E501 line too long (85 > 79 characters)
+- W291 trailing whitespace
+- E128 continuation line under-indented for visual indent
+- E122 continuation line missing indentation or outdented
+- E501 line too long
+- W292 no newline at end of file
+
+These were generally simple fixes that had resulted from copy/paste or auto linting being set incorrectly to use two space tab.\
+I did however find myself slightly unsure how to reduce an overlength line after already using a continuation line.\
+During stand up (2024-12-03) I asked Amy (learning facilitator) about this and was informed it was a non-issue and out of scope for the proejct.
+
+As a follow up, Amy provided additional resources:
+- Python.org - [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/#indentation)
+- Datacamp - [A Comprehensive Guide on How to Line Break in Python](https://www.datacamp.com/tutorial/how-to-line-break-in-python)
+
+Using these resources for further supplemental learning I intend to return and fix this issue once my MVP deliverables have been achieved. 
+
+<details><summary>Original Code</summary>
+
+![settings: test-1.1](images/testing/settings-test1-1.webp)
+
+</details>
+
+<details><summary>Edited Code</summary>
+
+![settings: test-1.2](images/testing/settings-test1-2.webp)
+
+</details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-### CSS Validation
+## CSS Validation
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-### Lighthouse Scores
+## Lighthouse Scores
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-### Wave Accessibility Evaluation
+## Wave Accessibility Evaluation
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-## Virtual Test Environment
+## Manual Testing
+
+### User Input/Form Validation
+
+<p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
+
+### Browser Compatibility
+
+<p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
+
+### Testing User Stories
+
+<p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
+
+### Dev Tools/Real World Device Testing
+
+<p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
+
+### Virtual Test Environment
 
 Using [statcounter](https://gs.statcounter.com/screen-resolution-stats) to attain the latest (_October 2024_) usage stats, I compiled a virtual testing environment using [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en) with the six most popular worldwide screen resolutions. Although the most popular resolution globally is **1920x1080**, the [data](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet) shows usage stats for **61.63% - Mobile**, **36.52% - Desktop** and the remaining **1.85% - Tablet**, thus reinforcing a mobile first approach to responsive design and UX.
 

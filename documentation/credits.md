@@ -2,7 +2,7 @@
 ![Learning Objectives](<images/Credits.webp>)
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
 </p>
@@ -10,8 +10,10 @@
 ## Table of Contents
 
 - [Media Credits](#media-credits)
-  - [Freepik](#freepik)
-  - [Placeholder](#placeholder)
+  - [Table of Contents](#table-of-contents)
+- [Freepik](#freepik)
+- [Placeholder](#placeholder)
+- [Unsplash](#unsplash)
 
 ## Media Credits
 
@@ -29,4 +31,8 @@
 Though these images are no longer present within the final project, I had created my own placeholder image using resources that were present in earlier commits within the GitHub Repository. 
 
 - [Am I Responsive](https://ui.dev/amiresponsive) - Responsive devices screenshot. 
-- [Placeholder](https://placehold.co/)  - Placeholder within responsive device screenshot. 
+- [Placeholder](https://placehold.co/)  - Placeholder within responsive device screenshot.
+
+### Unsplash
+
+- [Unsplash](https://unsplash.com) has been used to source various images throughout the project. I have included links to each specific image below, exceeding the requirements of the Unsplach [Attribution Policy](https://unsplash.com/license)
