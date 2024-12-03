@@ -3,7 +3,7 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
-  <a href="https://github.com/users/TheRickyroy/projects/3">Project Board</a> |
+  <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
   <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
 </p>
@@ -75,7 +75,7 @@
 	- [Jann Plans Things](https://www.youtube.com/channel/UCmU4UQaW_pkWxw_uq-vnFPg)
 	- [Amanda Rach Lee](https://www.youtube.com/channel/UCk9aeo2A6a1fg3VeRueTn9w)
 
-- [The Ultimate Bullet Journal Resources List. — Gwennan Rees](https://www.gwennanrees.com/blog/the-ultimate-bullet-journal-resources-list)
+- [Gwennan Rees](https://www.gwennanrees.com/blog/the-ultimate-bullet-journal-resources-list) - The Ultimate Bullet Journal Resources List
 	- Tips & Tricks On Starting & Using Your Journal
 		- [Tiny Ray of Sunshine](https://www.tinyrayofsunshine.com/)
 		- [Bullet Journal](https://bulletjournal.com/)
@@ -83,6 +83,8 @@
 		- [Buzzfeed](https://www.buzzfeed.com/rachelwmiller/how-to-start-a-bullet-journal?utm_term=.ko01x8kgJw#.yy7n2pPY0K) - WTF Is A Bullet Journal And Why Should You Start One? An Explainer
 
 - [Bullet Journal Junkie](https://bulletjournaljunkie.com)
+
+- [Katie Codes](https://ksylor.github.io/2020/08/26/bullet-journaling.html) - Bullet journalling for software engineers (and other not-necessarily-artistic people)
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
 
@@ -115,8 +117,9 @@
 
 **Reading Material**
 
-- [A Checks - APCA Accessible Colour Contrast Checker](https://www.achecks.org/apca-accessible-colour-contrast-checker/)
-- [WebFX - What Is ADA Compliance ANd How Do I Make My Website Compliant?](https://www.webfx.com/blog/marketing/what-is-ada-compliance/#:~:text=ADA%20compliance%20refers%20to%20the%20Americans%20with%20Disabilities%20Act%20Standards,accessible%20to%20people%20with%20disabilities.)
+- [A Checks](https://www.achecks.org/apca-accessible-colour-contrast-checker/) - APCA Accessible Colour Contrast Checker
+- [WebFX](https://www.webfx.com/blog/marketing/what-is-ada-compliance/#:~:text=ADA%20compliance%20refers%20to%20the%20Americans%20with%20Disabilities%20Act%20Standards,accessible%20to%20people%20with%20disabilities.) - What Is ADA Compliance ANd How Do I Make My Website Compliant?
+- [Toptal](https://www.toptal.com/designers/colorfilter/) - Colorblind Web Page Filter Testing Tool & Simulator
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
 
@@ -153,15 +156,15 @@
 
 **Reading Material**
 
-- [Atoms - LCH is the best color space for UI](https://atmos.style/blog/lch-color-space)
-- [Atmos - HEX to LCH Color Converter](https://atmos.style/color-converter/hex-to-lch)
-- [Can I Use - LCH and Lab color values](https://caniuse.com/css-lch-lab)
-- [Evil Martians - OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
-- [Josh W. Comeau - Color Formats in CSS](https://www.joshwcomeau.com/css/color-formats/)
-- [Lambdatest - LCH and Lab color values](https://www.lambdatest.com/web-technologies/css-lch-lab)
-- [Lea Verou - LCH colors in CSS: what, why, and how?](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/)
-- [MDN - lab()](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab)
-- [MDN - lch()](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch)
-- [Smashing Magazine - A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
+- Atoms - [LCH is the best color space for UI](https://atmos.style/blog/lch-color-space)
+- Atmos - [HEX to LCH Color Converter](https://atmos.style/color-converter/hex-to-lch)
+- Can I Use - [LCH and Lab color values](https://caniuse.com/css-lch-lab)
+- Evil Martians - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
+- Josh W. Comeau - [Color Formats in CSS](https://www.joshwcomeau.com/css/color-formats/)
+- Lambdatest - [LCH and Lab color values](https://www.lambdatest.com/web-technologies/css-lch-lab)
+- Lea Verou - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/)
+- MDN - [lab()](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab)
+- MDN - [lch()](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch)
+- Smashing Magazine - [A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
