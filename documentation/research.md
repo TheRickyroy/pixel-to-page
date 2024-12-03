@@ -21,6 +21,15 @@
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
 
+## Code
+
+This sections includes some of the supplemental reading and learning used to further develop my knowledge.\
+These were particularly helpful whilst including features I had previously been unfamilar with.\
+Though this list is extensive, it is by no means exhaustive. 
+
+- W3Schools - [How TO - Scroll Indicator](https://www.w3schools.com/howto/howto_js_scroll_indicator.asp)
+
+
 ## Content & Inspiration
 
 ### Bullet Journal & Blogs
@@ -103,7 +112,6 @@
 ## Color
 
 ### Color Contrast
-
 
 >If your website isn’t ADA accessible, you are liable for the following:
 >

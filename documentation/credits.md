@@ -1,4 +1,4 @@
-# Media Credits
+# Credits
 ![Learning Objectives](<images/Credits.webp>)
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
@@ -9,11 +9,26 @@
 
 ## Table of Contents
 
-- [Media Credits](#media-credits)
+- [Credits](credits)
   - [Table of Contents](#table-of-contents)
-- [Freepik](#freepik)
-- [Placeholder](#placeholder)
-- [Unsplash](#unsplash)
+
+- [Code Credits](#code-credits)
+ 
+- [Media Credits](#media-credits)
+  - [Freepik](#freepik)
+  - [Placeholder](#placeholder)
+  - [Unsplash](#unsplash)
+
+## Code Credits
+
+These credits include code snippets that has been used, or modified for use within _Pixel To Page_.\
+In all cases the source of the code used is provided, although I have supplemented my learning with additional reading, research and personal coding practice to enure that I was able to understand the code as oppose to simply copy and pasting code. Much of this can be found within [Additional Research](documentation/research.md).
+
+- Chris Coyier - [Simple and Nice Blockquote Styling](https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/)
+- Code Institute - [CI Full Template](https://github.com/Code-Institute-Org/ci-full-template)
+- Real Favicon Generator - [Favicon Generrator](https://realfavicongenerator.net/)
+- 
+
 
 ## Media Credits
 
