@@ -168,6 +168,7 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 7 | Post Title Links | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
 | 8 | Comment Code Inclusion | 🟢 | Mark Briscoe - SME Session | [630d636](https://github.com/TheRickyroy/pixel-to-page/commit/630d63681624cd2e2e5498e50523a58d3cbf9ee9) |
 | 9 | Bash Terminal Overwriting | 🟢 | Debugging | N/A |
+| 10 | Blog Link Active State | 🟢 | Debugging | [af42261](https://github.com/TheRickyroy/pixel-to-page/commit/af422619027383d8601d41706353e507879c520f) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -397,10 +398,41 @@ Whilst typing the commit message for Bug #8 the bash terminal would begin overty
 
 </details>
 
+<details><summary>Bug #10 - Blog Link Active State</summary>
+
+Commit [af42261](https://github.com/TheRickyroy/pixel-to-page/commit/)
+
+**Identification**
+
+Whilst adding base styling to **style.css** and adjusting for the Booststrap auto styles, I realised that the active link styling was not applying to the **Blog** link. 
+
+Active link styling applying to **Home**\
+![bug-10-1](images/bugs/bug-10-1.webp)
+
+Active link styling not applied to **Blog**\
+![bug-10-2](images/bugs/bug-10-2.webp)
+
+**Solution**
+
+After debug testing of styles for nav classes (due to prior experience struggling to override Bootstrap) I realised that the issue may be with the link and not the styling. At this point I noticed that the link wasn't being called at the head of the page and quickly resolved the issue with the addition of the required code.\
+
+Code add
+``` Python
+{% url 'blog' as blog_url %}
+```
+
+Active link styling applying to **Blog**\
+![bug-10-3](images/bugs/bug-10-3.webp)
+
+
 </details>
 
 <details><summary>Bug #</summary>
 
+Commit - []()
+
 </details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
+
+
