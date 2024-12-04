@@ -30,8 +30,10 @@ def category_view(request, category_slug):
     context = {
         'category': category,
         'posts': posts,
+        'categories': Category.objects.all(),
     }
-    return render(request, 'blog/category.html', {'category': category, 'posts': posts})
+    # return render(request, 'blog/category.html', {'category': category, 'posts': posts})
+    return render(request, 'blog/category.html', context)
 
 def post_detail(request, category_slug, post_slug):
     """
