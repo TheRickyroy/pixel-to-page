@@ -1,5 +1,7 @@
-/* Border Debugging */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Border Debugging */
 /* * {
   outline: 1px solid red;
 } */
@@ -10,7 +12,8 @@
   --color-background: hsl(229, 41%, 5%);
   --color-background-muted: hsl(229, 41%, 10%);
   --color-heading: hsl(186, 91%, 87%);
-  --color-accent: hsl(251, 100%, 84%);  
+  --color-accent: hsl(251, 100%, 84%);
+  --color-accent-muted: hsl(251, 100%, 79%);
 }
 
 /* Base Styles */
@@ -19,10 +22,12 @@ body {
   padding: 0;
   color: var(--color-text);
   background-color: var(--color-background);
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
+  font-family: "Righteous", sans-serif;
 }
 
 a {
@@ -31,7 +36,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-muted);
   text-decoration: underline;
 }
 
@@ -46,15 +51,23 @@ main {
 }
 
 .navbar-brand {
-  color: var(--color-heading);
+  color: var(--color-accent);
+  font-family: "Righteous", sans-serif;
+  font-size: 2em;
 }
 
 .navbar-brand:hover{
-  color: var(--color-accent);
+  color: var(--color-accent-muted);
+  text-decoration: none;
+
 }
 
 .navbar .nav-link {
   color: var(--color-accent);
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-accent-muted);
 }
 
 .nav-item.active {
