@@ -170,6 +170,7 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 9 | Bash Terminal Overwriting | 🟢 | Debugging | N/A |
 | 10 | Blog Link Active State | 🟢 | Debugging | [af42261](https://github.com/TheRickyroy/pixel-to-page/commit/af422619027383d8601d41706353e507879c520f) |
 | 11 | Deployed CSS Styling | 🟢 | Roo MacArthur - Slack Coding Coach | [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e) & [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903) |
+| 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [Commit](Link) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -485,6 +486,34 @@ Provided commands to run to ensure the latest version of static files are being 
 
 `python manage.py collectstatic --clear`\
 `python manage.py collectstatic`
+
+</details>
+
+<details><summary>Bug #12 - Footer Position</summary>
+
+Commit - []()
+
+**Identification**
+
+Whilst appliying styling the footer position was incorrect on the **About** page, and thus across any page without content beyond the view height. 
+
+Footer Incorrect
+![bug-12-1](images/bugs/bug-12-1.webp)
+
+Footer Correct
+![bug-12-2](images/bugs/bug-12-2.webp)
+
+Though I have previously solved this on other projects, I sought out additional solutions in hope of learning a more effective method.\
+Following the steps provided by Rodu - [How to Make Footer Stay at Bottom of Page with Bootstrap](https://radu.link/make-footer-stay-bottom-page-bootstrap/) I was able to implement a shorter and cleaner code solution. 
+
+Body Classes
+`<body class="d-flex flex-column min-vh-100 main-bg">`
+
+Footer Class
+`<footer class="mt-auto">`
+
+Debug process for this was started on **docs** branch after performing merge main following Bug #11 pull request.
+To avoid conflicts I continued the debug and application of styling whilst on this same branch. 
 
 </details>
 
