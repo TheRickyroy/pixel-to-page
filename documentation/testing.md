@@ -169,6 +169,7 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 8 | Comment Code Inclusion | 🟢 | Mark Briscoe - SME Session | [630d636](https://github.com/TheRickyroy/pixel-to-page/commit/630d63681624cd2e2e5498e50523a58d3cbf9ee9) |
 | 9 | Bash Terminal Overwriting | 🟢 | Debugging | N/A |
 | 10 | Blog Link Active State | 🟢 | Debugging | [af42261](https://github.com/TheRickyroy/pixel-to-page/commit/af422619027383d8601d41706353e507879c520f) |
+| 11 | Deployed CSS Styling | 🟢 | Roo MacArthur - Slack Coding Coach | [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e) & [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -247,7 +248,7 @@ Discussion during guided session highlighted **runtime.txt** requirement absent 
 
 Upon creation of this file I attempted a `git add .` `git commit` and `git push` at which point I received an error in the terminal.
 
-**Resolution Steps**
+**Resolution**
 
 `git pull main`
 ```
@@ -391,7 +392,7 @@ Whilst typing the commit message for Bug #8 the bash terminal would begin overty
 
 ![bug 9](images/bugs/bug-9.webp)
 
-**Resolution**
+**Solution**
 
 - First Attempt - Retyping the command - produced the same result.
 - Second Attempt - Starting a new bash terminal and retyping the command. - Resolved issue.
@@ -424,6 +425,66 @@ Code add
 Active link styling applying to **Blog**\
 ![bug-10-3](images/bugs/bug-10-3.webp)
 
+
+</details>
+
+<details><summary>Bug #11 - Deployed CSS Styling</summary>
+
+Commit - [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e)
+Commit - [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903)
+
+**Identification**
+
+Merged changes from **style** branch into **main** performed pull request and deployed to Heroku. 
+Upon deployment the CSS styling was not being applied although it was present within the IDE workspace. 
+
+CSS Styling - IDE Workspace
+![bug-11-1](images/bugs/bug-11-1.webp)
+
+No CSS Styling - Deployed Heroku Project
+![bug-11-2](images/bugs/bug-11-2.webp)
+
+**Initial debugging steps taken:**
+
+- Ensuring DEBUG was set to false (it was)
+- Redeploying the project to Heroku
+- Checking Heroku config files
+- Testing across various devices and broswers
+- Testing as registered and unregistered users
+- Reaching out to CI Coding Coaches in Slack channel
+
+**Solution steps with Roo MacArthur:**
+
+- Confirmed Heoku status as above
+- Redeployed & observed build logs
+- Opened redeployed app
+  - Dev Tools > Network > [X] Disable cache
+	- View Source > Inspect CSS 
+    - Confirmed it was using a previous version
+  - Also checked app after hard refresh and within incognito window
+
+- Staged current branch changes for commit & push (my working local branch **style**)
+- Performed collect static on local **main**
+- Confirmed that **static > style.css** was not being collected into **staticfiles > style.css**
+- Created **base.css** to test whether it would be collected
+- Confirmed this file was collected
+- Renamed **style.css > style1.css** 
+- Created new **style.css** and copied across code
+- Collected static files
+- Confirmed new **style.css** was collected / updated
+  -  At this point the renames **style1.css** was also collected
+- Resolved divergent branches caused during debugging process
+- Push out to remote
+- Redeploy on Heroku
+- Confirmed deployment had updated styling applied
+
+Discussion regarding the cache functionality and process as a developer.\
+Roo confirmed with chatGPT that the Gitpod IDE workspace was maintaining a cached version of static files. 
+
+Provided commands to run to ensure the latest version of static files are being populated within the workspace.
+
+`python manage.py collectstatic --clear`\
+`python manage.py collectstatic`
 
 </details>
 
