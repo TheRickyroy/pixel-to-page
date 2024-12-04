@@ -169,8 +169,9 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 8 | Comment Code Inclusion | 🟢 | Mark Briscoe - SME Session | [630d636](https://github.com/TheRickyroy/pixel-to-page/commit/630d63681624cd2e2e5498e50523a58d3cbf9ee9) |
 | 9 | Bash Terminal Overwriting | 🟢 | Debugging | N/A |
 | 10 | Blog Link Active State | 🟢 | Debugging | [af42261](https://github.com/TheRickyroy/pixel-to-page/commit/af422619027383d8601d41706353e507879c520f) |
-| 11 | Deployed CSS Styling | 🟢 | Roo MacArthur - Slack Coding Coach | [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e) & [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903) |
-| 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [Commit](Link) |
+| 11 | Deployed CSS Styling | 🟢 | Roo MacArthur - Slack Coding Coach Channel | [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e) & [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903) |
+| 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f) |
+| 13 | Blog & Category Slugs  | 🟢 | Debugging & Roo MacArthur - Slack Coding Coach Channel | [Commit](Link) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -491,7 +492,7 @@ Provided commands to run to ensure the latest version of static files are being 
 
 <details><summary>Bug #12 - Footer Position</summary>
 
-Commit - []()
+Commit - [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f)
 
 **Identification**
 
@@ -520,6 +521,181 @@ To avoid conflicts I continued the debug and application of styling whilst on th
 <details><summary>Bug #</summary>
 
 Commit - []()
+
+**Identification**
+
+After implementing categories with default image assignment and attempting to setup the relevant slugs for filtering and category pages I received the following error when linking to **Blog**
+
+NoReverseMatch
+![bug-13-1](images/bugs/bug-13-1.webp)
+
+<details><summary>Error Code</summary>
+
+```
+Environment:
+
+
+Request Method: GET
+Request URL: http://8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net/blog/
+
+Django Version: 4.2.16
+Python Version: 3.12.2
+Installed Applications:
+['django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'cloudinary_storage',
+ 'cloudinary',
+ 'django.contrib.sites',
+ 'allauth',
+ 'allauth.account',
+ 'allauth.socialaccount',
+ 'crispy_forms',
+ 'crispy_bootstrap5',
+ 'django_summernote',
+ 'about',
+ 'blog',
+ 'home']
+Installed Middleware:
+['django.middleware.security.SecurityMiddleware',
+ 'whitenoise.middleware.WhiteNoiseMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'allauth.account.middleware.AccountMiddleware']
+
+
+Template error:
+In template /workspace/pixel-to-page/blog/templates/blog/blog.html, error at line 26
+   Reverse for 'post_detail' with arguments '('algorithm-of-productivity',)' not found. 1 pattern(s) tried: ['blog/(?P<category_slug>[-a-zA-Z0-9_]+)/(?P<post_slug>[-a-zA-Z0-9_]+)/\\Z']
+   16 :                         <div class="card-body d-flex flex-column justify-content-between">
+   17 :                             <div class="image-container">
+   18 :                                 {% if "placeholder" in post.featured_image.url %}
+   19 :                                 <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}" 
+   20 :                                     alt="pixel to page blog post default image placeholder">
+   21 :                                 {% else %}
+   22 :                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"
+   23 :                                     alt="{{ post.title }}">
+   24 :                                     {% endif %}
+   25 :                             </div>
+   26 :                             <a href=" {% url 'post_detail' post.slug %} " class="post-link">
+   27 :                                 <h2 class="card-title">{{ post.title }}</h2>
+   28 :                             </a>
+   29 :                             <hr>
+   30 :                             <p class="card-text">
+   31 :                                 {{ post.excerpt | safe }}
+   32 :                             </p>
+   33 :                             <hr>
+   34 :                             <div class="row">
+   35 :                                 <div class="col-6">
+   36 :                                   <p class="post-subtitle">Author: {{ post.author }}</p>
+
+
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Exception Type: NoReverseMatch at /blog/
+Exception Value: Reverse for 'post_detail' with arguments '('algorithm-of-productivity',)' not found. 1 pattern(s) tried: ['blog/(?P<category_slug>[-a-zA-Z0-9_]+)/(?P<post_slug>[-a-zA-Z0-9_]+)/\\Z']
+
+```
+
+</details>
+
+**Initial debugging steps taken:**
+
+- Checked **admin.py**, **models.py** and **views.py** reflected the addition of slug to category model.
+- Attempted debugging steps and searching previous solutions within Slack.
+- Used Perplexity.AI to help provide non-code based diagnose and guidance for potential debugging steps.
+- Reached out within Slack Coding Coach
+
+**Solution steps with Roo MacArthur:**
+
+- Roo provdied updated slug that hadn't been implemented within **base.html**\
+`{% url 'post_detail' post.category.slug post.slug %}`
+
+- I realised at this point that I hadn't actually run the migration since the addition of slug to category and that this would cause an issue and suggested zeroing out the data. 
+
+Slack Conversation
+![bug-13-2](images/bugs/bug-13-2.webp)
+
+- At this point Roo and I joined a VC call to discuss the solution process. 
+- Attempted to run migration knowing it would fail, more as a debug step for learning.
+- Migration was unable to complete due to the lack of default for previously assigned object data. 
+- This took us into a discussion regarding improved working practices, using the **db.sqlite3** as part of the development workspace and maintaining the **postgreSQL** for production only. 
+- As a result of this debugging process, and to further my learning of improved practices I;
+  - Deleted all current migrations as part of the **blog** app
+  - Performed `python manage.py migrate blog zero` (although redundant due to next step, this was more for practice)
+  - Setup a fresh **postgreSQL** database, linked in **env.py** and Heroku
+  - Began working on the **db.sqlite3** within development workspace
+
 
 </details>
 

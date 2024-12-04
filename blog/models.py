@@ -8,7 +8,7 @@ STATUS = (
 )
 
 def get_default_category():
-    category, _ = Category.objects.get_or_create(category="Bullet_Journal")
+    category, _ = Category.objects.get_or_create(category="Bullet Journal")
     return category.id
 
 class Category(models.Model):
@@ -16,6 +16,7 @@ class Category(models.Model):
     Stores the category related to :model: 'blog.Post'
     """
     category = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
     default_image = CloudinaryField('image', default='placeholder')
     
     class Meta:
@@ -24,6 +25,10 @@ class Category(models.Model):
     def __str__(self):
         return self.category
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.category)
+        super().save(*args, **kwargs)
 
 class Post(models.Model):
     """
@@ -55,6 +60,8 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         if not self.featured_image:
             self.featured_image = self.category.default_image
+        if not self.slug:
+            self.slug = f"{self.category.slug}/{slugify(self.title)}"
         super().save(*args, **kwargs)
 
 

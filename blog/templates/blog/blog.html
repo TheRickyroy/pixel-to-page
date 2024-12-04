@@ -23,7 +23,7 @@
                                     alt="{{ post.title }}">
                                     {% endif %}
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <a href="{% url 'post_detail' post.category.slug post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
                             <hr>
