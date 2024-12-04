@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.urls import path
+from . import views
 from .models import Post, Comment, Category
 from .forms import CommentForm
 
@@ -21,6 +23,15 @@ class PostList(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
         return context
+
+def category_view(request, category_slug):
+    category = get_object_or_404(Category, slug=category_slug)
+    posts = Post.objects.filter(category=category)
+    context = {
+        'category': category,
+        'posts': posts,
+    }
+    return render(request, 'blog/category.html', {'category': category, 'posts': posts})
 
 def post_detail(request, category_slug, post_slug):
     """
