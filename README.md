@@ -302,40 +302,63 @@ After creating the ERD I exported a PNG with transparency which was then modifie
 
 ## Colors
 
-Description and reasoning for the colors selected as part of the _project_ as well as any additional details.
-
-Repeat for additional palettes that may be included as part of light / dark mode or alternate themes.
-
 ### Color Palette
 
 Through much deliberation, trial and error and sourcing of inspirational images and palettes, I finally chose this palette for a number of reasons. 
 
-- Personal preference and inspiration. T
-- The softer almost pastel palette is a very common theme within the Bullet Journal community.
-- The colors are representitive of the upcoming winter season with the intention of changing palette regularly in this way.
+**Dark Theme - Winter Palette**
 
-**Preference & Inspiration**
+| ID | Name | Type | CSS Variable | HSL | HEX |
+|:-:|:-|:-|:-|:-|:-|
+| 1 | Seasalt | - | `--color-text` | hsl(0, 0%, 98%) | #FAFAFA |
+| 2 | Rich Black | - | `--color-background` | hsl(229, 41%, 5%) | #070912 |
+| 3 | Rich Black | - | `--color-background-muted` | hsl(229, 41%, 10%) | #0F1324 |
+| 4 | Celeste | - | `--color-heading` | hsl(186, 91%, 87%) | #BFF6FC |
+| 5 | Mauve | - | `--color-accent` | hsl(251, 100%, 84%) | #BDAEFF |
 
+<br>
 
-**Community Convention**\
-During my research it became apparent that the convention of using softer pastel colour palettes was very common, especially among _Bullet Journal_ blogs. Although the specific approach for the websites is aimed toward programmers, and thus this convention towards softer color schemes may not be necessary, I opted to pick one that struck a balance with the pastel and deeper colors.
+<details><summary>Initial Unused Palette</summary>
 
-**Design Flexibility**
-
-
-**Accessibility**
-
-![Winter Palette](<documentation/images/Winter Palette.webp>)
+My initial color palette before adding styling and opting to refine.\
+Variables had not yet been assigned and the inclusion of lch was present whilst researching color spaces.
 
 | ID | Name | Type | CSS Variable | LCH | HSL | HEX |
 |:-:|:-|:-|:-|:-|:-|:-|
-| 1 | White | - | `--color-white` | lch(100% 0 0) | hsl(0, 0%, 100%) | #FFFFFF |
+| 1 | White | - | `--color-` | lch(100% 0 0) | hsl(0, 0%, 100%) | #FFFFFF |
 | 2 | Seasalt | - | `--color-` | lch(98.27% 0 0) | hsl(0, 0%, 98%) | #FAFAFA |
 | 3 | Celeste | - | `--color-` | lch(93.26% 19.23 207.57) | hsl(186, 91%, 87%) | #BFF6FC |
 | 4 | Mauve | - | `--color-` | lch(74.65% 42.62 295.44) |hsl(251, 100%, 84%) | #BDAEFF |
 | 5 | Prussian Blue | - | `--color-` | lch(16.05% 15.32 257.06) | hsl(208, 49%, 16%) | #152A3D |
 | 6 | Rich Black | - | `--color-` | lch(6.14% 12.54 280.34) |hsl(229, 41%, 10%) | #0F1324 |
-| 7 | Black | - | `--color-black` | lch(0% 0 0) | hsl(0, 0%, 0%) | #000000 |
+| 7 | Black | - | `--color-` | lch(0% 0 0) | hsl(0, 0%, 0%) | #000000 |
+
+![Initial Color Contrast](<documentation/images/Initial Contrast GIF.gif>)
+
+| | White | Seasalt | Celeste | Mauve | Prussian<br>Blue | Rich<br>Black | Black |
+|-:|:-|:-|:-|:-|:-|:-|:-|
+| **White** | - | 🔴 [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=FAFAFA) | 🔴 [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BFF6FC) | 🔴 [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BDAEFF) | 🟢 [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=152A3D) | 🟢 [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=0F1324) | 🟢 [21:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=000000) |
+| **Seasalt** | 🔴 [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=FFFFFF) | - | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BFF6FC) | 🔴 [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BDAEFF) | 🟢 [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=152A3D) | 🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=0F1324) | 🟢 [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=000000)  |
+| **Celeste** | 🔴 [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FFFFFF) | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FAFAFA) | - | 🔴 [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=BDAEFF) | 🟢 [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=152A3D) | 🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324) | 🟢 [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=000000)  |
+| **Mauve** | 🔴 [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FFFFFF) | 🔴 [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FAFAFA) | 🔴 [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=BFF6FC) | - | 🟢 [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=152A3D) | 🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324) |🟢 [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=000000) |
+| **Prussian Blue** | 🟢 [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FFFFFF) | 🟢 [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FAFAFA) | 🟢 [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BFF6FC) | 🟢 [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BDAEFF) | - | 🔴 [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=0F1324) | 🔴 [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=000000) |
+| **Rich Black** | 🟢 [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | 🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FAFAFA) | 🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | 🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | 🔴 [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
+| **Black** | 🟢 [21:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FFFFFF) | 🟢 [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FAFAFA) | 🟢 [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BFF6FC) | 🟢 [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BDAEFF)  | 🔴 [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=152A3D) | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=0F1324) | - |
+
+</details><br>
+
+**Preference & Inspiration**\
+As _Pixel To Page_ is intended to encourage programmers away from the screen to engage in creative tactile note taking, I drew inspiration from images I find to be beneficial for myself when seeking those creative motivations. As many of these images were landscape photography including mountains, lakes and other environments, I opted to also include the upcoming winter season as part of the initial theme for this project, with the intention of updating as the seasons change.
+
+I used these images to extract a plethora of color palettes using Adobe's [Color Theme From Image](https://color.adobe.com/create/image) functionality and began to mix and match them according to my own preferences and contrast requirements.
+
+**Community Convention**\
+As mentioned I opted to use the seasons as part of the selection process for the chosen palette, something that is very common among the bullet journal community. Continuing this approach and taking inspiration from the wider community I also chose to adopt a common convention of using more muted, pastel like tones which is popular, especially among _Bullet Journal_ blogs. Although the specific approach for the websites is aimed toward programmers, I also opted to make the primary theme a dark theme, with the intention to implement an alternate light theme that would be more conventional to the bullet journal community. 
+
+**Accessibility**
+
+
+
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -349,6 +372,8 @@ This brought me to the final decision of implementing HSL as my chosen color spa
 
 **Design Flexibility**
 
+
+
 **Code Maintainability**
 
 **Learning Opportunity**
@@ -358,38 +383,29 @@ This brought me to the final decision of implementing HSL as my chosen color spa
 
 ### Contrast
 
-Provide details about the process used to ensure contrast compliance.\
-Include reference to validation testing and screenshots where appropriate. 
+![Contrast GIF](<documentation/images/Placeholder.png>)
 
-Potential tools for contrast compliance checks.
 - [Colour Contrast Checker](https://colourcontrast.cc/) also has [Chrome Extension](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)
-
-![Contrast GIF](<documentation/images/Contrast GIF.gif>)
 
 ### Color Contrast Score Table
 
 To corroborate the results from [Colour Contrast Checker](https://colourcontrast.cc/), each combination has also be checked using [Adobe](https://color.adobe.com/create/color-contrast-analyzer) and [WebAIM](https://webaim.org/resources/contrastchecker/).
 
-The table below provides the contrast ratio score for each color combination and a link to the [WebAIM](https://webaim.org/resources/contrastchecker/) results page. I have also opted to include a key to quickly identify the pass rating of each color combination, which in this case due to the focus on accessiblity, has resulted in a full pass state for the intended combinations and no patial passes. 
+The table provides the contrast ratio score for each color combination used and a link to the [WebAIM](https://webaim.org/resources/contrastchecker/) results page is also provided. I have also opted to include a key to quickly identify the pass rating of each color combination, which in this case due to the focus on accessiblity, has resulted in a full pass state for the intended combinations and no patial passes. 
 
 <details><summary>WCAG Color Contrast Score Key</summary>
 
-| | Pass All | | Pass ||:-:| Partial | Fail All |
-|-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| | > 7:1 | |:-:|:-:|:-:| > 4.5:1 | < 3:1 |
-| **Contrast Check** | 🟢 | |:-:|:-:|:-:|:-:| 🔴 |
+| | Pass All | Partial | Partial |Fail All |
+|-:|:-:|:-:|:-:|:-:|
+| **Contrast Score** | > 7:1 | > 4.5:1 | > 3:1 | < 3:1 |
+| **Color Key** | 🟢 | 🟡 | 🟠 | 🔴 |
 
 </details>
 
-| | White | Seasalt | Celeste | Mauve | Prussian<br>Blue | Rich<br>Black | Black |
-|-:|:-|:-|:-|:-|:-|:-|:-|
-| **White** | - | 🔴 [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=FAFAFA) | 🔴 [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BFF6FC) | 🔴 [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=BDAEFF) | 🟢 [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=152A3D) | 🟢 [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=0F1324) | 🟢 [21:1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=000000) |
-| **Seasalt** | 🔴 [1.04:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=FFFFFF) | - | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BFF6FC) | 🔴 [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=BDAEFF) | 🟢 [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=152A3D) | 🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=0F1324) | 🟢 [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=000000)  |
-| **Celeste** | 🔴 [1.17:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FFFFFF) | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=FAFAFA) | - | 🔴 [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=BDAEFF) | 🟢 [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=152A3D) | 🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324) | 🟢 [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=000000)  |
-| **Mauve** | 🔴 [1.96:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FFFFFF) | 🔴 [1.88:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=FAFAFA) | 🔴 [1.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=BFF6FC) | - | 🟢 [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=152A3D) | 🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324) |🟢 [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=000000) |
-| **Prussian Blue** | 🟢 [14.68:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FFFFFF) | 🟢 [14.06:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=FAFAFA) | 🟢 [12.44:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BFF6FC) | 🟢 [7.45:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=BDAEFF) | - | 🔴 [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=0F1324) | 🔴 [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=152A3D&bcolor=000000) |
-| **Rich Black** | 🟢 [18.43:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FFFFFF) | 🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=FAFAFA) | 🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BFF6FC) | 🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=BDAEFF) | 🔴 [1.25:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=152A3D) | - | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=0F1324&bcolor=000000) |
-| **Black** | 🟢 [21:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FFFFFF) | 🟢 [20.11:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=FAFAFA) | 🟢 [17.8:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BFF6FC) | 🟢 [10.66:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=BDAEFF)  | 🔴 [1.43:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=152A3D) | 🔴 [1.13:1](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=0F1324) | - |
+| | Text | Highlight | Accent |
+|-:|:-|:-|:-|
+| **Background** |🟢 [19.03:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=070912)|🟢 [16.84:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=070912)|🟢 [10.08:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=070912)|
+| **Background Muted** |🟢 [17.66:1](https://webaim.org/resources/contrastchecker/?fcolor=FAFAFA&bcolor=0F1324)|🟢 [15.63:1](https://webaim.org/resources/contrastchecker/?fcolor=BFF6FC&bcolor=0F1324)|🟢 [9.36:1](https://webaim.org/resources/contrastchecker/?fcolor=BDAEFF&bcolor=0F1324)|
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -967,38 +983,49 @@ I have recorded these bugs, their solution status as well as documenting additio
 
 ## Credits
 
+Generic source accreditation with specific source credits included in an appendix document [Credits](documentation/credits.md). 
+
 ### Code
 
 Provide reference to all sources used for coding the project, including sources used as part of debugging. 
 
-**General Resources / Learning**
-
 - [Code Institute - LMS](https://codeinstitute.net/)
 - [W3Schools](https://www.w3schools.com/)
 
-**Specific Code Used Within Project**
-
-- 
-
 ### Media
 
-Generic source accreditation with specific [Media Credits](documentation/credits.md) included in an appendix document. 
-
 - [Freepik](http://www.freepik.com/) - Following [Attributation Policy](https://support.freepik.com/s/article/Attribution-How-when-and-where?language=en_US)
+
+- General Pedro Art - Freelance Artist Used For Numerous Comission Pieces
+  - [Twitch](https://m.twitch.tv/generalpedroart/home)
+  - [Ko-Fi](https://ko-fi.com/generalpedro/commissions)
+  - [Bluesky](https://bsky.app/profile/generalpedro.bsky.social)
+
 - [Unsplash](https://unsplash.com) - Following [Attribution Policy](https://unsplash.com/license)
-- [Source](#) - Media Sources Requiring General Credit
 
 ### Appendices
 
-Additional documentation included as part of the project.\
-Listed alphabetically. 
+Additional documentation included as part of the project.
 
-- [Additional Research](documentation/research.md)
-- [Media Credits](documentation/credits.md)
-- [Testing & Validation](documentation/testing.md) 
+- [Additional Research](documentation/research.md) - Personal supplemental learning & research
+- [Learning Objectives](documentation/learning-objectives.md) - Provided by Code Institute
+- [Media Credits](documentation/credits.md) - Specific source credit for all media within the project
+- [Testing & Validation](documentation/testing.md) - Documented testing, validation & bugs
 
 ### Acknowledgements
 
-Space to thank those that helped with the projects both directly and indirectly. 
+Julia, for all her support and being kind enough to proof read and pickup those typos that slip through the net. 
+
+All Code Institute staff for providing ample learning opportunities allowing for the completition of this project, as well as my first steps into a career as a software developer. A particular thank you for the support, inspiration, guidance and the occasional nudge in the right direction for debugging.
+- [Amy Richardson](https://github.com/amylour) - Learning Facilitator
+- [Mark Briscoe](https://github.com/mbriscoe) - Subject Matter Expert
+- [John Rearden](https://github.com/johnrearden) - Coding Coach
+- [Robyn de Brún](https://www.linkedin.com/in/robyn-de-brun/) - Careers Coaching Executive
+
+My fellow bootcamp students for their support
+
+Most of all though a huge thank you to Rhiannon, for everything throughout the whole course and beyond.\
+For putting up with my long days and late nights, for listening to my rubber ducking even though it sounded like complete jibberish and for making sure I actually took the odd break.\
+Without her this would not have been possible.
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p><hr>
