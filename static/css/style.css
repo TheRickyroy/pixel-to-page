@@ -28,6 +28,14 @@ body {
   line-height: 1.5em;
 }
 
+main {
+  margin: 50px 0 150px;
+}
+
+section {
+  padding: 25px 0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   font-family: "Righteous", serif;
@@ -41,10 +49,6 @@ a {
 a:hover {
   color: var(--color-accent-muted);
   text-decoration: underline;
-}
-
-main {
-  margin: 50px 0 150px;
 }
 
 /* Navbar */
@@ -71,6 +75,22 @@ main {
 
 .navbar .nav-link.active {
   color: var(--color-heading);
+}
+
+/* Featured Carousel*/
+
+.featured-link {
+  opacity: .9;
+}
+
+.featured-link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	width: auto;
 }
 
 /* Scroll Progress */
