@@ -2,6 +2,41 @@
 {% block content %}
 {% load static %}
 
+
+<!-- index.html content starts here -->
+<div class="container">
+    <div class="row">
+        <h1>Featured Posts</h1>
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in featured_posts %}
+                <div class="col-md-4">
+                    <div class="card mb-4 h-100">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div class="image-container">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
+                                    alt="pixel to page blog post default image placeholder">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                {% endif %}
+                                <a href="{% url 'post_detail' post.category.slug post.slug %}" class="category-link">
+                                    <span>
+                                        <p class="overlay-text">{{ post.title }}</p>
+                                    </span></a>
+                                <p class="post-subtitle">Posted: {{ post.created_on }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Placeholder -->
 
 <div class="container">
@@ -31,14 +66,14 @@
 
     <blockquote cite="http://stackoverflow.com">
         <p>Type HTML in the textarea above, <q>and it will magically
-        appear</q> in the frame below.</p>
+                appear</q> in the frame below.</p>
         <br><br>
         <cite><a href="http://stackoverflow.com">reference url</a></cite>
-    </blockquote>  
+    </blockquote>
 
     <blockquote cite="http://stackoverflow.com">
         <p>Type HTML in the textarea above, <q>and it will magically
-        appear</q> in the frame below.</p>
+                appear</q> in the frame below.</p>
         <br><br>
         <cite><a href="http://stackoverflow.com">reference url</a></cite>
     </blockquote>
@@ -46,7 +81,7 @@
 
     <blockquote cite="http://stackoverflow.com">
         <p>Type HTML in the textarea above, <q>and it will magically
-        appear</q> in the frame below.</p>
+                appear</q> in the frame below.</p>
         <br><br>
         <cite><a href="http://stackoverflow.com">reference url</a></cite>
     </blockquote>
@@ -54,11 +89,12 @@
 
     <div>
         <blockquote cite="https://www.huxley.net/bnw/four.html">
-        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
-        
-        <p>—Aldous Huxley, Brave New World</p>
+            <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re
+                pierced.</p>
+
+            <p>—Aldous Huxley, Brave New World</p>
         </blockquote>
-    </div>  
+    </div>
 
     <h4>H4 Sub-Heading</h4>
     <p>
