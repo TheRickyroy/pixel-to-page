@@ -10,7 +10,7 @@ from .forms import CommentForm
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/blog.html"
-    paginate_by = 3
+    paginate_by = 6
 
     def get_queryset(self):
         queryset = Post.objects.filter(status=1)
@@ -30,8 +30,19 @@ def category_view(request, category_slug):
     context = {
         'category': category,
         'posts': posts,
+        'categories': Category.objects.all(),
     }
-    return render(request, 'blog/category.html', {'category': category, 'posts': posts})
+    # return render(request, 'blog/category.html', {'category': category, 'posts': posts})
+    return render(request, 'blog/category.html', context)
+
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(category=category, status=1).order_by('-created_on')
+    context = {
+        'category': category,
+        'posts': posts
+    }
+    return render(request, 'category_detail.html', context)
 
 def post_detail(request, category_slug, post_slug):
     """
