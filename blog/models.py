@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.db.models import Q
 
 STATUS = (
     (0, "Draft"), 
@@ -65,6 +66,21 @@ class Post(models.Model):
         if not self.slug:
             self.slug = f"{self.category.slug}/{slugify(self.title)}"
         super().save(*args, **kwargs)
+
+    def get_next_post(self):
+        return Post.objects.filter(
+            Q(created_on__gt=self.created_on) | 
+            (Q(created_on=self.created_on) & Q(id__gt=self.id)),
+            status=1
+        ).order_by('created_on', 'id').first()
+
+    def get_previous_post(self):
+        return Post.objects.filter(
+            Q(created_on__lt=self.created_on) | 
+            (Q(created_on=self.created_on) & Q(id__lt=self.id)),
+            status=1
+        ).order_by('-created_on', '-id').first()
+
 
 class Comment(models.Model):
     """

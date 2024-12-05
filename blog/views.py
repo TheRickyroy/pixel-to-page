@@ -61,6 +61,9 @@ def post_detail(request, category_slug, post_slug):
     post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    next_post = post.get_next_post()
+    previous_post = post.get_previous_post()
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -82,7 +85,9 @@ def post_detail(request, category_slug, post_slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form
+            "comment_form": comment_form,
+            "next_post": next_post,
+            "previous_post": previous_post
         },
     )
 
