@@ -13,11 +13,11 @@
     <div class="row g-0">
       <div class="image-container">
         {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}" 
-            alt="pixel to page blog post default image placeholder">
+        <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
+        alt="{{post.category.default_image_alt }}">
         {% else %}
         <img class="card-img-top" src=" {{ post.featured_image.url }}"
-            alt="{{ post.title }}">
+        alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
             {% endif %}
       </div>
       <div class="col-md-12 masthead-text">
