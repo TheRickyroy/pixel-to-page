@@ -22,6 +22,8 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"
                                     alt="{{ post.title }}">
                                     {% endif %}
+                                    <a href="{% url 'category_detail' slug=post.category.slug %}" class="category-link">
+                                        <span><p class="overlay-text">Category: {{ post.category.category }}</p></span></a>
                             </div>
                             <a href="{% url 'post_detail' post.category.slug post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>

@@ -35,6 +35,15 @@ def category_view(request, category_slug):
     # return render(request, 'blog/category.html', {'category': category, 'posts': posts})
     return render(request, 'blog/category.html', context)
 
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(category=category, status=1).order_by('-created_on')
+    context = {
+        'category': category,
+        'posts': posts
+    }
+    return render(request, 'category_detail.html', context)
+
 def post_detail(request, category_slug, post_slug):
     """
     Display an individual :model:`blog.Post`.
