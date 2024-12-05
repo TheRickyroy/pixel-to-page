@@ -15,11 +15,11 @@
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}" 
-                                    alt="pixel to page blog post default image placeholder">
+                                <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
+                                    alt="{{post.category.default_image_alt }}">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                    alt="{{ post.title }}">
+                                <img class="card-img-top" src="{{ post.featured_image.url }}"
+                                    alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
                                     {% endif %}
                             </div>
                                 <h2 class="card-title"><a href="{% url 'post_detail' post.category.slug post.slug %}">{{ post.title }}</h2>

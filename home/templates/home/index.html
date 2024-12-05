@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load cloudinary %}
 {% block content %}
 {% load static %}
 
@@ -9,29 +10,14 @@
 
 <!-- Hero Section -->
 <section class="section" id="section-hero">
-    {% if user.is_authenticated %}
-    <div class="text-center" id="cta-registered">
-        <img class="section-img d-block mx-auto" src="" alt="Image Alt Text">
-        <h2 class="heading display-5 fw-bold py-3">Hero Heading</h2>
+    <div class="text-center">
+        <img class="section-img d-block mx-auto" src="{{ hero.hero_image.url }}" alt="{{ hero.hero_image_alt }}">
+        <h2 class="heading display-5 fw-bold py-3">{{ hero.hero_heading }}</h2>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Hero Text</p>
-            <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> -->
-            <a href="#" class="btn btn-lg" role="button" aria-label="Call To Action Button">Hero Button</a>
-            <!-- </div> -->
+            <p class="lead mb-4">{{ hero.hero_text|safe }}</p>
+            <a href="{{ hero.hero_button_url }}" class="btn btn-lg" role="button" aria-label="{{ hero.hero_button_label }}">{{ hero.hero_button_text }}</a>
         </div>
     </div>
-    {% else %}
-    <div class="text-center" id="cta-registered">
-        <img class="section-img d-block mx-auto" src="" alt="Image Alt Text">
-        <h2 class="heading display-5 fw-bold py-3">Hero Heading</h2>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Hero Text</p>
-            <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> -->
-            <a href="#" class="btn btn-lg" role="button" aria-label="Call To Action Button">Hero Button</a>
-            <!-- </div> -->
-        </div>
-    </div>
-    {% endif %}
 </section>
 
 <!-- Featured Carousel -->
@@ -43,9 +29,10 @@
                 <a href="{% url 'post_detail' post.category.slug post.slug %}" class="featured-link">
                     {% if "placeholder" in post.featured_image.url %}
                     <img src="{% static 'images/default-post.webp' %}" class="d-block w-100"
-                        alt="pixel to page blog post default image placeholder">
+                        alt="{{post.category.default_image_alt }}">
                     {% else %}
-                    <img src="{{ post.featured_image.url }}" class="d-block w-100" alt="{{ post.title }}">
+                    <img src="{{ post.featured_image.url }}" class="d-block w-100"
+                        alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
                     {% endif %}
                     <!-- <a href="{% url 'post_detail' post.category.slug post.slug %}" class="category-link"> -->
                     <p class="overlay-text">{{ post.title }}</p>
@@ -79,33 +66,33 @@
     </div>
 </section>
 
-<!-- Call To Action -->
-<section class="section" id="section-cta">
+
+<!-- Test Section -->
+<!-- <section class="section" id="section-test" style="background-image: url('{{ cta.cta_image.url }}');">
     <div class="container">
-        {% if user.is_authenticated %}
-        <div class="text-center" id="cta-registered">
-            <img class="section-img d-block mx-auto" src="" alt="Image Alt Text">
-            <h2 class="heading display-5 fw-bold py-3">Call To Action Heading</h2>
+        <div class="text-center">
+            <h2 class="heading display-5 fw-bold py-3">{{ cta.cta_heading }}</h2>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Call to action text</p>
-                <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> -->
-                <a href="#" class="btn btn-lg" role="button" aria-label="Call To Action Button">CTA Button</a>
-                <!-- </div> -->
-            </div>
-        </div>
-        {% else %}
-        <div class="text-center" id="cta-registered">
-            <img class="section-img d-block mx-auto" src="" alt="Image Alt Text">
-            <h2 class="heading display-5 fw-bold py-3">Call To Action Heading</h2>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Call to action text</p>
-                <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> -->
-                <a href="#" class="btn btn-lg" role="button" aria-label="Call To Action Button">CTA Button</a>
-                <!-- </div> -->
+                <p class="lead mb-4">{{ cta.cta_text|safe }}</p>
+                <a href="{{ cta.cta_button_url }}" class="btn btn-lg" role="button" aria-label="{{ cta.cta_button_label }}">{{ cta.cta_button_text }}</a>
             </div>
         </div>
     </div>
-    {% endif %}
+</section> -->
+
+
+<!-- Call To Action -->
+<section class="section" id="section-cta">
+    <div class="container">
+        <div class="text-center">
+            <img class="section-img d-block mx-auto" src="{{ cta.cta_image.url }}" alt="{{ cta.cta_image_alt }}">
+            <h2 class="heading display-5 fw-bold py-3">{{ cta.cta_heading }}</h2>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">{{ cta.cta_text|safe }}</p>
+                <a href="{{ cta.cta_button_url }}" class="btn btn-lg" role="button" aria-label="{{ cta.cta_button_label }}">{{ cta.cta_button_text }}</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Featured Posts -->

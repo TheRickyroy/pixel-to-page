@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.db.models import Q
 
 STATUS = (
     (0, "Draft"), 
@@ -18,6 +19,7 @@ class Category(models.Model):
     category = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     default_image = CloudinaryField('image', default='placeholder')
+    default_image_alt = models.TextField()
     
     class Meta:
         verbose_name_plural = "categories"
@@ -42,6 +44,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     featured_image = CloudinaryField('image', blank=True, null=True)
+    featured_image_alt = models.TextField(blank=True)
     category = models.ForeignKey(Category, 
         on_delete=models.PROTECT, related_name="blog_posts", default=get_default_category)
     content = models.TextField()
@@ -63,6 +66,20 @@ class Post(models.Model):
         if not self.slug:
             self.slug = f"{self.category.slug}/{slugify(self.title)}"
         super().save(*args, **kwargs)
+
+    def get_next_post(self):
+        return Post.objects.filter(
+            Q(created_on__gt=self.created_on) | 
+            (Q(created_on=self.created_on) & Q(id__gt=self.id)),
+            status=1
+        ).order_by('created_on', 'id').first()
+
+    def get_previous_post(self):
+        return Post.objects.filter(
+            Q(created_on__lt=self.created_on) | 
+            (Q(created_on=self.created_on) & Q(id__lt=self.id)),
+            status=1
+        ).order_by('-created_on', '-id').first()
 
 
 class Comment(models.Model):
