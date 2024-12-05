@@ -4,36 +4,33 @@
 {% load static %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <h1>All Blog Posts</h1>
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-12">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4 h-100">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="image-container">
+                <div class="col-12 col-lg-6 col-xl-4 mt-5">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="image-container mb-1">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}" 
                                     alt="pixel to page blog post default image placeholder">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                <img class="card-img-top" src="{{ post.featured_image.url }}"
                                     alt="{{ post.title }}">
                                     {% endif %}
                                     <a href="{% url 'category_detail' slug=post.category.slug %}" class="category-link">
                                         <span><p class="overlay-text">Category: {{ post.category.category }}</p></span></a>
                             </div>
                             <a href="{% url 'post_detail' post.category.slug post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                            </a>
+                                <h2 class="card-title">{{ post.title }}</h2></a>
                             <hr>
-                            <p class="card-text">
-                                {{ post.excerpt | safe }}
-                            </p>
+                            <p class="card-text flex-grow-1">{{ post.excerpt | safe }}</p>
                             <hr>
-                            <div class="row">
+                            <div class="row mt-auto">
                                 <div class="col-6">
                                   <p class="post-subtitle">Author: {{ post.author }}</p>
                                 </div>
@@ -48,8 +45,7 @@
             </div>
             <div class="row">
                 {% endif %}
-                {% endfor %}
-
+                {% endfor %}                
             </div>
         </div>
     </div>
