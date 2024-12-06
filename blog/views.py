@@ -2,15 +2,49 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from django.urls import path
+from . import views
+from .models import Post, Comment, Category
 from .forms import CommentForm
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/blog.html"
-    paginate_by = 3
+    paginate_by = 6
 
-def post_detail(request, slug):
+    def get_queryset(self):
+        queryset = Post.objects.filter(status=1)
+        category_slug = self.request.GET.get('category')
+        if category_slug:
+            queryset = queryset.filter(category__slug=category_slug)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
+def category_view(request, category_slug):
+    category = get_object_or_404(Category, slug=category_slug)
+    posts = Post.objects.filter(category=category)
+    context = {
+        'category': category,
+        'posts': posts,
+        'categories': Category.objects.all(),
+    }
+    # return render(request, 'blog/category.html', {'category': category, 'posts': posts})
+    return render(request, 'blog/category.html', context)
+
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(category=category, status=1).order_by('-created_on')
+    context = {
+        'category': category,
+        'posts': posts
+    }
+    return render(request, 'category_detail.html', context)
+
+def post_detail(request, category_slug, post_slug):
     """
     Display an individual :model:`blog.Post`.
 
@@ -24,9 +58,12 @@ def post_detail(request, slug):
     :template:`blog/post_detail.html`
     """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    next_post = post.get_next_post()
+    previous_post = post.get_previous_post()
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -48,18 +85,19 @@ def post_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form
+            "comment_form": comment_form,
+            "next_post": next_post,
+            "previous_post": previous_post
         },
     )
 
-def comment_edit(request, slug, comment_id):
+def comment_edit(request, category_slug, post_slug, comment_id):
     """
     view to edit comments
     """
     if request.method == "POST":
-
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -72,14 +110,14 @@ def comment_edit(request, slug, comment_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_detail', args=[category_slug, post_slug]))
 
-def comment_delete(request, slug, comment_id):
+def comment_delete(request, category_slug, post_slug, comment_id):
     """
     view to delete comment
     """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
@@ -88,4 +126,4 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_detail', args=[category_slug, post_slug]))

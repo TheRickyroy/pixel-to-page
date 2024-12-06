@@ -13,11 +13,11 @@
     <div class="row g-0">
       <div class="image-container">
         {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}" 
-            alt="pixel to page blog post default image placeholder">
+        <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
+        alt="{{post.category.default_image_alt }}">
         {% else %}
         <img class="card-img-top" src=" {{ post.featured_image.url }}"
-            alt="{{ post.title }}">
+        alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
             {% endif %}
       </div>
       <div class="col-md-12 masthead-text">
@@ -48,7 +48,24 @@
   </div>
 </div>
 
+<!-- After Post CTA -->
+<div class="container py-5">
+  <div class="row text-center">
+    <h3 class="pb-3">Enjoying the post and want to read more?</h3>
+    <div class="col-6 text-start">
+  {% if previous_post %}
+      <a href="{% url 'post_detail' previous_post.category.slug previous_post.slug %}" alt="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i> {{ previous_post.title }}</a>
+  {% endif %}
+    </div>
+    <div class="col-6 text-end">
+  {% if next_post %}
+      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" alt="{{ next_post.title }}">{{ next_post.title }} <i class="fa-solid fa-angles-right"></i></a>
+  {% endif %}
+    </div>
+</div>
+</div>
 <!-- Displaying Comments -->
+ <div class="container">
 <div class="row">
   <div class="col-md-8 card mb-4  mt-3 ">
     <h3>Comments:</h3>
@@ -119,7 +136,7 @@
     </div>
   </div>
 </div>
-
+ </div>
 {% endblock content %}
 
 {% block extras %}

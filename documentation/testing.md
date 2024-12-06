@@ -496,6 +496,7 @@ Provided commands to run to ensure the latest version of static files are being 
 <details><summary>Bug #12 - Footer Position</summary>
 
 Commit - [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f)
+Commit - [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f)
 
 **Identification**
 
