@@ -5,6 +5,25 @@
 
 <!-- index.html content starts here -->
 <div class="container">
+
+
+    <!-- Active Call To Action -->
+    <div class="container pb-5">
+        <div class="row text-center">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <a class="btn {% if request.resolver_match.url_name == 'blog' %}active{% endif %}" href="{% url 'blog' %}">All Posts</a>
+                    {% for category in categories %}
+                    <a class="btn {% if request.resolver_match.url_name == 'category' and request.resolver_match.kwargs.category_slug == category.slug %}active{% endif %}" 
+                       href="{% url 'category' category.slug %}">
+                        {{ category }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <h1>All Blog Posts</h1>
         <!-- Blog Entries Column -->
@@ -68,22 +87,6 @@
         </ul>
     </nav>
     {% endif %} -->
-
-    <!-- Call To Action -->
-    <div class="container py-5">
-        <div class="row text-center">
-            <h3 class="pb-3">Struggling to find what you're after? Filter by category!</h3>
-            <div class="row align-items-center">
-                <div class="col-md-12">
-                    <a class="btn" href="{% url 'blog' %}">All Posts</a>
-                    {% for category in categories %}
-                    <a class="btn" href="{% url 'category' category.slug %}">{{ category }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <!-- index.html content ends here -->

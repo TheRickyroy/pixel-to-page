@@ -6,7 +6,7 @@ from django.urls import path
 from . import views
 from .models import Post, Comment, Category
 from .forms import CommentForm
-from django.http import JsonResponse
+# from django.http import JsonResponse
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
@@ -23,6 +23,7 @@ class PostList(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
+        context['current_url'] = self.request.path
         return context
 
 def category_view(request, category_slug):
@@ -32,6 +33,7 @@ def category_view(request, category_slug):
         'category': category,
         'posts': posts,
         'categories': Category.objects.all(),
+        'current_url': request.path,
     }
     # return render(request, 'blog/category.html', {'category': category, 'posts': posts})
     return render(request, 'blog/category.html', context)
@@ -128,3 +130,11 @@ def comment_delete(request, category_slug, post_slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[category_slug, post_slug]))
+
+def your_view(request):
+    context = {
+        'blog_url': reverse('blog'),
+        'category_url': reverse('category'),
+        # ... other context variables
+    }
+    return render(request, 'your_template.html', context)
