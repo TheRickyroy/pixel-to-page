@@ -67,7 +67,6 @@ a:hover {
   background-color: var(--color-background-muted);
 }
 
-
 #section-test {
   min-height: 250px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -76,7 +75,6 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 /* Navbar */
 .navbar {
@@ -219,7 +217,6 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
-
 
 /* Media Queries */
 
