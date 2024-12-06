@@ -42,6 +42,12 @@ input:focus {
   background-color: var(--color-heading-muted);
 }
 
+.form-control,
+.form-control:focus {
+  background-color: var(--color-background-muted);
+  color: var(--color-heading);
+}
+
 section {
   padding: 25px 0px;
 }
@@ -171,7 +177,8 @@ footer {
   color: var(--color-accent);
 }
 
-.btn-alt {
+.btn-alt,
+#submit {
   background-color: var(--color-accent);
   color: var(--color-background);
   font-weight: 500;

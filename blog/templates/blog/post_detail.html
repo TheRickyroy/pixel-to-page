@@ -14,13 +14,13 @@
       <div class="image-container">
         {% if "placeholder" in post.featured_image.url %}
         <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
-        alt="{{post.category.default_image_alt }}">
+          alt="{{post.category.default_image_alt }}">
         {% else %}
         <img class="card-img-top" src=" {{ post.featured_image.url }}"
-        alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
-            {% endif %}
+          alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
+        {% endif %}
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 pt-3">
         <h1 class="post-title">{{ post.title }}</h1>
       </div>
     </div>
@@ -29,7 +29,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col card mb-4  mt-3 left  top">
+    <div class="col mb-4  mt-3 left  top">
       <div class="card-body">
         <p class="card-text">
           {{ post.content | safe }}
@@ -49,7 +49,7 @@
 </div>
 
 <!-- After Post CTA -->
-<div class="container py-5">
+<div class="container pt-2 pb-5">
   <div class="row text-center">
     <div class="col-6 text-start">
       {% if previous_post %}
@@ -59,10 +59,11 @@
     </div>
     <div class="col-6 text-end">
       {% if next_post %}
-      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" alt="{{ next_post.title }}"> {{ next_post.title }}><i class="fa-solid fa-angles-right"></i></a>
+      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" alt="{{ next_post.title }}"> 
+        {{ next_post.title }}><i class="fa-solid fa-angles-right"></i></a>
       {% endif %}
     </div>
-    <h3 class="py-5">Enjoying the post and want to read more?</h3>
+    <h2 class="py-5">Enjoying the post and want to read more?</h2>
     <div class="row align-items-center">
       <div class="col-md-12">
         <a class="btn" href="{% url 'blog' %}">All Posts</a>
@@ -74,79 +75,174 @@
   </div>
 </div>
 
-<!-- Displaying Comments -->
- <div class="container">
-<div class="row">
-  <div class="col-md-8 card mb-4  mt-3 ">
-    <h3>Comments:</h3>
-    <div class="card-body">
-      <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
-      {% for comment in comments %}
-      <div class="p-2 comments
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
-        <p class="font-weight-bold">
-          {{ comment.author }}
-          <span class="font-weight-normal">
-            {{ comment.created_on }}
-          </span> wrote:
-        </p>
-        <div id="comment{{ comment.id }}">
-          {{ comment.body | safe }}
-        </div>
-        {% if not comment.approved and comment.author == user %}
-        <p class="approval">
-          This comment is awaiting approval
-        </p>
-        {% endif %}
-        {% if user.is_authenticated and comment.author == user %}
-        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-        {% endif %}
-      </div>
-      <!-- Our for loop ends here -->
-      {% endfor %}
+
+<!-- Displaying Comments Section -->
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <h3><i class="fa-regular fa-comment"></i> {{ comment_count }} - Comments</h3>
     </div>
   </div>
-  <!-- Creating New Comments -->
-  <div class="col-md-4 card mb-4 mt-3">
-    <div class="card-body">
-      {% if user.is_authenticated %}
-      <h3>Leave a comment:</h3>
-      <p>Posting as: {{ user.username }}</p>
-      <form id="commentForm" method="post" style="margin-top: 1.3em;">
-        {{ comment_form | crispy }}
-        {% csrf_token %}
-        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-      </form>
-      {% else %}
-      <p>Log in to leave a comment</p>
-      {% endif %}
+
+  <div class="row">
+    <div class="col">
+
+        {% for comment in comments %}
+        <div
+          class="card my-3 p-4 comments {% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %} d-none{% endif %}">
+          <h4>
+            {{ comment.author }}
+            <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
+          </h4>
+          <div class="py-3" id="comment{{ comment.id }}">
+            {{ comment.body | safe }}
+          </div>
+          {% if not comment.approved and comment.author == user %}
+          <p class="approval">This comment is awaiting approval</p>
+          {% endif %}
+          {% if user.is_authenticated and comment.author == user %}
+          <div class="comment-actions">
+            <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+
+    </div>
+  </div>
+
+  <!-- Creating New Comments Section -->
+  <div class="row mt-4">
+    <div class="col">
+      <div class="card p-4">
+        <div class="card-body">
+          {% if user.is_authenticated %}
+          <h3>Leave a comment:</h3>
+          <p>Posting as: {{ user.username }}</p>
+          <form id="commentForm" method="post">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+          </form>
+          {% else %}
+          <p>Log in to leave a comment</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete your comment? This action cannot be undone.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+
+
+
+
+<!-- <i class="far fa-comments"></i> {{ comment_count }} -->
+
+<!-- Displaying Comments -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col text-start">
+          <h3><i class="far fa-comments"></i> {{ comment_count }} Comments:</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card"> -->
+<!-- We want a for loop inside the empty control tags
+          to iterate through each comment in comments -->
+<!-- {% for comment in comments %}
+        <div class="p-2 comments
+          {% if not comment.approved and comment.author == user %}
+          faded{% elif not comment.approved %} d-none{% endif %}">
+          <p class="font-weight-bold">
+            {{ comment.author }}
+            <span class="font-weight-normal">
+              {{ comment.created_on }}
+            </span> wrote:
+          </p>
+          <div id="comment{{ comment.id }}">
+            {{ comment.body | safe }}
+          </div>
+          {% if not comment.approved and comment.author == user %}
+          <p class="approval">
+            This comment is awaiting approval
+          </p>
+          {% endif %}
+          {% if user.is_authenticated and comment.author == user %}
+          <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          {% endif %}
+        </div> -->
+<!-- Our for loop ends here -->
+<!-- {% endfor %}
+      </div>
+    </div>
+  </div> -->
+
+
+<!-- Creating New Comments -->
+<!-- <div class="container">
+    <div class="col-md-4 card mb-4 mt-3">
+      <div class="card-body">
+        {% if user.is_authenticated %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
+      </div>
+    </div>
+  </div> -->
+
+
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete your comment?
-        This action cannot be undone.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+<!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete your comment?
+          This action cannot be undone.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
- </div>
+</div> -->
 {% endblock content %}
 
 {% block extras %}
