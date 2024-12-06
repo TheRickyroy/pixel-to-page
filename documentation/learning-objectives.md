@@ -1,13 +1,20 @@
 # Individual Full Stack Project Assessment Guide 
 ![Learning Objectives](<images/Learning Objectives.webp>)
+
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
+  <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/admin">Admin Panel</a> |
+</p>
+<p align="center">
+ | <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> | 
   <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Research</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md">Credits</a> |
 </p>
 
-Specific learning objectives as provided by [Code Institute - Full Stack Software Developer Skills Bootcamp](https://codeinstitute.net/16-week-skills-bootcamp-lancashire/) as criteria for the individual assessment.\
+
+Learning objectives as provided by [Code Institute](https://codeinstitute.net/16-week-skills-bootcamp-lancashire/) as criteria for Full Stack Software Developer Skills Bootcamp individual assessment.\
 **NOTE:** Bootcamp is now AI-Augmented
 
 

@@ -3,9 +3,14 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
+  <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/admin">Admin Panel</a> |
+</p>
+<p align="center">
+ | <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> | 
   <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Research</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md">Credits</a> |
 </p>
 
 ## Table of Contents  
@@ -21,16 +26,38 @@
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
 
+## Accessibility
+
+- Bogdan Cerovac - A11y [Bogdan Cerovac on Digital Accessibility (A11y)](https://cerovac.com/a11y/2024/10/reminder-automatic-accessibility-testing-can-detect-inaccessibility-but-cant-detect-accessibility/?ref=dailydev)
+- British Dyslexia Association [Creating a dyslexia friendly workplace](https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide)
+- Lisa Charlotte Muth - Datawrapper [It’s time for a more sophisticated color contrast check for data visualizations](https://blog.datawrapper.de/color-contrast-check-data-vis-wcag-apca/)
+- Web Dev Simplified - YouTube [The Only Accessibility Video You Will Ever Need ](https://www.youtube.com/watch?v=2oiBKSjOOFE)
+
+
 ## Code
 
 This sections includes some of the supplemental reading and learning used to further develop my knowledge.\
 These were particularly helpful whilst including features I had previously been unfamilar with.\
 Though this list is extensive, it is by no means exhaustive. 
 
-- W3Schools - [How TO - Scroll Indicator](https://www.w3schools.com/howto/howto_js_scroll_indicator.asp)
-
+- Abdulla Fajal - Medium [Adding Tags to Django Blog Posts with django-taggit](https://medium.com/@abdullafajal/adding-tags-to-django-blog-posts-with-django-taggit-9fb4ec9479a2)
+- Amber McKee - Datacamp [A Comprehensive Guide on How to Line Break in Python](https://www.datacamp.com/tutorial/how-to-line-break-in-python)
+- Django [Project organization for multiple apps sharing the same frontend and templates](https://forum.djangoproject.com/t/project-organization-for-multiple-apps-sharing-the-same-frontend-and-templates/8442)
+- Django [URLField - Django Models](https://www.geeksforgeeks.org/urlfield-django-models/)
+- Django [Why do we need apps?](https://forum.djangoproject.com/t/why-do-we-need-apps/827)
+- Geeks For Geeks [TemplateView – Class Based Generic View Django](https://www.geeksforgeeks.org/templateview-class-based-generic-view-django/)
+- Kader Biral - Mediuam [15 Useful CSS Properties You Should Know About](https://kaderbiral26.medium.com/15-useful-css-properties-you-should-know-about-d924343d6f9c)
+- W3Schools [How TO - Scroll Indicator](https://www.w3schools.com/howto/howto_js_scroll_indicator.asp)
 
 ## Content & Inspiration
+
+-
+- [Colorsafe](http://colorsafe.co/)
+- [Coolors](https://coolors.co/)
+- GoodFon [Mountains](https://www.goodfon.com/landscapes/wallpaper-download-2048x1365-two-jack-lake-banff-national-1614.html)
+- [HSL Color Picker](https://hslpicker.com/)
+- Marco Biedermann - Codepen [Alternatives to Using Pure Black](https://codepen.io/marcobiedermann/pen/ExqKeoW)
+- Smashing Magazine [A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
 
 ### Bullet Journal & Blogs
 
@@ -123,11 +150,11 @@ Though this list is extensive, it is by no means exhaustive.
 >
 >[WebFX](https://www.webfx.com/blog/marketing/what-is-ada-compliance/#:~:text=ADA%20compliance%20refers%20to%20the%20Americans%20with%20Disabilities%20Act%20Standards,accessible%20to%20people%20with%20disabilities.)
 
-**Reading Material**
+**Reading Material & Inspiration**
 
 - [A Checks](https://www.achecks.org/apca-accessible-colour-contrast-checker/) - APCA Accessible Colour Contrast Checker
-- [WebFX](https://www.webfx.com/blog/marketing/what-is-ada-compliance/#:~:text=ADA%20compliance%20refers%20to%20the%20Americans%20with%20Disabilities%20Act%20Standards,accessible%20to%20people%20with%20disabilities.) - What Is ADA Compliance ANd How Do I Make My Website Compliant?
 - [Toptal](https://www.toptal.com/designers/colorfilter/) - Colorblind Web Page Filter Testing Tool & Simulator
+- [WebFX](https://www.webfx.com/blog/marketing/what-is-ada-compliance/#:~:text=ADA%20compliance%20refers%20to%20the%20Americans%20with%20Disabilities%20Act%20Standards,accessible%20to%20people%20with%20disabilities.) - What Is ADA Compliance ANd How Do I Make My Website Compliant?
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
 
@@ -176,3 +203,5 @@ Though this list is extensive, it is by no means exhaustive.
 - Smashing Magazine - [A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
 
 <p align="right"><a href="#additional-research--online-learning">🔺 Back To Top</a></p>
+
+

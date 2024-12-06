@@ -3,9 +3,14 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
+  <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/admin">Admin Panel</a> |
+</p>
+<p align="center">
+ | <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> | 
   <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Research</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md">Credits</a> |
 </p>
 
 ## Table of Contents  
@@ -156,21 +161,22 @@ Additional details about each bug, including screenshots, resolution steps and p
 
 </details>
 
-
 | No. | Bug | Status | Solution Credit | Commit no. |
 | :--: | :-- | :--: | :-- | --: |
 | 1 | Database Migration - Syntax Error | 🟢 | Bash Terminal Error | [ef4ef38](https://github.com/TheRickyroy/pixel-to-page/commit/ef4ef3867d31ea2762afa447bfe4ef8849102eb9) |
 | 2 | Database Migration - Syntax Error | 🟢 | Bash Terminal Error | [ef4ef38](https://github.com/TheRickyroy/pixel-to-page/commit/ef4ef3867d31ea2762afa447bfe4ef8849102eb9) |
 | 3 | Heroku Application Error | 🟢 | Debugging & Slack Coding Coach Channel | [f1efeb0](https://github.com/TheRickyroy/pixel-to-page/commit/f1efeb0e2f6fe703e79bf5fdab7953d8ed85f6ce) |
 | 4 | Procfile - Syntax Error | 🟢 | Identified as part of Bug #3 | [aa63bd6](https://github.com/TheRickyroy/pixel-to-page/commit/aa63bd6bd083caf5125419e8955d9354af4d07c8) |
-| 5 | Commit Push Failure | 🟢 | [Medium](https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2) & [Graphite](https://graphite.dev/guides/understanding-your-branch-is-ahead-of-origin-main-by-1-commit) | [923e65f](https://github.com/TheRickyroy/pixel-to-page/commit/923e65fcb58a6436f1f6540841b7aac3c78fe630) |
+| 5 | Commit Push Failure | 🟢 | [Sakshi Rathore - Medium](https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2) & [Kenny DuMez - Graphite](https://graphite.dev/guides/understanding-your-branch-is-ahead-of-origin-main-by-1-commit) | [923e65f](https://github.com/TheRickyroy/pixel-to-page/commit/923e65fcb58a6436f1f6540841b7aac3c78fe630) |
 | 6 | Admin Panel Access | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
 | 7 | Post Title Links | 🟢 | Debugging within development workspace | [a3ddfb1](https://github.com/TheRickyroy/pixel-to-page/commit/a3ddfb1d34ea27d541b7b9f8dbd2b0849b64d204) |
 | 8 | Comment Code Inclusion | 🟢 | Mark Briscoe - SME Session | [630d636](https://github.com/TheRickyroy/pixel-to-page/commit/630d63681624cd2e2e5498e50523a58d3cbf9ee9) |
 | 9 | Bash Terminal Overwriting | 🟢 | Debugging | N/A |
 | 10 | Blog Link Active State | 🟢 | Debugging | [af42261](https://github.com/TheRickyroy/pixel-to-page/commit/af422619027383d8601d41706353e507879c520f) |
-| 11 | Deployed CSS Styling | 🟢 | Roo MacArthur - Slack Coding Coach | [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e) & [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903) |
-| 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [Commit](Link) |
+| 11 | Deployed CSS Styling | 🟢 | Roo MacArthur - Slack Coding Coach Channel | [4a38412](https://github.com/TheRickyroy/pixel-to-page/commit/4a384126a85f6ed7d9b680af36c193496658f90e) & [9c4d1de](https://github.com/TheRickyroy/pixel-to-page/commit/9c4d1deeb09a9b67d4b6e9dec8accf03b6829903) |
+| 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f) |
+| 13 | Blog & Category Slugs  | 🟢 | Debugging & Roo MacArthur - Slack Coding Coach Channel | [1032cff](https://github.com/TheRickyroy/pixel-to-page/commit/1032cffec8b7347a93132d0892f72b8cf152e869) |
+| 14 | Category Navigation Population | 🟢 | [Sarah Hudaib - Dev.to](https://dev.to/sarahhudaib/context-processors-in-django-15h2) | [53f2bbb](https://github.com/TheRickyroy/pixel-to-page/commit/53f2bbbdd0278efcf524d04d510c0e505a680ed1) |
 | # | - | - | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
@@ -235,7 +241,6 @@ Project name identified to be using wrong sytnax in **Procfile** as part of Bug 
 
 Incorrect - `web: gunicorn pixel-to-page.wsgi`\
 Correct - `web: gunicorn pixel_to_page.wsgi`
-
 
 </details>
 
@@ -342,15 +347,15 @@ Upon inspection of **index.html** I realised I had the original `<href>` was sti
 Incorrect Code
 ```
 <a href="{% url 'post_detail' post.slug %}" class="post-link"></a>
-	<a href="#" class="post-link">
-	<h2 class="card-title">{{ post.title }}</h2>
+  <a href="#" class="post-link">
+  <h2 class="card-title">{{ post.title }}</h2>
 </a>
 ```
 
 Corrected Code 
 ```
 <a href="{% url 'post_detail' post.slug %}" class="post-link">
-	<h2 class="card-title">{{ post.title }}</h2>
+  <h2 class="card-title">{{ post.title }}</h2>
 </a>
 ```
 
@@ -426,7 +431,6 @@ Code add
 Active link styling applying to **Blog**\
 ![bug-10-3](images/bugs/bug-10-3.webp)
 
-
 </details>
 
 <details><summary>Bug #11 - Deployed CSS Styling</summary>
@@ -460,7 +464,7 @@ No CSS Styling - Deployed Heroku Project
 - Redeployed & observed build logs
 - Opened redeployed app
   - Dev Tools > Network > [X] Disable cache
-	- View Source > Inspect CSS 
+  - View Source > Inspect CSS 
     - Confirmed it was using a previous version
   - Also checked app after hard refresh and within incognito window
 
@@ -491,7 +495,7 @@ Provided commands to run to ensure the latest version of static files are being 
 
 <details><summary>Bug #12 - Footer Position</summary>
 
-Commit - []()
+Commit - [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f)
 
 **Identification**
 
@@ -517,12 +521,345 @@ To avoid conflicts I continued the debug and application of styling whilst on th
 
 </details>
 
-<details><summary>Bug #</summary>
+<details><summary>Bug #13 - Blog & Category Slugs</summary>
 
-Commit - []()
+Commit - [1032cff](https://github.com/TheRickyroy/pixel-to-page/commit/1032cffec8b7347a93132d0892f72b8cf152e869)
+
+**Identification**
+
+After implementing categories with default image assignment and attempting to setup the relevant slugs for filtering and category pages I received the following error when linking to **Blog**
+
+NoReverseMatch
+![bug-13-1](images/bugs/bug-13-1.webp)
+
+<details><summary>Error Code</summary>
+
+```
+Environment:
+
+Request Method: GET
+Request URL: http://8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net/blog/
+
+Django Version: 4.2.16
+Python Version: 3.12.2
+Installed Applications:
+['django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'cloudinary_storage',
+ 'cloudinary',
+ 'django.contrib.sites',
+ 'allauth',
+ 'allauth.account',
+ 'allauth.socialaccount',
+ 'crispy_forms',
+ 'crispy_bootstrap5',
+ 'django_summernote',
+ 'about',
+ 'blog',
+ 'home']
+Installed Middleware:
+['django.middleware.security.SecurityMiddleware',
+ 'whitenoise.middleware.WhiteNoiseMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'allauth.account.middleware.AccountMiddleware']
+
+Template error:
+In template /workspace/pixel-to-page/blog/templates/blog/blog.html, error at line 26
+   Reverse for 'post_detail' with arguments '('algorithm-of-productivity',)' not found. 1 pattern(s) tried: ['blog/(?P<category_slug>[-a-zA-Z0-9_]+)/(?P<post_slug>[-a-zA-Z0-9_]+)/\\Z']
+   16 :                         <div class="card-body d-flex flex-column justify-content-between">
+   17 :                             <div class="image-container">
+   18 :                                 {% if "placeholder" in post.featured_image.url %}
+   19 :                                 <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}" 
+   20 :                                     alt="pixel to page blog post default image placeholder">
+   21 :                                 {% else %}
+   22 :                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"
+   23 :                                     alt="{{ post.title }}">
+   24 :                                     {% endif %}
+   25 :                             </div>
+   26 :                             <a href=" {% url 'post_detail' post.slug %} " class="post-link">
+   27 :                                 <h2 class="card-title">{{ post.title }}</h2>
+   28 :                             </a>
+   29 :                             <hr>
+   30 :                             <p class="card-text">
+   31 :                                 {{ post.excerpt | safe }}
+   32 :                             </p>
+   33 :                             <hr>
+   34 :                             <div class="row">
+   35 :                                 <div class="col-6">
+   36 :                                   <p class="post-subtitle">Author: {{ post.author }}</p>
+
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Exception Type: NoReverseMatch at /blog/
+Exception Value: Reverse for 'post_detail' with arguments '('algorithm-of-productivity',)' not found. 1 pattern(s) tried: ['blog/(?P<category_slug>[-a-zA-Z0-9_]+)/(?P<post_slug>[-a-zA-Z0-9_]+)/\\Z']
+
+```
+
+</details>
+
+**Initial debugging steps taken:**
+
+- Checked **admin.py**, **models.py** and **views.py** reflected the addition of slug to category model.
+- Attempted debugging steps and searching previous solutions within Slack.
+- Used Perplexity.AI to help provide non-code based diagnose and guidance for potential debugging steps.
+- Reached out within Slack Coding Coach
+
+**Solution steps with Roo MacArthur:**
+
+- Roo provdied updated slug that hadn't been implemented within **blog.html**\
+`{% url 'post_detail' post.category.slug post.slug %}`
+
+- I realised at this point that I hadn't actually run the migration since the addition of slug to category and that this would cause an issue and suggested zeroing out the data. 
+
+Slack Conversation
+![bug-13-2](images/bugs/bug-13-2.webp)
+
+- At this point Roo and I joined a VC call to discuss the solution process. 
+- Attempted to run migration knowing it would fail, more as a debug step for learning.
+- Migration was unable to complete due to the lack of default for previously assigned object data. 
+- This took us into a discussion regarding improved working practices, using the **db.sqlite3** as part of the development workspace and maintaining the **postgreSQL** for production only. 
+- As a result of this debugging process, and to further my learning of improved practices I;
+  - Deleted all current migrations as part of the **blog** app
+  - Performed `python manage.py migrate blog zero` (although redundant due to next step, this was more for practice)
+  - Setup a fresh **postgreSQL** database, linked in **env.py** and Heroku
+  - Began working on the **db.sqlite3** within development workspace
+
+</details>
+
+<details><summary>Bug #14 - Category Navigation Population</summary>
+
+Commit: [53f2bbb](https://github.com/TheRickyroy/pixel-to-page/commit/53f2bbbdd0278efcf524d04d510c0e505a680ed1)
+
+**Identification**
+
+After implementing the category dropdown list and testing (pre-styling) it was functioning on the blog / category pages, but only displayed **All Posts** on the home and about page 
+
+Blog - Category Populated\
+![bug-14-1](images/bugs/bug-14-1.webp)
+
+About - Category Unpopulated\
+![bug-14-2](images/bugs/bug-14-2.webp)
+
+**Solution**
+
+My first consideration concluded in realising the home and about apps were not connected to the category model and were unable to populate the list based on the code within **base.html**
+
+``` Python
+{% for category in categories %}
+    <li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{ category }}</a></li>
+{% endfor %}
+```
+
+- I considered possibilities for how to achieve this in the most streamlined way following the DRY principle and avoiding duplicating code.
+- Upon searching for solutions I found relevant information regarding the use of [context processors](https://dev.to/sarahhudaib/context-processors-in-django-15h2).
+- After following the steps detailed within the post I returned a 'ModuleNotFoundError'
+
+ModuleNotFound\
+![bug-14-3](images/bugs/bug-14-3.webp)
+
+<details><summary>Error Code</summary>
+
+```
+Environment:
+
+Request Method: GET
+Request URL: http://8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net/
+
+Django Version: 4.2.16
+Python Version: 3.12.2
+Installed Applications:
+['django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'cloudinary_storage',
+ 'cloudinary',
+ 'django.contrib.sites',
+ 'allauth',
+ 'allauth.account',
+ 'allauth.socialaccount',
+ 'crispy_forms',
+ 'crispy_bootstrap5',
+ 'django_summernote',
+ 'about',
+ 'blog',
+ 'home']
+Installed Middleware:
+['django.middleware.security.SecurityMiddleware',
+ 'whitenoise.middleware.WhiteNoiseMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'allauth.account.middleware.AccountMiddleware']
+
+
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/base.py", line 173, in render
+    with context.bind_template(self):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gitpod/.pyenv/versions/3.12.2/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/context.py", line 251, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/engine.py", line 116, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/template/engine.py", line 116, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gitpod/.pyenv/versions/3.12.2/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+    <source code not available>
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+    <source code not available>
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+    <source code not available>
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    <source code not available>
+               ^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+    <source code not available>
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+    <source code not available>
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+    <source code not available>
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Exception Type: ModuleNotFoundError at /
+Exception Value: No module named 'utils'
+```
+
+</details><br>
+
+- I took a moment to go through and double check the steps against my implementation to confirm I had done everything correctly. 
+- I deduced that the initial step creating the **utils** folder in your project. was referring to the root directory, not the **Pixel To Page** project config folder and upon moving the folder it resolved my issues immediately. 
+- I also realised this was essentially creating a utils app, which seemed unnecessary if I could include **context_processor** as part of the blog app itself. 
+- I made this change and the fix continued to work, thus reducing the requirement of an additional app
+- I am sure that the addition of the utils app is possibly considered bet practice, and would be something I use as I gain a better understanding of working practices, but for the purpose of my own learning I chose this option. 
+
+</details>
+
+<details><summary>Bug # - </summary>
+
+Commit: []()
+
+**Identification**
+
+**Solution**
 
 </details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
+
 
 
