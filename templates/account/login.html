@@ -11,11 +11,10 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
-
-            <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If
-                you
-                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}</p>
+            <p>Welcome back to Pixel To Page!</p>
+            <p>{% blocktrans %}
+                All ready to comment and contribute? Sign in below.<br>
+                If you don't yet have an account, but would like one, please <a class="link" href="{{ signup_url }}">sign up</a>.{% endblocktrans %}</p>
         </div>
     </div>
     <div class="row">
@@ -24,9 +23,9 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
                 {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                <button class="btn btn-alt" type="submit">{% trans "Sign In" %} <i class="fa-solid fa-angles-right"></i></button>
             </form>
         </div>
     </div>

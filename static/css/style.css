@@ -32,6 +32,16 @@ main {
   margin: 50px 0 150px;
 }
 
+input {
+  width: 100%;
+  padding: 10px;
+  caret-color: var(--color-background-muted);
+}
+
+input:focus {
+  background-color: var(--color-heading-muted);
+}
+
 section {
   padding: 25px 0px;
 }
@@ -158,6 +168,12 @@ footer {
 /* Buttons */
 .btn {
   color: var(--color-accent);
+}
+
+.btn-alt {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 500;
 }
 
 .btn:hover {
