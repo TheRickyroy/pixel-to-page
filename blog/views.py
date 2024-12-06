@@ -6,11 +6,12 @@ from django.urls import path
 from . import views
 from .models import Post, Comment, Category
 from .forms import CommentForm
+from django.http import JsonResponse
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/blog.html"
-    paginate_by = 6
+    # paginate_by = 6
 
     def get_queryset(self):
         queryset = Post.objects.filter(status=1)

@@ -51,19 +51,29 @@
 <!-- After Post CTA -->
 <div class="container py-5">
   <div class="row text-center">
-    <h3 class="pb-3">Enjoying the post and want to read more?</h3>
     <div class="col-6 text-start">
-  {% if previous_post %}
-      <a href="{% url 'post_detail' previous_post.category.slug previous_post.slug %}" alt="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i> {{ previous_post.title }}</a>
-  {% endif %}
+      {% if previous_post %}
+      <a href="{% url 'post_detail' previous_post.category.slug previous_post.slug %}"
+        alt="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i> {{ previous_post.title }}</a>
+      {% endif %}
     </div>
     <div class="col-6 text-end">
-  {% if next_post %}
-      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" alt="{{ next_post.title }}">{{ next_post.title }} <i class="fa-solid fa-angles-right"></i></a>
-  {% endif %}
+      {% if next_post %}
+      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" alt="{{ next_post.title }}"> {{ next_post.title }}><i class="fa-solid fa-angles-right"></i></a>
+      {% endif %}
     </div>
+    <h3 class="py-5">Enjoying the post and want to read more?</h3>
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <a class="btn" href="{% url 'blog' %}">All Posts</a>
+        {% for category in categories %}
+        <a class="btn" href="{% url 'category' category.slug %}">{{ category }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
 <!-- Displaying Comments -->
  <div class="container">
 <div class="row">
