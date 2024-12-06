@@ -3,16 +3,23 @@
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
+  <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/admin">Admin Panel</a> |
+</p>
+<p align="center">
+ | <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> | 
   <a href="https://github.com/users/TheRickyroy/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D">Project Board</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/README.md">README</a> |
-  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing & Validation</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Testing</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/testing.md">Research</a> |
+  <a href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md">Credits</a> |
 </p>
 
 ## Introduction
 
-This _README Template_ serves as boilerplate placeholder for your new GitHub repo.
+_Pixel To Page_ is a blog app designed to encourage, inspire and guide programmers in the use of bullet journals.
 
-Developed for personal use on _Code Institute: Full Stack Software Developer Bootcamp_ projects with intention of future expanding of the scope to _support other students and developers_.
+Developed as part of Code Institute Full Stack Software Develeoper Skills Bootcamp, _Pixel To Page_ serves as my final individual assessment project to deliver a full stack application providing CRUD functionality to end users.
+
+This README and associated documentation serve as both technical documentaion and a record of my own personal learning.
 
 ## Table of Contents
 
@@ -22,15 +29,6 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
 
 - [UX - User Experience](#ux---user-experience)
   - [Design Ideation](#design-ideation)
-
-- [Colors](#colors)
-  - [Color Palette](#color-palette)
-  - [Color Contrast](#contrast)
-  - [Color Contrast Score Table](#color-contrast-score-table)
-- [Typfaces](#typefaces)
-  - [Font Usage](#font-usage)
-
-- [Imagery](#imagery)
 
 - [Strategy Plane](#strategy-plane)
   - [Key Objectives](#key-objectives)
@@ -50,19 +48,28 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
 
 - [Scope Plane](#scope-plane)
 
+  - [Security](#security)
+    - [AllAuth](#allauth)
+    - [Defensive Design](#defensive-design)
+    - [CSRF Tokens](#csfr-tokens)
+
 - [Structure Plane](#structure-plane)
-  
+  - [Database Schema](#database-schema)
+
 - [Skeleton Plane](#skeleton-plane)
   - [Wireframes](#wireframes)
 
 - [Surface Plane](#surface-plane)
-    
-- [Database Schema](#database-schema)
 
-- [Security](#security)
-  - [AllAuth](#allauth)
-  - [Defensive Design](#defensive-design)
-  - [CSFR Tokens](#csfr-tokens)
+- [Colors](#colors)
+  - [Color Palette](#color-palette)
+  - [Color Contrast](#contrast)
+  - [Color Contrast Score Table](#color-contrast-score-table)
+
+- [Typfaces](#typefaces)
+  - [Font Usage](#font-usage)
+
+- [Imagery](#imagery)
 
 - [Features](#features)
   - [Feature](#)
@@ -98,8 +105,8 @@ Developed for personal use on _Code Institute: Full Stack Software Developer Boo
 
 - [Testing](#testing)
   - [Code Validation](#code-validation)
-  - [Accessibility](#accessibility)
-  - [Lighthouse Performance](#lighthouse-performance)
+  - [Accessibility & Audit](#accessibility--audit)
+  - [Bugs](#bugs)
 
 - [Credits](#credits)
   - [Code](#code)
@@ -243,7 +250,6 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 ## Scope Plane
 
-
 ## Security
 
 Fully describe all measures taken to ensure security and safety within the _project_.\
@@ -285,8 +291,6 @@ I have also included models that were part of my user stories for features of fu
 After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
 
 ![ERD](documentation/images/ERD%20Pixel%20To%20Page.webp)
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -358,8 +362,6 @@ As mentioned I opted to use the seasons as part of the selection process for the
 **Accessibility**
 
 
-
-
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 ### Color Space
@@ -372,12 +374,9 @@ This brought me to the final decision of implementing HSL as my chosen color spa
 
 **Design Flexibility**
 
-
-
 **Code Maintainability**
 
 **Learning Opportunity**
-
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -414,11 +413,9 @@ The table provides the contrast ratio score for each color combination used and 
 Describe the selection process and reasoning behind the typefaces used in the _project_.\
 Identify any specific requirements, inspirations or difficulties faced. 
 
-[Primary](https://fonts.google.com/) - Default typeface, a reflection of brand identity.\
-[Secondary](https://fonts.google.com/) - Complementary to the main typeface.\
-[Tertiary](https://fonts.google.com/) - Used for accents.
-
-Alternate typefaces may also be included as part of additional themes or accessibility features.
+- [Righteous](https://fonts.google.com/specimen/Righteous) - Brand / Headings
+- [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans) - Primary Body
+- [Sour Gummy](https://fonts.google.com/specimen/Sour+Gummy) - Accessibility Body Alt (Currenty Unused)
 
 ### Font Usage
 
@@ -436,8 +433,6 @@ If credit is required, refence to these within the credit section of the README.
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-
 
 ## Features
 
@@ -482,7 +477,6 @@ These could be outstanding issues, or new ideas that developed over the course o
 [![Static Badge](https://img.shields.io/badge/JavaScript-ES6-grey?logo=javascript&logoColor=%23ffffff&color=%23F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Static Badge](https://img.shields.io/badge/Python-v3.13.0-grey?logo=python&logoColor=%23ffffff&color=%233776AB)](https://www.python.org/doc/)
 
-
 ### Frameworks & Libraries
 [![Static Badge](https://img.shields.io/badge/allauth-v0.57.2-grey?logo=cloudinary&logoColor=%23ffffff&color=%2314b012)](https://docs.allauth.org)
 [![Static Badge](https://img.shields.io/badge/cloudinary-v1.41.0-grey?logo=cloudinary&logoColor=%23ffffff&color=%233448C5)](https://pypi.org/project/cloudinary/)
@@ -506,7 +500,6 @@ These could be outstanding issues, or new ideas that developed over the course o
 
 [![Static Badge](https://img.shields.io/badge/Microsoft-Power_Toys-grey?logo=&logoColor=%23ffffff&color=%237fba00)](https://learn.microsoft.com/en-us/windows/powertoys/)
 [![Static Badge](https://img.shields.io/badge/Elgato-Stream_Deck-grey?logo=elgato&logoColor=%23ffffff&color=%23101010)](https://www.elgato.com/uk/en/s/downloads)
-
 
 ### Design Tools
 [![Static Badge](https://img.shields.io/badge/Affinity-Photo_2-grey?logo=affinityphoto&logoColor=%23ffffff&color=%234E3188)](https://affinity.serif.com/en-gb/)
@@ -624,7 +617,6 @@ python3 manage.py runserver
 - A new browser tab should open containing the Django project.
 - Copy the INVALID HTTP_HOST header displayed on this page `'8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net'`
 
-
 6. Navigate to **settings.py** in the IDE File Explorer.
 - Update the `ALLOWED_HOSTS` to include what was copied in the previous step and `'.herokuapp.com'`.
 ``` Python
@@ -677,8 +669,8 @@ INSTALLED_APPS = [
 - Navigate to app settings .
 - Click **'Reveal Config Vars'**.
 - Add a new Config var.
-	- Key = `DISABLE_COLLECTSTATIC`
-	- Value = `1`
+  - Key = `DISABLE_COLLECTSTATIC`
+  - Value = `1`
 - Click **'Add'**.
 
 4. Install the web server gunicorn and freeze requirements.
@@ -756,12 +748,12 @@ In **Heroku**
 1. Navigate to the **Settings** > **Config Vars**
 
 - Add your secret key
-	- Key = `SECRET_KEY,`
-	- Value = `The secret hey generated in previous step`
+  - Key = `SECRET_KEY,`
+  - Value = `The secret hey generated in previous step`
 
 - Add your Database URL 
-	- Key = `DATABASE_URL`
-	- Value = `The URL provided by the CI Database Maker`
+  - Key = `DATABASE_URL`
+  - Value = `The URL provided by the CI Database Maker`
 <br><br>
 
 In **settings.py**
@@ -782,10 +774,10 @@ os.environ.get('SECRET_KEY')
 3. Comment out the old Database section code
 ``` Python
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
 ```
 - **Note:** Highlight all code and use **'CTRL + /'** (On Windows) to comment out all lines together
@@ -817,7 +809,6 @@ Before install, locate your **API Enironment Variable** for use in the next step
 
 1. Navigate to **Dashboard** > **Product Environment Settings** > **API Keys** 
 2. Reveal the **API Secret** following the instructions provided.
-
 
 In **Heroku**
 
@@ -875,19 +866,19 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 4. Change the templates directory to `TEMPLATES_DIR`
 ``` Python
 TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [TEMPLATES_DIR],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
 ```
 
@@ -963,17 +954,18 @@ All additional information regarding manual testing can be found within [Testing
 
 ### Code Validation
 
-- [W3C - Markup Validation](https://validator.w3.org/)
-- [W3C - CSS Validation](https://jigsaw.w3.org/css-validator/)
+- [Code Institute - CI Python Linter](https://pep8ci.herokuapp.com)
 - [JSHint](https://jshint.com/)
+- [W3C - CSS Validation](https://jigsaw.w3.org/css-validator/)
+- [W3C - Markup Validation](https://validator.w3.org/)
 
-### Accessibility
+### Accessibility & Audit
 
-- [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/)\
-
-### Lighthouse Performance
-
+- Content Forest [Image Alt Test Checker](https://contentforest.com/tools/image-alt-checker)
 - [Lighthouse Audit](https://developer.chrome.com/docs/lighthouse/overview)
+- SEOptimer - [Image ALt Tag Checker](https://www.seoptimer.com/alt-tag-checker)
+- Toptal - [Colorblind Web Page Filter](https://www.toptal.com/designers/colorfilter/)
+- WAVE - [Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
 ### Bugs
 
@@ -983,13 +975,23 @@ I have recorded these bugs, their solution status as well as documenting additio
 
 ## Credits
 
-Generic source accreditation with specific source credits included in an appendix document [Credits](documentation/credits.md). 
+These accreditations are to documentation and resource providers from which much supplemental learning has taken place, individual source credits can be found in appendix document [Credits](documentation/credits.md). 
 
 ### Code
 
-Provide reference to all sources used for coding the project, including sources used as part of debugging. 
-
+- [Bootstrap](https://getbootstrap.com/)
 - [Code Institute - LMS](https://codeinstitute.net/)
+- [Codepen](https://codepen.io/)
+- [CSS Tricks](https://css-tricks.com/)
+- [Daily.Dev](https://daily.dev/)
+- [Django](https://docs.djangoproject.com/en/5.1/)
+- [GitHub](https://docs.github.com/en)
+- [Logrocket](https://logrocket.com/)
+- [Medium](https://medium.com/)
+- [Mozilla - MDN](https://developer.mozilla.org/en-US/)
+- [Perplexity](https://www.perplexity.ai)
+- [Stack Overflow](https://stackoverflow.com/)
+- [W3C](https://www.w3.org/)
 - [W3Schools](https://www.w3schools.com/)
 
 ### Media
@@ -1017,15 +1019,19 @@ Additional documentation included as part of the project.
 Julia, for all her support and being kind enough to proof read and pickup those typos that slip through the net. 
 
 All Code Institute staff for providing ample learning opportunities allowing for the completition of this project, as well as my first steps into a career as a software developer. A particular thank you for the support, inspiration, guidance and the occasional nudge in the right direction for debugging.
+
 - [Amy Richardson](https://github.com/amylour) - Learning Facilitator
 - [Mark Briscoe](https://github.com/mbriscoe) - Subject Matter Expert
 - [John Rearden](https://github.com/johnrearden) - Coding Coach
 - [Robyn de Brún](https://www.linkedin.com/in/robyn-de-brun/) - Careers Coaching Executive
+- [Roo MacArthud](https://github.com/roomacarthur) - Coding Coach
 
-My fellow bootcamp students for their support
+My fellow bootcamp students for their support.
 
 Most of all though a huge thank you to Rhiannon, for everything throughout the whole course and beyond.\
 For putting up with my long days and late nights, for listening to my rubber ducking even though it sounded like complete jibberish and for making sure I actually took the odd break.\
 Without her this would not have been possible.
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p><hr>
+
+
