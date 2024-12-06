@@ -22,7 +22,7 @@ for (let button of editButtons) {
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_comment/${commentId}`);
+    commentForm.setAttribute("action", `comment/edit/${commentId}`);
   });
 }
 
@@ -39,7 +39,7 @@ for (let button of editButtons) {
 for (let button of deleteButtons) {
   button.addEventListener("click", (e) => {
     let commentId = e.target.getAttribute("comment_id");
-    deleteConfirm.href = `delete_comment/${commentId}`;
+    deleteConfirm.href = `comment/delete/${commentId}`;
     deleteModal.show();
   });
 }
