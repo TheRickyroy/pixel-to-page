@@ -10,11 +10,11 @@
     <div class="col-md-8 mt-3 offset-md-2">
       <h3>{% trans "Sign Up" %}</h3>
 
+      <p>Welcome to Pixel To Page</p>
+
       <p>{% blocktrans %}
-        Welcome back to the code|star blog.
-        Do you already have an account? Then please
-        <a class="link" href="{{ login_url }}">sign in</a>
-        instead.
+        If you're new here, or have been reading a while, and would like to comment you can sign up below.<br> 
+        If you already have an account, you can <a class="link" href="{{ login_url }}">sign in</a> instead.
         {% endblocktrans %}
       </p>
     </div>
@@ -27,8 +27,8 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">
-          {% trans "Sign Up" %} &raquo;</button>
+        <button class="btn btn-alt right" type="submit">
+          {% trans "Sign Up" %} <i class="fa-solid fa-angles-right"></i></button>
       </form>
     </div>
   </div>

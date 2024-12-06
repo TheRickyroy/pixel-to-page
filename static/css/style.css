@@ -32,6 +32,16 @@ main {
   margin: 50px 0 150px;
 }
 
+input {
+  width: 100%;
+  padding: 10px;
+  caret-color: var(--color-background-muted);
+}
+
+input:focus {
+  background-color: var(--color-heading-muted);
+}
+
 section {
   padding: 25px 0px;
 }
@@ -57,7 +67,6 @@ a:hover {
   background-color: var(--color-background-muted);
 }
 
-
 #section-test {
   min-height: 250px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -66,7 +75,6 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 /* Navbar */
 .navbar {
@@ -95,7 +103,6 @@ a:hover {
 }
 
 /* Featured Carousel*/
-
 .featured-link {
   opacity: .9;
 }
@@ -155,9 +162,19 @@ footer {
   padding: 5px;
 }
 
+.card-title {
+  font-size: 1.5em;
+}
+
 /* Buttons */
 .btn {
   color: var(--color-accent);
+}
+
+.btn-alt {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 500;
 }
 
 .btn:hover {
@@ -166,16 +183,7 @@ footer {
 }
 
 .page-link {
-  color: var(--color-background);
-  background-color: var(--color-accent);
-  border: none;
   margin-top: 1.5em;
-}
-
-.page-link:hover {
-  color: var(--color-background);
-  background-color: var(--color-accent-muted);
-  border: none;
 }
 
 #back-to-top {
@@ -209,7 +217,6 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
-
 
 /* Media Queries */
 

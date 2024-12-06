@@ -11,11 +11,11 @@
 <!-- Hero Section -->
 <section class="section" id="section-hero">
     <div class="text-center">
-        <img class="section-img d-block mx-auto" src="{{ hero.hero_image.url }}" alt="{{ hero.hero_image_alt }}">
-        <h2 class="heading display-5 fw-bold py-3">{{ hero.hero_heading }}</h2>
+        <img class="section-img d-block mx-auto" src="{{ hero.image.url }}" alt="{{ hero.image_alt }}">
+        <h2 class="heading display-5 fw-bold py-3">{{ hero.heading|safe }}</h2>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">{{ hero.hero_text|safe }}</p>
-            <a href="{{ hero.hero_button_url }}" class="btn btn-lg" role="button" aria-label="{{ hero.hero_button_label }}">{{ hero.hero_button_text }}</a>
+            <a href="{{ hero.button_url }}" class="btn btn-lg" role="button" aria-label="{{ hero.button_label }}">{{ hero.button_text|safe }}</a>
         </div>
     </div>
 </section>
@@ -68,13 +68,13 @@
 
 
 <!-- Test Section -->
-<!-- <section class="section" id="section-test" style="background-image: url('{{ cta.cta_image.url }}');">
+<!-- <section class="section" id="section-test" style="background-image: url('{{ cta.image.url }}');">
     <div class="container">
         <div class="text-center">
-            <h2 class="heading display-5 fw-bold py-3">{{ cta.cta_heading }}</h2>
+            <h2 class="heading display-5 fw-bold py-3">{{ cta.heading }}</h2>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">{{ cta.cta_text|safe }}</p>
-                <a href="{{ cta.cta_button_url }}" class="btn btn-lg" role="button" aria-label="{{ cta.cta_button_label }}">{{ cta.cta_button_text }}</a>
+                <p class="lead mb-4">{{ cta.text|safe }}</p>
+                <a href="{{ cta.button_url }}" class="btn btn-lg" role="button" aria-label="{{ cta.button_label }}">{{ cta.button_text }}</a>
             </div>
         </div>
     </div>
@@ -85,11 +85,25 @@
 <section class="section" id="section-cta">
     <div class="container">
         <div class="text-center">
-            <img class="section-img d-block mx-auto" src="{{ cta.cta_image.url }}" alt="{{ cta.cta_image_alt }}">
-            <h2 class="heading display-5 fw-bold py-3">{{ cta.cta_heading }}</h2>
+            <img class="section-img d-block mx-auto" src="{{ cta.image.url }}" alt="{{ cta.image_alt }}">
+            <h2 class="heading display-5 fw-bold py-3">{{ cta.heading|safe }}</h2>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">{{ cta.cta_text|safe }}</p>
-                <a href="{{ cta.cta_button_url }}" class="btn btn-lg" role="button" aria-label="{{ cta.cta_button_label }}">{{ cta.cta_button_text }}</a>
+                <a href="{{ cta.button_url }}" class="btn btn-lg" role="button" aria-label="{{ cta.button_label }}">{{ cta.button_text|safe }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info -->
+<section class="section" id="section-info">
+    <div class="container">
+        <div class="text-center">
+            <img class="section-img d-block mx-auto" src="{{ info.image.url }}" alt="{{ info.image_alt }}">
+            <h2 class="heading display-5 fw-bold py-3">{{ info.heading|safe }}</h2>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">{{ info.text|safe }}</p>
+                <a href="{{ info.button_url }}" class="btn btn-lg" role="button" aria-label="{{ info.label }}">{{ info.text|safe }}</a>
             </div>
         </div>
     </div>
