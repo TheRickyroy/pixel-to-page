@@ -34,8 +34,15 @@
                     <img src="{{ post.featured_image.url }}" class="d-block w-100"
                         alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
                     {% endif %}
-                    <!-- <a href="{% url 'post_detail' post.category.slug post.slug %}" class="category-link"> -->
-                    <p class="overlay-text">{{ post.title }}</p>
+                    <div class="row overlay-text px-4">
+                        <!-- <a href="{% url 'post_detail' post.category.slug post.slug %}" class="category-link"> -->
+                        <div class="col-8 test-start">
+                            {{ post.title }}
+                        </div>
+                        <div class="col-4 text-end">
+                            {{ post.category.category }}
+                        </div>
+                    </div>
                 </a>
             </div>
             {% endfor %}
