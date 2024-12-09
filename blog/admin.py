@@ -9,18 +9,16 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-
     list_display = ('title', 'author','slug', 'category', 'status', 'created_on', 'updated_on', 'featured')
     search_fields = ['title', 'content']
-    list_filter = ('status', 'category', 'featured',)
+    list_filter = ('status', 'category', 'featured')
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('content',)
+    summernote_fields = ('content')
 
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
-
     list_display = ('author', 'post', 'approved', 'created_on', 'updated_on')
     search_fields = ['author_username', 'body']
     list_filter = ('approved', 'created_on')
-    summernote_fields = ('body',)
+    summernote_fields = ('body')
 

@@ -123,13 +123,7 @@
               </ul>
             </div>
             <div class="col-6 col-md-2 mb-3">
-              <h5>Featured Posts</h5>
-              <ul class="nav flex-column">
-                {% for post in featured_posts %}
-                <li><a class="nav-item" href="{% url 'post_detail' post.category.slug post.slug %}">
-                    {{ post.title }}</a></li>
-                {% endfor %}
-              </ul>
+
             </div>
             <div class="col-6 col-md-2 mb-3">
               <h5>General</h5>

@@ -20,7 +20,7 @@ class Hero(models.Model):
 
 class Cta(models.Model):
     image = CloudinaryField('image')
-    image_alt = models.TextField(blank=True)
+    image_alt = models.TextField()
     heading = models.CharField(max_length=200)
     text = models.TextField()
     button_text = models.CharField(max_length=200)
@@ -36,7 +36,7 @@ class Cta(models.Model):
 
 class Signup(models.Model):
     image = CloudinaryField('image')
-    image_alt = models.TextField(blank=True)
+    image_alt = models.TextField()
     heading = models.CharField(max_length=200)
     text = models.TextField()
     button_text = models.CharField(max_length=200)
@@ -46,7 +46,7 @@ class Signup(models.Model):
 
     def save(self, *args, **kwargs):
         if self.is_active:
-            # Deactivate all other Call To Actionss
+            # Deactivate all other Signups
             Signup.objects.filter(is_active=True).update(is_active=False)
         super().save(*args, **kwargs)
 
@@ -54,7 +54,6 @@ class Info(models.Model):
     image = CloudinaryField('image', transformation=[
         {'width': 300, 'height': 300, 'crop': "fill"}
         ])
-
     image_alt = models.TextField()
     heading = models.CharField(max_length=200)
     text = models.TextField()
