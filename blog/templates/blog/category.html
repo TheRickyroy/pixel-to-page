@@ -5,28 +5,24 @@
 
 <div class="container">
 
-        <!-- Active Call To Action -->
-        <div class="container pb-5">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <a class="btn {% if request.resolver_match.url_name == 'blog' %}active{% endif %}" href="{% url 'blog' %}">All Posts</a>
-                    {% for category in categories %}
-                    <a class="btn {% if request.resolver_match.url_name == 'category' and request.resolver_match.kwargs.category_slug == category.slug %}active{% endif %}" 
-                       href="{% url 'category' category.slug %}">
-                        {{ category }}
-                    </a>
-                    {% endfor %}
-                </div>
+    <!-- Categories -->
+    <div class="container pb-5">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <a class="btn {% if request.resolver_match.url_name == 'blog' %}active{% endif %}"
+                    href="{% url 'blog' %}">All Posts</a>
+                {% for category in categories %}
+                <a class="btn {% if request.resolver_match.url_name == 'category' and request.resolver_match.kwargs.category_slug == category.slug %}active{% endif %}"
+                    href="{% url 'category' category.slug %}">
+                    {{ category }}</a>
+                {% endfor %}
             </div>
         </div>
+    </div>
 
-
-
-
-
+    <!-- Blog posts -->
     <div class="row">
         <h1>Category: {{ category }}</h1>
-        <!-- Blog Entries Column -->
         <div class="col-12">
             <div class="row">
                 {% for post in posts %}
@@ -40,9 +36,10 @@
                                 {% else %}
                                 <img class="card-img-top" src="{{ post.featured_image.url }}"
                                     alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
-                                    {% endif %}
+                                {% endif %}
                             </div>
-                                <h2 class="card-title"><a href="{% url 'post_detail' post.category.slug post.slug %}">{{ post.title }}</h2>
+                            <h2 class="card-title"><a href="{% url 'post_detail' post.category.slug post.slug %}">
+                                {{ post.title }}</h2>
                             </a>
                             <hr>
                             <p class="card-text flex-grow-1">
@@ -52,12 +49,13 @@
                             <div class="row mt-auto">
                                 <div class="col-6 text-start">
                                     <a class="btn btn-alt" aria-current="Read More"
-                href="{% url 'post_detail' post.category.slug post.slug %}">Read More <i class="fa-solid fa-angles-right"></i></a>
+                                        href="{% url 'post_detail' post.category.slug post.slug %}">Read More
+                                        <i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                                 <div class="col-6 text-end">
-                                  <p class="post-subtitle">Posted: {{ post.created_on.date }}</p>
+                                    <p class="post-subtitle">Posted: {{ post.created_on.date }}</p>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,33 +67,6 @@
             </div>
         </div>
     </div>
-    <!-- {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="btn"><i class="fa-solid fa-angles-left"></i> PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="btn"> NEXT <i class="fa-solid fa-angles-right"></i></a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %} -->
 </div>
-
-    <!-- Call To Action -->
-    <!-- <div class="container py-5">
-        <div class="row text-center">
-          <h3 class="pb-3">Struggling to find what you're after? Filter by category!</h3>
-          <div class="row align-items-center">
-            <div class="col-md-12">
-              <a class="btn" href="{% url 'blog' %}">All Posts</a>
-              {% for category in categories %}
-              <a class="btn" href="{% url 'category' category.slug %}">{{ category }}</a>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div> -->
 
 {% endblock %}
