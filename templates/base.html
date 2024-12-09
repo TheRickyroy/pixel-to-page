@@ -10,8 +10,11 @@
 <html class="h-100" lang="en">
 
 <head>
-  <title>Pixel To Page</title>
+  <title>Pixel To Page - A Programmer's Guide To Bullet Journals</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="A blog for programmers looking for ideas and inspiration for their code related bullet journal">
+  <meta name="keywords" content="bujo, bullet journal, coding, programmers, inspiration, tutorials, reviews">
   <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg">
   <link rel="shortcut icon" href="/static/favicon/favicon.ico">
@@ -22,108 +25,148 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 
 <body class="d-flex flex-column min-vh-100 main-bg">
   <div class="content-wrapper">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg" id="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}"><span>PIXEL TO PAGE</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-              href="{% url 'home' %}">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Blog
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'blog' %}">All Posts</a></li>
-              {% for category in categories %}
-              <li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{ category }}</a></li>
-              {% endfor %}
-            </ul>
-          </li>  
-        </ul>
-        <span class="navbar-text">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><span>PIXEL TO PAGE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_logout' %}">Sign Out</a>
+              <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                href="{% url 'home' %}">Home</a>
             </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_login' %}">Sign In</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Blog
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'blog' %}">All Posts</a></li>
+                {% for category in categories %}
+                <li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{ category }}</a></li>
+                {% endfor %}
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="btn btn-alt {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_signup' %}">Sign Up</a>
-            </li>
-            {% endif %}
           </ul>
-        </span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- displaying Django messages -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-          {{ message | safe }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <span class="navbar-text">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                  href="{% url 'account_logout' %}">Sign Out</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                  href="{% url 'account_login' %}">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-alt {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                  href="{% url 'account_signup' %}">Sign Up</a>
+              </li>
+              {% endif %}
+            </ul>
+          </span>
         </div>
-        {% endfor %}
+      </div>
+    </nav>
+
+    <!-- Django messages -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
 
-  <main>
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
-  </main> 
+    <!-- Block Content -->
+    <main>
+      {% block content %}
+      {% endblock content %}
+    </main>
 
- <!-- Back To Top -->
- <button onclick="topFunction()" class="btn" id="back-to-top" title="Go to top"><i class="fa-solid fa-angles-up"></i></button>
-
+    <!-- Back to top -->
+    <button onclick="topFunction()" class="btn" id="back-to-top" title="Go to top"><i
+        class="fa-solid fa-angles-up"></i></button>
   </div>
 
   <!-- Footer -->
   <footer class="mt-auto">
+    <div class="container">
       <div class="container">
-        <div class="d-flex justify-content-center pt-3">
-          <ul class="list-unstyled d-flex justify-content-around">
-            <li><a data-mdb-ripple-init class="btn btn-social" href="https://github.com/TheRickyroy"
-                aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-github"
-                  aria-hidden="true"></i></a></li>
-            <li><a data-mdb-ripple-init class="btn btn-social" href="https://bsky.app/profile/therickyroy.bsky.social"
-                aria-label="Bluesky - opens in new tab" target="_blank"><i class="fa-brands fa-bluesky"
-                  aria-hidden="true"></i></a></li>
-            <li><a data-mdb-ripple-init class="btn btn-social" href="https://www.linkedin.com/in/therickyroy/"
-                aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-linkedin"
-                  aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-        <div class="d-flex justify-content-center">
-          <p>&copy; 2024 Ricky Smithson.</p>
-        </div>
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <h5>Pixel To Page - Categories</h5>
+              <ul class="footer-flex">
+                <li><a class="nav-item flex px-2" href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com//blog/">All
+                    Posts</a></li>
+                {% for category in categories %}
+                <li><a class="nav-item flex px-2" href="{% url 'category' category.slug %}">
+                    {{ category }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Featured Posts</h5>
+              <ul class="nav flex-column">
+                {% for post in featured_posts %}
+                <li><a class="nav-item" href="{% url 'post_detail' post.category.slug post.slug %}">
+                    {{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+              <h5>General</h5>
+              <ul class="nav flex-column">
+                <li><a class="nav-item" href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/about">About Us</a></li>
+                <li><a class="nav-item" href="https://github.com/TheRickyroy/pixel-to-page">GitHub Repo</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Credits</h5>
+              <ul class="nav flex-column">
+                <li>All Project <a class="nav-item"
+                    href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md"
+                    aria-label="Therickyroy github project credits - opens in new tab" target="_blank">Credits</a></li>
+                <li>Artwork design by <a class="nav-item" href="https://www.freepik.com"
+                    aria-label="Freepik - opens in new tab" target="_blank">Freepik</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>&copy; {% now 'Y' %} Ricky Smithson. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li><a data-mdb-ripple-init class="btn btn-social" href="https://github.com/TheRickyroy"
+                  aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i></a></li>
+              <li><a data-mdb-ripple-init class="btn btn-social" href="https://bsky.app/profile/therickyroy.bsky.social"
+                  aria-label="Bluesky - opens in new tab" target="_blank"><i class="fa-brands fa-bluesky"
+                    aria-hidden="true"></i></a></li>
+              <li><a data-mdb-ripple-init class="btn btn-social" href="https://www.linkedin.com/in/therickyroy/"
+                  aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </footer>
       </div>
+    </div>
   </footer>
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
