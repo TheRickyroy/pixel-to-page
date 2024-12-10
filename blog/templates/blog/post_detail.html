@@ -53,7 +53,8 @@
     <div class="col-6 text-start">
       {% if previous_post %}
       <a href="{% url 'post_detail' previous_post.category.slug previous_post.slug %}"
-        alt="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i> {{ previous_post.title }}</a>
+        alt="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i>
+        {{ previous_post.title }}</a>
       {% endif %}
     </div>
     <div class="col-6 text-end">
@@ -84,8 +85,8 @@
   <div class="row">
     <div class="col">
       {% for comment in comments %}
-      <div
-        class="card my-3 p-4 comments {% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %} d-none{% endif %}">
+      <div class="card my-3 p-4 comments {% if not comment.approved and comment.author == user %}faded
+        {% elif not comment.approved %} d-none{% endif %}">
         <h4>
           {{ comment.author }} says:
         </h4>
@@ -123,7 +124,7 @@
             <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
           </form>
           {% else %}
-          <p>Log in to leave a comment</p>
+          <p><a class="link" href="{{ login_url }}">Sign in</a> or <a class="link" href="{{ signup_url }}">sign up</a> to leave a comment.</p>
           {% endif %}
         </div>
       </div>

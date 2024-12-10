@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'blog',
     'home',
+    'profiles',
 ]
 
 SITE_ID = 1
@@ -136,6 +137,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = '/account/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_URL = "/account/logout/"
+ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
