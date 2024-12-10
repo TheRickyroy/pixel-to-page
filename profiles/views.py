@@ -19,16 +19,6 @@ def edit_profile(request):
     return render(request, 'edit_profile.html', {'form': form})
 
 @login_required
-def update_email(request):
-    if request.method == 'POST':
-        new_email = request.POST.get('email')
-        request.user.email = new_email
-        request.user.save()
-        return redirect('profile')
-
-    return render(request, 'update_email.html')
-
-@login_required
 def profile_view(request):
     profile, created = Profile.objects.get_or_create(user=request.user)
     return render(request, 'profile.html', {'profile': profile})
