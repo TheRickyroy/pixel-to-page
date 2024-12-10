@@ -9,7 +9,7 @@
     <div class="container section-content py-5 text-end">
         <h1 class="display-5 fw-bold">{{ hero.heading|safe }}</h1>
         <p class="py-3 fs-4">{{ hero.text|safe }}</p>
-        <button class="btn btn-alt btn-lg" type="button">{{ hero.button_text|safe }}</button>
+        <a class="btn btn-alt btn-lg" href="{{ hero.button_url }}" type="button">{{ hero.button_text|safe }}</a>
     </div>
 </div>
 
@@ -67,17 +67,16 @@
     <div class="container py-5 text-start">
         <h2 class="display-5 fw-bold">{{ cta.heading|safe }}</h2>
         <p class="py-3 fs-4">{{ cta.text|safe }}</p>
-        <button class="btn btn-alt btn-lg" type="button">{{ cta.button_text|safe }}</button>
+        <a class="btn btn-alt btn-lg" href="{{ cta.button_url }}" type="button">{{ cta.button_text|safe }}</a>
     </div>
 </div>
 {% else %}
 <div class="section p-5" id="section-cta" style="background-image: url('{{ signup.image.url }}');"
     alt="{{ signup.image_alt }}">
     <div class="container py-5 text-start">
-        <h2>Tester </h2>
         <h2 class="display-5 fw-bold">{{ signup.heading|safe }}</h2>
         <p class="py-3 fs-4">{{ signup.text|safe }}</p>
-        <button class="btn btn-alt btn-lg" type="button">{{ signup.button_text|safe }}</button>
+        <a class="btn btn-alt btn-lg" href="{{ signup.button_url }}" type="button">{{ signup.button_text|safe }}</a>
     </div>
 </div>
 {% endif %}
