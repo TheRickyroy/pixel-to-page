@@ -328,6 +328,14 @@ blockquote p {
   display: inline;
 }
 
+#post-user-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+  border: 2px solid var(--color-accent);
+  object-fit: cover;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {

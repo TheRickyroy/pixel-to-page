@@ -37,7 +37,7 @@ class Post(models.Model):
     Stores individual blog posts related to :model: 'auth.User'
     """
 
-    author = models.ForeignKey(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE,
         related_name="blog_posts"
     )
@@ -58,7 +58,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"{self.title} | written by {self.author}"
+        return f"{self.title} | written by {self.user}"
 
     def save(self, *args, **kwargs):
         if not self.featured_image:
@@ -91,7 +91,7 @@ class Comment(models.Model):
         Post, on_delete=models.CASCADE, 
         related_name="comments"
     )
-    author = models.ForeignKey(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE,
         related_name="commenter"
     )
@@ -104,4 +104,4 @@ class Comment(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} by {self.author}"
+        return f"Comment {self.body} by {self.user}"
