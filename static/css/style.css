@@ -233,6 +233,10 @@ footer {
   background-color: var(--color-background-muted);
 }
 
+.footer-title {
+  font-size: 1.2em;
+}
+
 .footer-flex {
   list-style-type: none;
   display: flex;
