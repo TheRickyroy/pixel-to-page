@@ -196,6 +196,10 @@ background-color: var(--color-heading-muted / 60%);
   background-color: var(--color-background-muted)
 }
 
+.dropdown-toggle::after {
+  display:none;
+}
+
 /* Featured Carousel*/
 .featured-link {
   opacity: .9;
@@ -326,6 +330,39 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+#profile-user-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 10%;
+  border: 5px solid var(--color-accent);
+  object-fit: cover;
+}
+
+#post-user-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+  border: 2px solid var(--color-accent);
+  object-fit: cover;
+  padding: 0;
+}
+
+#comment-user-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
+  border: 2px solid var(--color-accent);
+  object-fit: cover;
+}
+
+#nav-user-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25%;
+  border: 2px solid var(--color-accent);
+  object-fit: cover;
 }
 
 /* Media Queries */
