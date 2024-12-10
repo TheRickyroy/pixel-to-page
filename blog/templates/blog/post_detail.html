@@ -8,155 +8,141 @@
 <div id="scroll-progress"></div>
 
 <!-- Post Detail -->
-<div class="masthead">
-  <div class="container">
-    <div class="row g-0">
-      <div class="image-container">
-        {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
-          alt="{{post.category.default_image_alt }}">
-        {% else %}
-        <img class="card-img-top" src=" {{ post.featured_image.url }}"
-          alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
-        {% endif %}
-      </div>
-      <div class="col-md-12 pt-3">
-        <h1 class="post-title">{{ post.title }}</h1>
-      </div>
-    </div>
+<article class="post-detail">
+  <div class="image-container">
+    {% if "placeholder" in post.featured_image.url %}
+    <img class="card-img-top scale" src="{% static 'images/default-post.webp' %}"
+      alt="{{post.category.default_image_alt }}">
+    {% else %}
+    <img class="card-img-top" src=" {{ post.featured_image.url }}"
+      alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
+    {% endif %}
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col mb-4  mt-3 left  top">
-      <div class="card-body">
-        <p class="card-text">
-          {{ post.content | safe }}
-        </p>
-        <hr>
-        <!-- Post Author -->
-        <div class="container pt-2 pb-5">
-          <div class="row text-center justify-content-center">
-            <img id="post-user-img" src="{{ post.user.profile.get_image_url }}" class="img-fluid mx-auto d-block"
-              alt="{{ post.user.profile.get_display_name }}">
-            <h2 class="post-user-bio">About {{ post.user.profile.get_display_name }}</h2>
-            <p>{{ post.user.profile.bio }}</p>
-          </div>
+  <h1 class="post-title py-5">{{ post.title }}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card-body">
+          <p class="card-text">{{ post.content | safe }}</p>
         </div>
       </div>
     </div>
-    <hr>
   </div>
-</div>
+</article>
+<hr>
 
-<!-- After Post CTA -->
-<div class="container pt-2 pb-5">
-  <div class="row text-center">
-    <div class="col-6 text-start">
+<!-- Next/Prev Posts -->
+<nav class="container py-3">
+  <div class="row">
+    <div class="col-6 text-start px-3">
       {% if previous_post %}
       <a href="{% url 'post_detail' previous_post.category.slug previous_post.slug %}"
-        alt="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i>
+        title="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i>
         {{ previous_post.title }}</a>
       {% endif %}
     </div>
     <div class="col-6 text-end">
       {% if next_post %}
-      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" alt="{{ next_post.title }}">
-        {{ next_post.title }}><i class="fa-solid fa-angles-right"></i></a>
+      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" title="{{ next_post.title }}">
+        {{ next_post.title }} <i class="fa-solid fa-angles-right"></i></a>
       {% endif %}
     </div>
-    <h2 class="py-5">Enjoying the post and want to read more?</h2>
-    <div class="row align-items-center">
-      <div class="col-md-12">
-        <a class="btn" href="{% url 'blog' %}">All Posts</a>
-        {% for category in categories %}
-        <a class="btn" href="{% url 'category' category.slug %}">{{ category }}</a>
-        {% endfor %}
-      </div>
-    </div>
   </div>
-</div>
+</nav>
 
-<!-- Displaying Comments Section -->
-<div class="container">
-  <div class="row text-center">
-    <div class="col">
-      <h3><i class="fa-regular fa-comment"></i> {{ comment_count }} - Comments</h3>
-    </div>
+<!-- Post Author -->
+<section class="container py-3">
+  <div class="row text-center justify-content-center">
+    <img class="mb-3" id="post-user-img" src="{{ post.user.profile.get_image_url }}"
+      alt="{{ post.user.profile.get_display_name }}">
+    <h3 class="post-user-bio mb-3">About {{ post.user.profile.get_display_name }}</h3>
+    <p>{{ post.user.profile.bio }}</p>
   </div>
-  <div class="row">
-    <div class="col">
-      {% for comment in comments %}
-      <div class="card my-3 p-4 comments {% if not comment.approved and comment.user == user %}faded
-        {% elif not comment.approved %} d-none{% endif %}">
-        <img id="comment-user-img" src="{{ comment.user.profile.get_image_url }}" class="img-fluid mx-auto d-block"
-              alt="{{ comment.user.profile.get_display_name }}">
-        <h4>
-          {{ comment.user.profile.get_display_name }} says:
-        </h4>
-        <div class="py-3" id="comment{{ comment.id }}">
-          {{ comment.body | safe }}
-        </div>
-        <div class="text-end">
-          <span class="font-weight-normal">{{ comment.created_on }}</span>
-        </div>
-        {% if not comment.approved and comment.user == user %}
-        <p class="approval">This comment is awaiting approval</p>
-        {% endif %}
-        {% if user.is_authenticated and comment.user == user %}
-        <div class="comment-actions">
-          <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-        </div>
-        {% endif %}
-      </div>
+</section>
+
+<!-- After Post CTA -->
+<section class="container py-3">
+  <div class="text-center">
+    <h2 class="py-3">Enjoying the post and want to read more?</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+      <a class="btn" href="{% url 'blog' %}">All Posts</a>
+      {% for category in categories %}
+      <a class="btn" href="{% url 'category' category.slug %}">{{ category }}</a>
       {% endfor %}
     </div>
   </div>
+</section>
 
-  <!-- Creating New Comments Section -->
-  <div class="row mt-4">
-    <div class="col">
-      <div class="card p-4">
-        <div class="card-body">
-          {% if user.is_authenticated %}
-          <h3>Leave a comment:</h3>
-          <p>Posting as: {{ user.profile.get_display_name }}</p>
-          <form id="commentForm" method="post">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-          </form>
-          {% else %}
-          <p><a class="link" href="{{ login_url }}">Sign in</a> or <a class="link" href="{{ signup_url }}">sign
-              up</a> to leave a comment.</p>
-          {% endif %}
-        </div>
-      </div>
+<!-- Displaying Comments Section -->
+<section class="container py-3">
+  <h3 class="text-center"><i class="fa-regular fa-comment"></i> {{ comment_count }} - Comments</h3>
+
+  <!-- Existing Comments -->
+  {% for comment in comments %}
+  <div class="card my-3 p-4 comments {% if not comment.approved and comment.user == user %}faded
+        {% elif not comment.approved %} d-none{% endif %}">
+    <img id="comment-user-img" src="{{ comment.user.profile.get_image_url }}" class="img-fluid mx-auto d-block"
+      alt="{{ comment.user.profile.get_display_name }}">
+    <h4>{{ comment.user.profile.get_display_name }} says:</h4>
+    <div class="py-3" id="comment{{ comment.id }}">
+      {{ comment.body | safe }}
+    </div>
+    <div class="text-end">
+      <span class="font-weight-normal">{{ comment.created_on }}</span>
+    </div>
+    {% if not comment.approved and comment.user == user %}
+    <p class="approval">This comment is awaiting approval</p>
+    {% endif %}
+    {% if user.is_authenticated and comment.user == user %}
+    <div class="comment-actions">
+      <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+      <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <!-- New Comments -->
+  <div class="card p-4 mt-4">
+    <div class="card-body">
+      {% if user.is_authenticated %}
+      <h3>Leave a comment:</h3>
+      <p>Posting as: {{ user.profile.get_display_name }}</p>
+      <form id="commentForm" method="post">
+        {{ comment_form | crispy }}
+        {% csrf_token %}
+        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+      </form>
+      {% else %}
+      <p>
+        <a class="link" href="{{ login_url }}">Sign in</a> or
+        <a class="link" href="{{ signup_url }}">sign up</a> to leave a comment.
+      </p>
+      {% endif %}
     </div>
   </div>
+</section>
 
-  <!-- Delete Confirmation Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
-          <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Are you sure you want to delete your comment? This action cannot be undone.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-          <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
-        </div>
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your comment? This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
 </div>
-{% endblock content %}
 
+{% endblock content %}
 {% block extras %}
 <script src="{% static 'js/scroll_progress.js' %}"></script>
 <script src="{% static 'js/comments.js' %}"></script>

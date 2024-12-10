@@ -40,10 +40,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                href="{% url 'home' %}">Home</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -64,13 +60,13 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   <img id="nav-user-img" src="{{ user.profile.get_image_url }}" class="img-fluid mx-auto d-block"
-                  alt="{{ user.profile.display_name }}">
+                    alt="{{ user.profile.get_display_name }}">
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'profile' %}">Profile</a></li>
+                      href="{% url 'profile' %}">Profile</a></li>
                   <li><a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'account_logout' %}">Sign Out</a></li>
+                      href="{% url 'account_logout' %}">Sign Out</a></li>
                 </ul>
               </li>
               {% else %}
@@ -105,8 +101,8 @@
     <!-- Block Content -->
     <main>
       <div class="container">
-      {% block content %}
-      {% endblock content %}
+        {% block content %}
+        {% endblock content %}
       </div>
     </main>
 
@@ -116,73 +112,70 @@
   </div>
 
   <!-- Footer -->
-  <footer class="mt-auto">
+  <footer class="mt-auto py-5">
     <div class="container">
-      <div class="container">
-        <footer class="py-5">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <h5>Pixel To Page - Categories</h5>
-              <ul class="footer-flex">
-                <li><a class="nav-item flex px-2" href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com//blog/">All
-                    Posts</a></li>
-                {% for category in categories %}
-                <li><a class="nav-item flex px-2" href="{% url 'category' category.slug %}">
-                    {{ category }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="col-md-2 mb-3">
-              <h5>Account</h5>
-              {% if user.is_authenticated %}
-              <ul class="nav flex-column">
-                <li><a class="nav-item {% if request.path == profile_url %}active{% endif %}" aria-current="page"
-                  href="{% url 'profile' %}">Profile</a></li>
-                <li><a class="nav-item {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                  href="{% url 'account_logout' %}">Sign Out</a></li>
-              </ul>
-              {% else %}
-              <li><a class="nav-item {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                  href="{% url 'account_login' %}">Sign In</a>
-              </li>
-              <li><a class="nav-item {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                  href="{% url 'account_signup' %}">Sign Up</a>
-              </li>
-              {% endif %}
-            </div>
-            <div class="col-md-2 mb-3">
-              <h5>General</h5>
-              <ul class="nav flex-column">
-                <li><a class="nav-item" href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/about">About Us</a></li>
-                <li><a class="nav-item" href="https://github.com/TheRickyroy/pixel-to-page">GitHub Repo</a></li>
-              </ul>
-            </div>
-            <div class="col-md-2 mb-3">
-              <h5>Credits</h5>
-              <ul class="nav flex-column">
-                <li>All Project <a class="nav-item"
-                    href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md"
-                    aria-label="Therickyroy github project credits - opens in new tab" target="_blank">Credits</a></li>
-                <li>Artwork design by <a class="nav-item" href="https://www.freepik.com"
-                    aria-label="Freepik - opens in new tab" target="_blank">Freepik</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>&copy; {% now 'Y' %} Ricky Smithson. All rights reserved.</p>
-            <ul class="list-unstyled d-flex">
-              <li><a data-mdb-ripple-init class="btn btn-social" href="https://github.com/TheRickyroy"
-                  aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-github"
-                    aria-hidden="true"></i></a></li>
-              <li><a data-mdb-ripple-init class="btn btn-social" href="https://bsky.app/profile/therickyroy.bsky.social"
-                  aria-label="Bluesky - opens in new tab" target="_blank"><i class="fa-brands fa-bluesky"
-                    aria-hidden="true"></i></a></li>
-              <li><a data-mdb-ripple-init class="btn btn-social" href="https://www.linkedin.com/in/therickyroy/"
-                  aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-linkedin"
-                    aria-hidden="true"></i></a></li>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <h2 class="footer-title pb-3">Pixel To Page - Categories</h5>
+            <ul class="footer-flex">
+              <li><a class="nav-item flex px-2" href="{% url 'blog' %}">All Posts</a></li>
+              {% for category in categories %}
+              <li><a class="nav-item flex px-2" href="{% url 'category' category.slug %}">
+                  {{ category }}</a></li>
+              {% endfor %}
             </ul>
-          </div>
-        </footer>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h2 class="footer-title pb-3">Account</h2>
+          {% if user.is_authenticated %}
+          <ul class="nav flex-column">
+            <li><a class="nav-item {% if request.path == profile_url %}active{% endif %}" aria-current="page"
+                href="{% url 'profile' %}">Profile</a></li>
+            <li><a class="nav-item {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_logout' %}">Sign Out</a></li>
+          </ul>
+          {% else %}
+          <ul class="nav flex-column">
+            <li><a class="nav-item {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_login' %}">Sign In</a>
+            </li>
+            <li><a class="nav-item {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_signup' %}">Sign Up</a>
+            </li>
+          </ul>
+          {% endif %}
+        </div>
+        <div class="col-md-2 mb-3">
+          <h2 class="footer-title pb-3">General</h2>
+          <ul class="nav flex-column">
+            <li><a class="nav-item" href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/about">About Us</a></li>
+            <li><a class="nav-item" href="https://github.com/TheRickyroy/pixel-to-page">GitHub Repo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h2 class="footer-title pb-3">Credits</h2>
+          <ul class="nav flex-column">
+            <li>All Project <a class="nav-item"
+                href="https://github.com/TheRickyroy/pixel-to-page/blob/main/documentation/credits.md"
+                aria-label="Therickyroy github project credits - opens in new tab" target="_blank">Credits</a></li>
+            <li>Artwork design by <a class="nav-item" href="https://www.freepik.com"
+                aria-label="Freepik - opens in new tab" target="_blank">Freepik</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; {% now 'Y' %} Ricky Smithson. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li><a data-mdb-ripple-init class="btn btn-social" href="https://github.com/TheRickyroy"
+              aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-github"
+                aria-hidden="true"></i></a></li>
+          <li><a data-mdb-ripple-init class="btn btn-social" href="https://bsky.app/profile/therickyroy.bsky.social"
+              aria-label="Bluesky - opens in new tab" target="_blank"><i class="fa-brands fa-bluesky"
+                aria-hidden="true"></i></a></li>
+          <li><a data-mdb-ripple-init class="btn btn-social" href="https://www.linkedin.com/in/therickyroy/"
+              aria-label="Therickyroy github - opens in new tab" target="_blank"><i class="fa fa-linkedin"
+                aria-hidden="true"></i></a></li>
+        </ul>
       </div>
     </div>
   </footer>
