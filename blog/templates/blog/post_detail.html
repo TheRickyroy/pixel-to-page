@@ -19,11 +19,11 @@
       alt="{{ post.featured_image_alt|default:post.category.default_image_alt }}">
     {% endif %}
   </div>
-  <h1 class="post-title py-5">{{ post.title }}</h1>
+  <h1 class="post-title py-5 px-3 text-center">{{ post.title }}</h1>
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card-body">
+        <div class="card-body px-3">
           <p class="card-text">{{ post.content | safe }}</p>
         </div>
       </div>
