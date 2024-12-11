@@ -1,12 +1,7 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Border Debugging */
-/* * {
-  outline: 1px solid red;
-} */
-
-/* Root */
+/* Root Variable */
 :root {
   --color-text: hsl(0, 0%, 98%);
   --color-text-muted: hsl(0, 0%, 93%);
@@ -32,6 +27,29 @@ main {
   margin: 50px 0 50px;
 }
 
+/* Text Elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-family: "Righteous", serif;
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-muted);
+  text-decoration: underline;
+}
+
+/* Form Elements */
 input {
   width: 100%;
   padding: 10px;
@@ -48,40 +66,11 @@ input:focus {
   color: var(--color-heading);
 }
 
-section {
-  padding: 25px 0px;
-  margin: 25px 0px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-heading);
-  font-family: "Righteous", serif;
-  margin: 0px 0px;
-}
-
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-accent-muted);
-  text-decoration: underline;
-}
-
-/* Django Messages */
-.alert {
-  margin-top: 3em;
-  background-color: var(--color-background-muted);
-  color: var(--color-heading);
-}
-
-.modal-content {
-  background-color: var(--color-background-muted);
-  border: 1px solid var(--color-heading);
-}
-
 /* Sections */
+section {
+  padding: 25px 0;
+  margin: 25px 0;
+}
 
 .section {
   margin-bottom: 10em;
@@ -90,43 +79,19 @@ a:hover {
 #section-hero {
   min-height: 450px;
   line-height: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--color-text-muted) center/cover no-repeat;
+  color: var(--color-background-muted);
 }
 
 #section-cta {
   min-height: 450px;
   line-height: 3em;
-  color: var(--color-background);
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#section-cta h2 {
-color: var(--color-background-muted);
+  background-color: var(--color-text-muted) center/cover no-repeat;
+  color: var(--color-background-muted);
 }
 
 #section-info {
   background-color: var(--color-background-muted);
-}
-
-.section-content {
-background-color: var(--color-heading-muted / 60%);
-}
-
-#section-test {
-  min-height: 450px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Navbar */
@@ -147,14 +112,8 @@ background-color: var(--color-heading-muted / 60%);
   color: var(--color-accent);
 }
 
-.nav.active {
-  color: var(--color-heading);
-}
-
-.nav-item.active {
-  color: var(--color-heading);
-}
-
+.nav.active,
+.nav-item.active,
 .navbar .nav-link.active {
   color: var(--color-heading);
 }
@@ -194,16 +153,16 @@ background-color: var(--color-heading-muted / 60%);
 
 .dropdown-item:hover {
   color: var(--color-accent-muted);
-  background-color: var(--color-background-muted)
+  background-color: var(--color-background-muted);
 }
 
 .dropdown-toggle::after {
-  display:none;
+  display: none;
 }
 
 /* Featured Carousel*/
 .featured-link {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .featured-link:hover {
@@ -213,7 +172,7 @@ background-color: var(--color-heading-muted / 60%);
 
 .carousel-control-prev,
 .carousel-control-next {
-	width: auto;
+  width: auto;
 }
 
 /* Scroll Progress */
@@ -301,10 +260,6 @@ footer {
   border-color: var(--color-background);
 }
 
-/* .page-link {
-  margin-top: 1.5em;
-} */
-
 #back-to-top {
   display: none;
   position: fixed;
@@ -337,6 +292,7 @@ blockquote p {
   display: inline;
 }
 
+/* User Images */
 #profile-user-img {
   height: 300px;
   width: 300px;
@@ -370,10 +326,22 @@ blockquote p {
   object-fit: cover;
 }
 
+/* Django Messages */
+.alert {
+  margin-top: 3em;
+  background-color: var(--color-background-muted);
+  color: var(--color-heading);
+}
+
+.modal-content {
+  background-color: var(--color-background-muted);
+  border: 1px solid var(--color-heading);
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
   #section-test {
-      background-attachment: scroll;
+    background-attachment: scroll;
   }
 }

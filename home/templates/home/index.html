@@ -6,8 +6,8 @@
 <!-- Hero Section -->
 <section class="section p-5" id="section-hero" style="background-image: url('{{ hero.image.url }}');"
     alt="{{ hero.image_alt }}">
-    <div class="container section-content py-5 text-end">
-        <h1 class="display-5 fw-bold">{{ hero.heading|safe }}</h1>
+    <div class="container py-5 text-end">
+        <h1 class="display-5">{{ hero.heading|safe }}</h1>
         <p class="py-3 fs-4">{{ hero.text|safe }}</p>
         <a class="btn btn-alt btn-lg" href="{{ hero.button_url }}" type="button">{{ hero.button_text|safe }}</a>
     </div>
