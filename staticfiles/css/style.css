@@ -1,12 +1,7 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Border Debugging */
-/* * {
-  outline: 1px solid red;
-} */
-
-/* Root */
+/* Root Variable */
 :root {
   --color-text: hsl(0, 0%, 98%);
   --color-text-muted: hsl(0, 0%, 93%);
@@ -29,33 +24,19 @@ body {
 }
 
 main {
-  margin: 50px 0 150px;
+  margin: 50px 0 50px;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  caret-color: var(--color-background-muted);
-}
-
-input:focus {
-  background-color: var(--color-heading-muted);
-}
-
-.form-control,
-.form-control:focus {
-  background-color: var(--color-background-muted);
-  color: var(--color-heading);
-}
-
-section {
-  padding: 25px 0px;
-  margin: 25px 0px;
-}
-
-h1, h2, h3, h4, h5, h6 {
+/* Text Elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-heading);
   font-family: "Righteous", serif;
+  margin: 0;
 }
 
 a {
@@ -68,64 +49,74 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Django Messages */
-.alert {
-  margin-top: 3em;
+/* Form Elements */
+textarea[name="bio"], 
+input {
+  width: 100%;
+  padding: 10px;
+  caret-color: var(--color-background-muted);
+}
+
+textarea[name="bio"]:focus,
+input:focus {
+  background-color: var(--color-heading-muted);
+}
+
+.form-control,
+.form-control:focus {
   background-color: var(--color-background-muted);
   color: var(--color-heading);
 }
 
-.modal-content {
-  background-color: var(--color-background-muted);
-  border: 1px solid var(--color-heading);
+form button,
+form button[type="submit"],
+#id_image::-webkit-file-upload-button {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 500;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  line-height: 1.5;
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+form button:hover,
+form button[type="submit"]:hover,
+#id_image::-webkit-file-upload-button:hover {
+  color: var(--color-background);
+  background-color: var(--color-accent-muted);
 }
 
 /* Sections */
+section {
+  padding: 25px 0;
+  margin: 25px 0;
+}
 
 .section {
-  margin-bottom: 10em;
+  margin-bottom: 5em;
 }
 
-#section-hero {
-  min-height: 450px;
-  line-height: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
+#section-hero,
 #section-cta {
   min-height: 450px;
-  line-height: 3em;
-  color: var(--color-background);
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  line-height: 1.5em;
+  font-size: xx-large;
+  background: var(--color-text-muted) center/cover no-repeat;
+  color: var(--color-background-muted);
 }
 
+#section-hero h1,
 #section-cta h2 {
-color: var(--color-background-muted);
+  font-size: 2.5em;
+  color: var(--color-background-muted);
 }
 
 #section-info {
   background-color: var(--color-background-muted);
-}
-
-.section-content {
-background-color: var(--color-heading-muted / 60%);
-}
-
-#section-test {
-  min-height: 450px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Navbar */
@@ -146,14 +137,8 @@ background-color: var(--color-heading-muted / 60%);
   color: var(--color-accent);
 }
 
-.nav.active {
-  color: var(--color-heading);
-}
-
-.nav-item.active {
-  color: var(--color-heading);
-}
-
+.nav.active,
+.nav-item.active,
 .navbar .nav-link.active {
   color: var(--color-heading);
 }
@@ -193,16 +178,16 @@ background-color: var(--color-heading-muted / 60%);
 
 .dropdown-item:hover {
   color: var(--color-accent-muted);
-  background-color: var(--color-background-muted)
+  background-color: var(--color-background-muted);
 }
 
 .dropdown-toggle::after {
-  display:none;
+  display: none;
 }
 
 /* Featured Carousel*/
 .featured-link {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .featured-link:hover {
@@ -212,7 +197,7 @@ background-color: var(--color-heading-muted / 60%);
 
 .carousel-control-prev,
 .carousel-control-next {
-	width: auto;
+  width: auto;
 }
 
 /* Scroll Progress */
@@ -230,6 +215,10 @@ background-color: var(--color-heading-muted / 60%);
 footer {
   color: var(--color-heading);
   background-color: var(--color-background-muted);
+}
+
+.footer-title {
+  font-size: 1.2em;
 }
 
 .footer-flex {
@@ -270,8 +259,7 @@ footer {
   line-height: 1.5;
 }
 
-.btn-alt,
-#submit {
+.btn-alt {
   background-color: var(--color-accent);
   color: var(--color-background);
   font-weight: 500;
@@ -282,7 +270,7 @@ footer {
   background-color: var(--color-accent);
 }
 
-.btn:hover {
+.btn:hover  {
   color: var(--color-background);
   background-color: var(--color-accent-muted);
 }
@@ -295,10 +283,6 @@ footer {
   color: var(--color-background);
   border-color: var(--color-background);
 }
-
-/* .page-link {
-  margin-top: 1.5em;
-} */
 
 #back-to-top {
   display: none;
@@ -332,6 +316,7 @@ blockquote p {
   display: inline;
 }
 
+/* User Images */
 #profile-user-img {
   height: 300px;
   width: 300px;
@@ -365,10 +350,14 @@ blockquote p {
   object-fit: cover;
 }
 
-/* Media Queries */
+/* Django Messages */
+.alert {
+  margin-top: 3em;
+  background-color: var(--color-background-muted);
+  color: var(--color-heading);
+}
 
-@media only screen and (max-width: 768px) {
-  #section-test {
-      background-attachment: scroll;
-  }
+.modal-content {
+  background-color: var(--color-background-muted);
+  border: 1px solid var(--color-heading);
 }
