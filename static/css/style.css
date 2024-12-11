@@ -68,6 +68,28 @@ input:focus {
   color: var(--color-heading);
 }
 
+form button,
+form button[type="submit"],
+#id_image::-webkit-file-upload-button {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 500;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  line-height: 1.5;
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+form button:hover,
+form button[type="submit"]:hover,
+#id_image::-webkit-file-upload-button:hover {
+  color: var(--color-background);
+  background-color: var(--color-accent-muted);
+}
+
 /* Sections */
 section {
   padding: 25px 0;
@@ -75,7 +97,7 @@ section {
 }
 
 .section {
-  margin-bottom: 10em;
+  margin-bottom: 5em;
 }
 
 #section-hero,
@@ -230,17 +252,14 @@ footer {
 }
 
 /* Buttons */
-.btn, 
-form button {
+.btn {
   color: var(--color-accent);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   line-height: 1.5;
 }
 
-.btn-alt,
-form button,
-#submit {
+.btn-alt {
   background-color: var(--color-accent);
   color: var(--color-background);
   font-weight: 500;
@@ -251,8 +270,7 @@ form button,
   background-color: var(--color-accent);
 }
 
-.btn:hover,
-form button:hover {
+.btn:hover  {
   color: var(--color-background);
   background-color: var(--color-accent-muted);
 }
@@ -342,12 +360,4 @@ blockquote p {
 .modal-content {
   background-color: var(--color-background-muted);
   border: 1px solid var(--color-heading);
-}
-
-/* Media Queries */
-
-@media only screen and (max-width: 768px) {
-  #section-test {
-    background-attachment: scroll;
-  }
 }
