@@ -38,13 +38,13 @@
     <div class="col-6 text-start px-3">
       {% if previous_post %}
       <a href="{% url 'post_detail' previous_post.category.slug previous_post.slug %}"
-        title="{{ previous_post.title }}"><i class="fa-solid fa-angles-left"></i>
+        title="Previous Post"><i class="fa-solid fa-angles-left"></i>
         {{ previous_post.title }}</a>
       {% endif %}
     </div>
     <div class="col-6 text-end">
       {% if next_post %}
-      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" title="{{ next_post.title }}">
+      <a href="{% url 'post_detail' next_post.category.slug next_post.slug %}" title="Next Post">
         {{ next_post.title }} <i class="fa-solid fa-angles-right"></i></a>
       {% endif %}
     </div>
@@ -55,7 +55,7 @@
 <section class="container py-3">
   <div class="row text-center justify-content-center">
     <img class="mb-3" id="post-user-img" src="{{ post.user.profile.get_image_url }}"
-      alt="{{ post.user.profile.get_display_name }}">
+      alt="{{ post.user.profile.get_display_name }} Author's Profile Image">
     <h3 class="post-user-bio mb-3">About {{ post.user.profile.get_display_name }}</h3>
     <p>{{ post.user.profile.bio }}</p>
   </div>
