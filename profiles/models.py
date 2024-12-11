@@ -13,8 +13,8 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=30, blank=True, null=True)
     last_name = models.CharField(max_length=30, blank=True, null=True)
     image = CloudinaryField('image', blank=True, null=True, transformation=[{
-        'width': 300, 
-        'height': 300, 
+        'width': 300,
+        'height': 300,
         'crop': "fill"
         }])
     bio = models.TextField(null=True, blank=True)

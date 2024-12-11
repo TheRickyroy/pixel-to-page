@@ -27,13 +27,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-# Automatic DEBUG status - Provided by John during coding coach
-# DEBUG = 'DEBUG' in os.environ
-
-ALLOWED_HOSTS = ['8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net', 
-                '.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-therickyroy-pixeltopage-pqpue43ydq5.ws.codeinstitute-ide.net',
+    '.herokuapp.com'
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.codeinstitute-ide.net',
