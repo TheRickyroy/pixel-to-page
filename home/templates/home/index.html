@@ -74,14 +74,14 @@
             <div class="py-2">{{ cta.text|safe }}</div>
             <a class="btn btn-alt btn-lg" href="{{ cta.button_url }}">{{ cta.button_text|safe }}</a>
         </div>
-        {% else %}
-        <div class="section p-5" id="section-cta" style="background-image: url('{{ signup.image.url }}');"
-            aria-label="{{ signup.image_alt }}">
-            <div class="container py-5 text-start">
-                <h2>{{ signup.heading|safe }}</h2>
-                <div class="py-2">{{ signup.text|safe }}</div>
-                <a class="btn btn-alt btn-lg" href="{{ signup.button_url }}">{{ signup.button_text|safe }}</a>
-            </div>
+    </section>
+    {% else %}
+    <section class="section p-5" id="section-cta" style="background-image: url('{{ signup.image.url }}');"
+        aria-label="{{ signup.image_alt }}">
+        <div class="container py-5 text-start">
+            <h2>{{ signup.heading|safe }}</h2>
+            <div class="py-2">{{ signup.text|safe }}</div>
+            <a class="btn btn-alt btn-lg" href="{{ signup.button_url }}">{{ signup.button_text|safe }}</a>
         </div>
     </section>
     {% endif %}
@@ -98,7 +98,7 @@
                     <div class="col-md-6">
                         <div class="card-body">
                             <h2 class="heading display-5 fw-bold">{{ info.heading|safe }}</h2>
-                            <div class="fs-4">{{ info.text|safe }}</div>
+                            <div class="py-5 fs-4">{{ info.text|safe }}</div>
                             <a href="{{ info.button_url }}" class="btn btn-alt btn-lg" role="button"
                                 aria-label="{{ info.label }}">
                                 {{ info.button_text|safe }}</a>
