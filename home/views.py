@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Hero, Cta, Signup, Info
 
+
 def HomePage(request):
     # Fetch the active hero and CTA
     active_hero = Hero.objects.filter(is_active=True).first()

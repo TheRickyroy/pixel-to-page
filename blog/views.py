@@ -6,12 +6,11 @@ from django.urls import path
 from . import views
 from .models import Post, Comment, Category
 from .forms import CommentForm
-# from django.http import JsonResponse
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/blog.html"
-    # paginate_by = 6
 
     def get_queryset(self):
         queryset = Post.objects.filter(status=1)
@@ -26,6 +25,7 @@ class PostList(generic.ListView):
         context['current_url'] = self.request.path
         return context
 
+
 def category_view(request, category_slug):
     category = get_object_or_404(Category, slug=category_slug)
     posts = Post.objects.filter(category=category)
@@ -35,17 +35,20 @@ def category_view(request, category_slug):
         'categories': Category.objects.all(),
         'current_url': request.path,
     }
-    # return render(request, 'blog/category.html', {'category': category, 'posts': posts})
     return render(request, 'blog/category.html', context)
+
 
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)
-    posts = Post.objects.filter(category=category, status=1).order_by('-created_on')
+    posts = Post.objects.filter(
+        category=category,
+        status=1).order_by('-created_on')
     context = {
         'category': category,
         'posts': posts
     }
     return render(request, 'category_detail.html', context)
+
 
 def post_detail(request, category_slug, post_slug):
     """
@@ -61,7 +64,11 @@ def post_detail(request, category_slug, post_slug):
     :template:`blog/post_detail.html`
     """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
+    post = get_object_or_404(
+        queryset,
+        category__slug=category_slug,
+        slug=post_slug
+    )
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     next_post = post.get_next_post()
@@ -78,7 +85,7 @@ def post_detail(request, category_slug, post_slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-    
+
     comment_form = CommentForm()
 
     return render(
@@ -94,13 +101,18 @@ def post_detail(request, category_slug, post_slug):
         },
     )
 
+
 def comment_edit(request, category_slug, post_slug, comment_id):
     """
     view to edit comments
     """
     if request.method == "POST":
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
+        post = get_object_or_404(
+            queryset,
+            category__slug=category_slug,
+            slug=post_slug
+        )
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -111,30 +123,49 @@ def comment_edit(request, category_slug, post_slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'Error updating comment!'
+            )
 
-    return HttpResponseRedirect(reverse('post_detail', args=[category_slug, post_slug]))
+    return HttpResponseRedirect(reverse(
+        'post_detail',
+        args=[category_slug, post_slug])
+    )
+
 
 def comment_delete(request, category_slug, post_slug, comment_id):
     """
     view to delete comment
     """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, category__slug=category_slug, slug=post_slug)
+    post = get_object_or_404(
+        queryset,
+        category__slug=category_slug,
+        slug=post_slug
+    )
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.user == request.user:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request,
+            messages.ERROR,
+            'You can only delete your own comments!'
+        )
 
-    return HttpResponseRedirect(reverse('post_detail', args=[category_slug, post_slug]))
+    return HttpResponseRedirect(reverse(
+        'post_detail',
+        args=[category_slug, post_slug])
+    )
+
 
 def your_view(request):
     context = {
         'blog_url': reverse('blog'),
         'category_url': reverse('category'),
-        # ... other context variables
     }
     return render(request, 'your_template.html', context)

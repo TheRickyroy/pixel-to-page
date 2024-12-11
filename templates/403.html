@@ -21,7 +21,7 @@
             {% else %}
             <a class="btn {% if request.path == login_url %}active{% endif %}" aria-current="page"
                 href="{% url 'account_login' %}">Sign In</a>
-            <a class="nav-item {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+            <a class="btn {% if request.path == signup_url %}active{% endif %}" aria-current="page"
                 href="{% url 'account_signup' %}">Sign Up</a>
             {% endif %}
             <a class="btn" href="{% url 'blog' %}">All Posts</a>

@@ -2,6 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from django.core.exceptions import ValidationError
 
+
 class Hero(models.Model):
     image = CloudinaryField('image')
     image_alt = models.TextField()
@@ -17,6 +18,7 @@ class Hero(models.Model):
             # Deactivate all other heroes
             Hero.objects.filter(is_active=True).update(is_active=False)
         super().save(*args, **kwargs)
+
 
 class Cta(models.Model):
     image = CloudinaryField('image')
@@ -34,6 +36,7 @@ class Cta(models.Model):
             Cta.objects.filter(is_active=True).update(is_active=False)
         super().save(*args, **kwargs)
 
+
 class Signup(models.Model):
     image = CloudinaryField('image')
     image_alt = models.TextField()
@@ -49,6 +52,7 @@ class Signup(models.Model):
             # Deactivate all other Signups
             Signup.objects.filter(is_active=True).update(is_active=False)
         super().save(*args, **kwargs)
+
 
 class Info(models.Model):
     image = CloudinaryField('image', transformation=[
