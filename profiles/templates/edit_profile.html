@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load cloudinary %}
 {% load static %}
-
 {% block content %}
+<main>
 
   <h2>Edit Profile</h2>
   <form method="post" enctype="multipart/form-data">
@@ -10,5 +10,6 @@
       {{ form.as_p }}
       <button type="submit">Save changes</button>
   </form>
-  
+
+</main>
 {% endblock %}
