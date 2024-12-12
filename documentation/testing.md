@@ -29,8 +29,6 @@
   - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
 
 - [Manual Testing](#manual-testing)
-  - [User Input/Form Validation](#user-inputform-validation)
-  - [Browser Compatibility](#browser-compatibility)
   - [Testing User Stories](#testing-user-stories)
   - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
   - [Virtual Test Environment](#virtual-test-environment)
@@ -641,20 +639,85 @@ All testing done as part of this project has been done manually across various d
 |Desktop|Windows 11 Pro v23H2|AMD Ryzen 9 5900X 12-Core Processor 3.70 GHz|64.0 GB|2560 x 1440|1920 x 1080|
 |Desktop|Windows 11 Home v23H2|AMD Ryzen 5 3600X 6-Core Processor 3.90 GHz|32.0 GB|1920 x 1080||
 |Laptop|Windows 11 Home v23H2|AMD Ryzen 7 5800H with Radeon Graphics 3.20 GHz|16.0 GB|1920 x 1080||
-|Laptop|Windows 10 Business v22H2|11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz|8.00 GB|1920 x 1080|:-|
+|Laptop|Windows 10 Business v22H2|11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz|8.00 GB|1920 x 1080||
 |Galaxy Tab S6 Lite||||1200 x 2000||
 |Pixel 6 Pro||||1440 x 3120||
 |Huawei P20 Pro||||2240 x 1080||
 
-### User Input/Form Validation
-
-<p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
-
-### Browser Compatibility
-
-<p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
-
 ### Testing User Stories
+
+Throughout the project my design changed quite a bit upon the result of new learning and understanding of full stack development and user experience.
+
+As a result of this I spent time implementing features and processes that drastically improved the project beyond the initial scope, but do feel I lacked the time to fully embrace the agile process and continually update and reflect this within my user stories. With this improved understanding I believe my intiial ideation process would more closely match the requirements of a project MVP from both a user and a develope perspective.
+
+The results below correspond to the intial user stories developed, but would be updated to reflect the project more accurately within the next sprint cycle. 
+
+**Testing Key**
+| Color | Tested | Delivered |
+|:-:|:-|:-|
+| 🟢 | Fully | Fully |
+| 🟡 |  | Fully based upon alteration to user story / migration of criteria | 
+| 🟠 |  | Partial delivery | 
+| 🔴 | Not Required | Not included within project at current state |
+
+
+### Epic: User Profile
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#1](https://github.com/TheRickyroy/pixel-to-page/issues/1) | As a _User_ I can _sign up or login_ so that _I can engage with full site functionality_. | 🟢 | 🟢 |
+| [#2](https://github.com/TheRickyroy/pixel-to-page/issues/2) | As a _Registered User_, I can _login to my profile page_ so that _I can update my details and see previous activity_. | 🟢 | 🟡 |
+| [#3](https://github.com/TheRickyroy/pixel-to-page/issues/3) | As a _Registered User_, I can _select notification preferences_ so that _I can be alerted about relevant content_. | 🔴 | 🔴 |
+
+### Epic: Home Page
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#4](https://github.com/TheRickyroy/pixel-to-page/issues/4) | As a _Site Admin_, I can _update my home page_ so that _I can present users with the latest content and engage them using appropriate call to action functionality_. | 🟢 | 🟢 |
+| [#5](https://github.com/TheRickyroy/pixel-to-page/issues/5) | As a _User_, I can _read the home page_ so that _I can easily identify new and noteworthy content_. | 🟢 | 🟢 |
+| [#6](https://github.com/TheRickyroy/pixel-to-page/issues/6) | As a _User_, I can _toggle theme_ so that _I can have a more enjoyable experience_ | 🔴 | 🔴 |
+| [#7](https://github.com/TheRickyroy/pixel-to-page/issues/7) | As a _User_, I can _access the website using stored theme preferences_ so that _I do not have to manually toggle each time_ | 🔴 | 🔴 |
+
+### Epic: About Page
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#8](https://github.com/TheRickyroy/pixel-to-page/issues/8) | As a _Site Admin_, I can _update my about page_ so that _users can access and view the content I share_ | 🟢 | 🟡 |
+| [#9](https://github.com/TheRickyroy/pixel-to-page/issues/9) | As a _User_, I can _access and read an bout page_ so that I can _better understand the author and content_ | 🟢 | 🟡 |
+
+### Epic: Blog Content
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#10](https://github.com/TheRickyroy/pixel-to-page/issues/10) | As a _Site Admin_, I can _draft, post, update and delete blog posts_ so that _I can share my content and update as necessary_. | 🟢 | 🟢 |
+| [#11](https://github.com/TheRickyroy/pixel-to-page/issues/11) | As a _Site Admin_, I can _categorise my blog posts_ so that _I can feature specific posts as necessary_ | 🟢 | 🟢 |
+| [#12](https://github.com/TheRickyroy/pixel-to-page/issues/12) | As a _User_, I can _view, filter and navigate a summary of blog posts_ so that _I can access relevant content_ | 🟢 | 🟢 |
+| [#13](https://github.com/TheRickyroy/pixel-to-page/issues/13) | As a _User_, I can _read blog posts_ so that _I can engage with relevant content_.| 🟢 | 🟢 |
+| [#14](https://github.com/TheRickyroy/pixel-to-page/issues/14) | As a _Registered User_, I can _like & share blog posts_ so that _I can easily find previously liked posts and share content with the wider community_. | 🔴 | 🔴 |
+| [#15](https://github.com/TheRickyroy/pixel-to-page/issues/15) | As a _User_, I can _share blog posts_ so that _I can easily share content with the wider community_. | 🔴 | 🔴 |
+
+### Epic: Comments
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#16](https://github.com/TheRickyroy/pixel-to-page/issues/16) | As a _Site Admin_, I can _approve, deny and delete comments_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🟢 | 🟢 |
+| [#17](https://github.com/TheRickyroy/pixel-to-page/issues/17) | As a _Registered User_, I can _comment on blog posts_ so that _I can contribute to the community and conversation_. | 🟢 | 🟢 |
+| [#18](https://github.com/TheRickyroy/pixel-to-page/issues/18) | As a _User_, I can _read comments on blog posts_ so that _I can read the ongoing conversations_. | 🟢 | 🟢 |
+
+### Epic: Resources
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#19](https://github.com/TheRickyroy/pixel-to-page/issues/19) | As a _Site Admin_, I can _upload resources_ so that _users can download for their own journal_. | 🔴 | 🔴 |
+| [#20](https://github.com/TheRickyroy/pixel-to-page/issues/20) | As a _User_, I can _download resources_ so that _I can use them to improve my own journal experience_. | 🔴 | 🔴 |
+
+### Epic: Community Content
+
+| ID | User Story | Tested | Delivered |
+|:-:|:-|:-:|:-:|
+| [#21](https://github.com/TheRickyroy/pixel-to-page/issues/21) | As a _Site Admin_, I can _approve, deny and delete community posts_ so that _I can ensure all community engagement is appropriate and follows TOS_. | 🔴 | 🔴 |
+| [#22](https://github.com/TheRickyroy/pixel-to-page/issues/22) | As a _Registered User_, I can _upload my journal images_ so that _I can share my ideas with the community and engage in feedback and conversation_. | 🔴 | 🔴 |
+
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
