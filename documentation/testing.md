@@ -43,9 +43,22 @@
 
 ## Validation
 
+The following validation testing has all been conducted as using the code from the final deployed project.
+
+This testing has been conducted has been done so in order of priority using the highest availble.
+
+1. Tool directly extrapolates data from the deployed URL
+2. Code taken from the deployed project page source
+3. Code taken from the final deliverable code from the IDE workspace
+
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## HTML Validation
+
+Through my validation testing I came across a number of errors within my HTML. \
+These errors were all resolved as part of my debug and fix process, numerous of which have been included with the [bugs](#bugs) section.
+
+It was noted and advised by Amy that all HTML validation be done via a copy/paste method from the page source due to IDE workspace code including Django code that would throw errors upon testing. 
 
 <details><summary>Home</summary>
 
@@ -119,53 +132,6 @@
 
 ![html-404](images/testing/html/html-404.webp)
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
@@ -368,14 +334,62 @@ Using these resources for further supplemental learning I intend to return and f
 
 ## CSS Validation
 
-<details><summary>CSS</summary>
+Although my CSS passed validation, and pleasantly upon first submission, I did receive a large number of warnings.
 
-![css-validation](images/testing/css/css.webp)
+These warnings related to Bootstrap inclusion, with two being the use of Bootstrap pseudo-elements for targeted styling.
+
+As such I was unable to resolve these as part of my testing & validation process.
+
+<details><summary>CSS Home</summary>
+
+![css-home](images/testing/css/css-home.webp)
 </details>
 
+<details><summary>CSS Blog</summary>
+
+![css-blog](images/testing/css/css-blog.webp)
+</details>
+
+<details><summary>CSS Category - Bujo</summary>
+
+![css-category-bujo](images/testing/css/css-category-bujo.webp)
+</details>
+
+<details><summary>CSS Category - Ideas</summary>
+
+![css-category-ideas](images/testing/css/css-category-ideas.webp)
+</details>
+
+<details><summary>CSS Category - Inspiration</summary>
+
+![css-category-inspiration](images/testing/css/css-category-inspiration.webp)
+</details>
+
+<details><summary>CSS Post Detail</summary>
+
+![css-post-detail](images/testing/css/css-post-detail.webp)
+</details>
+
+<details><summary>CSS Sign In</summary>
+
+![css-sign-in](images/testing/css/css-sign-in.webp)
+</details>
+
+<details><summary>CSS Warnings</summary>
+
+![css-warnings](images/testing/css/css-warnings.webp)
+</details>
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## Lighthouse Scores
+
+As part of my lighthouse testing I received warnings for accessibility due ton contrast which was a point of concern.\
+However due to the rigorous testing including multiple contrast checks during development, passing [WAVE Accessibility](#accessibility-evaluation) during validation testing and user feedback this was something I was comfortable with. 
+
+Lighthouse return color contrast issues during testing, though due to rigerous testing as part of my previos contrast checks and a pass state as part of WAVE WCAG testing I felt comfortable accepting these within this report.
+
+My main concern with the Lighthouse results were to do with the low score within best practices.\
+Upon inspection the issues being presented appear to be the result of using Cloudinary and Bootstrap, which puts them out of scope of what I am able to improve upon within this project. 
 
 <details><summary>Accessibility</summary>
 
@@ -385,8 +399,6 @@ Using these resources for further supplemental learning I intend to return and f
 </details>
 
 <details><summary>Accessibility - Contrast Issue</summary>
-
-Lighthouse return color contrast issues during testing, though due to rigerous testing as part of my previos contrast checks and a pass state as part of WAVE WCAG testing I felt comfortable accepting these within this report.
 
 ![lighthouse-accessibility-2](images/testing/lighthouse/lighthouse-accessibility-2.webp)
 </details>
@@ -462,6 +474,41 @@ Lighthouse return color contrast issues during testing, though due to rigerous t
 
 ## Accessibility Evaluation
 
+Accessibility checks were performed using the [WAVE Accessibility Evealuation Tool](https://wave.webaim.org/) and provided useful feedback for adjustments to improve the project. 
+
+Although I received no errors, there were a number warnings, some of which I resolved, others I opted to leave. 
+
+**Redundant Links**
+
+Present at multiple stages of testing, I opted to leave a number of these in place.\
+This decision was made due to the accepted convention of titles acting as a direct link to conent but also wanting to provide a positive user experience and increased accessibility by also including a _Read More_ button.
+
+**Overlength Alt Messages**
+
+I did receive multiple warnings across the site, often for the same recurring images, about alt text exceeding 100 characters.\
+As noted below within the details of these warnings the 100 characters is arbitary and as such not something I opted to reduce all alt text to conform too. Where possible I reduced alt text to something I felt appropriate.
+
+I have recently been following a number of accessibility professionals on [Bluesky](https://bsky.app/) and read through many discussions about the use of alt text and how best to approach this, many of which include lengthier descriptions as a preference. This topic is one that is very prominent currently with Bluesky offering user settings to prevent upload of images without alt text to improve accessibility, and is something I plan to learn much more about in the near future.
+
+>The Algorithm... in English
+>
+> The image's alt attribute value is more than 100 characters. Note that the 100 character limit is a rough and somewhat arbitrary length. For images that present complex content or lengthy text, alternative text longer than 100 characters may be appropriate.
+>
+> [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/report#/https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/)
+
+**Duplicated Alt Text**
+
+This duplication was the result of the post author profile image alt text being set as `{{ post.user.profile.get_display_name }}` which was directly follwed by the same information for displaying the author name. This was fixed by amending to `{{ post.user.profile.get_display_name }} Author's Profile Image`
+
+**After Post CTA Post Titles**
+
+The call to action for linking to previous and next posts within the post detail view,  as with the author alt image initially used the same information for both. I then changed the titles to 'Previous Post' and 'Next Post'
+- `{% url 'post_detail' previous_post.category.slug previous_post.slug %}`
+- {% url 'post_detail' previous_post.category.slug next_post.slug %}
+
+**Heading Level**
+The result of templating I initially had `<h2>` which was then altered to `<h1>` as required.
+
 <details><summary>WAVE Accessibility</summary>
 
 <details><summary>Home</summary>
@@ -495,6 +542,9 @@ Lighthouse return color contrast issues during testing, though due to rigerous t
 </details>
 
 </details>
+<br>
+
+I have included [Toptal Colorblind](https://www.toptal.com/designers/colorfilter/) results for a visual representation and understanding of how these may impact accessibility for users. Although all contrast compliance has been met and Toptal doesn't provide quantifiable data, it is a valuable resource for checking potential issues for users throughout the development process, as well as image selection for content after delivery. 
 
 <details><summary>Toptal Colorblind Filter</summary>
 
@@ -520,6 +570,9 @@ Lighthouse return color contrast issues during testing, though due to rigerous t
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## Manual Testing
+
+
+### Device List
 
 ### User Input/Form Validation
 
