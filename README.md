@@ -300,6 +300,64 @@ After creating the ERD I exported a PNG with transparency which was then modifie
 
 ### Wireframes
 
+Initially my wireframes had been designed within Figma.\
+Unfortunately, whether due to fault of my own or technical issues within Figma, my account had been reset to the default status thus remving the wireframes I had been using / modifying for the project. 
+
+I plan to attempt to recover these, but for the process of submission I chose to quickly recreate the basic wireframes within Affinity Photo 2 due to time constraint and a greater level of comfort and familiarity with the tools.
+
+Affinity Photo 2
+![affinity-photo-2](documentation/images/wireframes/affinity-photo-2.webp)
+
+<details><summary>Desktop</summary>
+
+Home
+![desktop-home](documentation/images/wireframes/desktop-home.webp)
+
+Home Footer
+![desktop-home-footer](documentation/images/wireframes/desktop-home-footer.webp)
+
+Category
+![desktop-category](documentation/images/wireframes/desktop-category.webp)
+
+Post Detail
+![desktop-post-detail](documentation/images/wireframes/desktop-post detail.webp)
+
+Post Comment
+![desktop-post-comment](documentation/images/wireframes/desktop-post-comment.webp)
+
+</details>
+
+<details><summary>Tablet</summary>
+
+Home
+![tablet-home](documentation/images/wireframes/tablet-home-footer.webp)
+
+Category
+![tablet-category](documentation/images/wireframes/tablet-category.webp)
+
+Category Navbar
+![tablet-category-navbar](documentation/images/wireframes/tablet-category-navbar.webp)
+
+Post Detail
+![tablet-post-detail](documentation/images/wireframes/tablet-post-detail.webp)
+
+</details>
+
+
+<details><summary>Mobile</summary>
+
+Home Footer
+![mobile-footer](documentation/images/wireframes/mobile-home-footer.webp)
+
+Category Navbar & Footer
+![mobile-nav-footer](documentation/images/wireframes/tablet-category-navbar.webp)
+
+Post Detail
+![mobile-post-detail](documentation/images/wireframes/mobile-post-detail.webp)
+
+</details>
+
+
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 ## Surface Plane

@@ -43,9 +43,22 @@
 
 ## Validation
 
+The following validation testing has all been conducted as using the code from the final deployed project.
+
+This testing has been conducted has been done so in order of priority using the highest availble.
+
+1. Tool directly extrapolates data from the deployed URL
+2. Code taken from the deployed project page source
+3. Code taken from the final deliverable code from the IDE workspace
+
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## HTML Validation
+
+Through my validation testing using [W3c Markup Validation Service](https://validator.w3.org/) I came across a number of errors within my HTML. \
+These errors were all resolved as part of my debug and fix process, numerous of which have been included with the [bugs](#bugs) section.
+
+It was noted and advised by Amy that all HTML validation be done via a copy/paste method from the page source due to IDE workspace code including Django code that would throw errors upon testing. 
 
 <details><summary>Home</summary>
 
@@ -120,56 +133,27 @@
 ![html-404](images/testing/html/html-404.webp)
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## JavaScript Validation
+
+As part of the validation process for JavaScript I used [JSHint](https://jshint.com/) ensuring that _New JavaScript features (ES6)_ was checked within the confirgure panel. 
+
+<details><summary>JavaScript Comments</summary>
+
+![js-comments](images/testing/js/js-comments.webp)
+</details>
+
+<details><summary>JavaScript Script</summary>
+
+![js-script](images/testing/js/js-script.webp)
+</details>
+
+<details><summary>JavaScript Scroll Progress</summary>
+
+![js-scroll-progress](images/testing/js/js-scroll-progress.webp)
+</details>
+
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
@@ -177,9 +161,11 @@
 
 Validation of Python Code was performed using the [CI Python Linter](https://pep8ci.herokuapp.com/) as provided by Code Institute.
 
-#### Settings: Test 1
+Detailed errors allowed for easy identification and resolution which was intuative and easy enough to understand without additional reference to learning material.
 
-Upon initially testing my **settings.py** file I found a number of minor errors that required correction.\
+### Settings: Test 1
+
+Upon initially testing my **settings.py** file before most prohject development had taken place, I found a number of minor errors that required correction.\
 This included:
 - E111 indentation is not a multiple of 4
 - E501 line too long (85 > 79 characters)
@@ -368,14 +354,79 @@ Using these resources for further supplemental learning I intend to return and f
 
 ## CSS Validation
 
-<details><summary>CSS</summary>
+Although my CSS passed [W3C Validation Service](https://jigsaw.w3.org/css-validator/) testing, and pleasantly upon first submission, I did receive a large number of warnings.
 
-![css-validation](images/testing/css/css.webp)
+These warnings related to Bootstrap inclusion, with two being the use of Bootstrap pseudo-elements for targeted styling.
+
+As such I was unable to resolve these as part of my testing & validation process.
+
+<details><summary>CSS Home</summary>
+
+![css-home](images/testing/css/css-home.webp)
 </details>
 
+<details><summary>CSS Blog</summary>
+
+![css-blog](images/testing/css/css-blog.webp)
+</details>
+
+<details><summary>CSS Category - Bujo</summary>
+
+![css-category-bujo](images/testing/css/css-category-bujo.webp)
+</details>
+
+<details><summary>CSS Category - Ideas</summary>
+
+![css-category-ideas](images/testing/css/css-category-ideas.webp)
+</details>
+
+<details><summary>CSS Category - Inspiration</summary>
+
+![css-category-inspiration](images/testing/css/css-category-inspiration.webp)
+</details>
+
+<details><summary>CSS Post Detail</summary>
+
+![css-post-detail](images/testing/css/css-post-detail.webp)
+</details>
+
+<details><summary>CSS Sign In</summary>
+
+![css-sign-in](images/testing/css/css-sign-in.webp)
+</details>
+
+<details><summary>CSS Warnings</summary>
+
+![css-warnings](images/testing/css/css-warnings.webp)
+</details>
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## Lighthouse Scores
+
+As part of my [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) testing I received warnings for accessibility due ton contrast which was a point of concern.\
+However due to the rigorous testing including multiple contrast checks during development, passing [WAVE Accessibility](#accessibility-evaluation) during validation testing and user feedback this was something I was comfortable with. 
+
+Lighthouse return color contrast issues during testing, though due to rigerous testing as part of my previos contrast checks and a pass state as part of WAVE WCAG testing I felt comfortable accepting these within this report.
+
+My main concern with the Lighthouse results were to do with the low score within best practices.\
+Upon inspection the issues being presented appear to be the result of using Cloudinary and Bootstrap, which puts them out of scope of what I am able to improve upon within this project. 
+
+As part of a discussion regarding these issues with Amy it was discovered that a solution had been discussed by Code Institute peers on Slack. 
+
+>Hello, I had that too. For some reason cloudinary saved   images as http. The default should be https. I eventually found the fix by adding a line in settings.py. please see attached picture. The issue you may still have is that the images already uploaded will still be http and you might have to upload again.
+>
+> David D
+
+As a future implementation I would include this solution and thus improvethe performance across the site as a result.\
+This would include uploading images again, with the exception of user profile images which would remain as is. 
+
+Code to be added to **settings.py**
+``` Python
+# Add cloudinary config to ensure https instead of http
+cloudinary.config(
+  secure=True,
+)
+```
 
 <details><summary>Accessibility</summary>
 
@@ -385,8 +436,6 @@ Using these resources for further supplemental learning I intend to return and f
 </details>
 
 <details><summary>Accessibility - Contrast Issue</summary>
-
-Lighthouse return color contrast issues during testing, though due to rigerous testing as part of my previos contrast checks and a pass state as part of WAVE WCAG testing I felt comfortable accepting these within this report.
 
 ![lighthouse-accessibility-2](images/testing/lighthouse/lighthouse-accessibility-2.webp)
 </details>
@@ -457,10 +506,68 @@ Lighthouse return color contrast issues during testing, though due to rigerous t
 
 ![lighthouse-seo-score](images/testing/lighthouse/lighthouse-seo.webp)
 </details>
+<br>
+
+**Mobile**
+
+<details><summary>Lighthouse Mobile Performance</summary>
+
+![lighthouse-mobile-performance](images/testing/lighthouse/lighthouse-mobile-performance.webp)
+</details>
+
+<details><summary>Lighthouse Mobile Accessibility</summary>
+
+![lighthouse-mobile-accessibility](images/testing/lighthouse/lighthouse-mobile-accessibility.webp)
+</details>
+
+<details><summary>Lighthouse Mobile Best Practices</summary>
+
+![lighthouse-mobile-best-practices](images/testing/lighthouse/lighthouse-mobile-best-practices.webp)
+</details>
+
+<details><summary>Lighthouse Mobile SEO</summary>
+
+![lighthouse-mobile-seo](images/testing/lighthouse/lighthouse-mobile-seo.webp)
+</details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## Accessibility Evaluation
+
+Accessibility checks were performed using the [WAVE Accessibility Evealuation Tool](https://wave.webaim.org/) and provided useful feedback for adjustments to improve the project. 
+
+Although I received no errors, there were a number warnings, some of which I resolved, others I opted to leave. 
+
+**Redundant Links**
+
+Present at multiple stages of testing, I opted to leave a number of these in place.\
+This decision was made due to the accepted convention of titles acting as a direct link to conent but also wanting to provide a positive user experience and increased accessibility by also including a _Read More_ button.
+
+**Overlength Alt Messages**
+
+I did receive multiple warnings across the site, often for the same recurring images, about alt text exceeding 100 characters.\
+As noted below within the details of these warnings the 100 characters is arbitary and as such not something I opted to reduce all alt text to conform too. Where possible I reduced alt text to something I felt appropriate.
+
+I have recently been following a number of accessibility professionals on [Bluesky](https://bsky.app/) and read through many discussions about the use of alt text and how best to approach this, many of which include lengthier descriptions as a preference. This topic is one that is very prominent currently with Bluesky offering user settings to prevent upload of images without alt text to improve accessibility, and is something I plan to learn much more about in the near future.
+
+>The Algorithm... in English
+>
+> The image's alt attribute value is more than 100 characters. Note that the 100 character limit is a rough and somewhat arbitrary length. For images that present complex content or lengthy text, alternative text longer than 100 characters may be appropriate.
+>
+> [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/report#/https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/)
+
+**Duplicated Alt Text**
+
+This duplication was the result of the post author profile image alt text being set as `{{ post.user.profile.get_display_name }}` which was directly follwed by the same information for displaying the author name. This was fixed by amending to `{{ post.user.profile.get_display_name }} Author's Profile Image`
+
+**After Post CTA Post Titles**
+
+The call to action for linking to previous and next posts within the post detail view,  as with the author alt image initially used the same information for both. I then changed the titles to 'Previous Post' and 'Next Post'
+- `{% url 'post_detail' previous_post.category.slug previous_post.slug %}`
+- {% url 'post_detail' previous_post.category.slug next_post.slug %}
+
+**Heading Level**
+The result of templating I initially had `<h2>` which was then altered to `<h1>` as required.
 
 <details><summary>WAVE Accessibility</summary>
 
@@ -495,6 +602,9 @@ Lighthouse return color contrast issues during testing, though due to rigerous t
 </details>
 
 </details>
+<br>
+
+I have included [Toptal Colorblind](https://www.toptal.com/designers/colorfilter/) results for a visual representation and understanding of how these may impact accessibility for users. Although all contrast compliance has been met and Toptal doesn't provide quantifiable data, it is a valuable resource for checking potential issues for users throughout the development process, as well as image selection for content after delivery. 
 
 <details><summary>Toptal Colorblind Filter</summary>
 
@@ -520,6 +630,21 @@ Lighthouse return color contrast issues during testing, though due to rigerous t
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## Manual Testing
+
+All testing done as part of this project has been done manually across various devices and browser versions.\
+
+### Device List
+
+
+| Device | Operating System | Processor | RAM | Resolution 1 | Resolution 2 |
+|:-|:-|:-|:-|:-|:-|
+|Desktop|Windows 11 Pro v23H2|AMD Ryzen 9 5900X 12-Core Processor 3.70 GHz|64.0 GB|2560 x 1440|1920 x 1080|
+|Desktop|Windows 11 Home v23H2|AMD Ryzen 5 3600X 6-Core Processor 3.90 GHz|32.0 GB|1920 x 1080||
+|Laptop|Windows 11 Home v23H2|AMD Ryzen 7 5800H with Radeon Graphics 3.20 GHz|16.0 GB|1920 x 1080||
+|Laptop|Windows 10 Business v22H2|11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz|8.00 GB|1920 x 1080|:-|
+|Galaxy Tab S6 Lite||||1200 x 2000||
+|Pixel 6 Pro||||1440 x 3120||
+|Huawei P20 Pro||||2240 x 1080||
 
 ### User Input/Form Validation
 
@@ -594,27 +719,41 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f) |
 | 13 | Blog & Category Slugs  | 🟢 | Debugging & Roo MacArthur - Slack Coding Coach Channel | [1032cff](https://github.com/TheRickyroy/pixel-to-page/commit/1032cffec8b7347a93132d0892f72b8cf152e869) |
 | 14 | Category Navigation Population | 🟢 | [Sarah Hudaib - Dev.to](https://dev.to/sarahhudaib/context-processors-in-django-15h2) | [53f2bbb](https://github.com/TheRickyroy/pixel-to-page/commit/53f2bbbdd0278efcf524d04d510c0e505a680ed1) |
-| 15 | Comment CRUD Functionality | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 16 | Info Section Active State | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 17 | Django Objects Continuation Line | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 18 | Bootstrap Guttering | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 19 | Button Text 'Padding' | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 20 | Signup CTA Not Displaying | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 21 | Navbar Styling | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 22 | Author Image Padding | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 23 | Profile Image - Logged In State | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 24 | Default Profile Image | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 25 | User Display Name | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 25-2 | Failed Deployment | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 26 | Placeholder Text Not Removed | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 27 | Button URL Failure | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 28 | Button Incorrect Object | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 29 | Home Page Section Overlap | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 30 | Profile Page Responsivity | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 31 | Edit Profile Styling | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 32 | Home Page Section Overlap | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 33 | AllAuth Page Styling | 🟢 | [Credited Source](Link) | [Commit](Link) |
-| 34 | Losing Styling On Deployment | 🟢 | [Credited Source](Link) | [Commit](Link) |
+
+<br>
+<details><summary>Additional Bugs</summary>
+
+This table contains a list of additional bugs that were encountered and resolved as part of the development and validation process.\
+Unfortunately due to time constraints these bugs have no been included within this documentaion in the full detail that was intended.
+
+I have opted to list them within this additional table as a record which may be referred to when comparing to commit history.
+
+Given opportunity following the submission process all appropriate details are to be migrated from my obsidian development records.
+
+| No. | Bug | Status | Solution Credit | Commit no. |
+| :--: | :-- | :--: | :-- | --: |
+| 15 | Comment CRUD Functionality | 🟢 |  |  |
+| 16 | Info Section Active State | 🟢 |  |  |
+| 17 | Django Objects Continuation Line | 🟢 |  |  |
+| 18 | Bootstrap Guttering | 🟢 |  |  |
+| 19 | Button Text 'Padding' | 🟢 |  |  |
+| 20 | Signup CTA Not Displaying | 🟢 |  |  |
+| 21 | Navbar Styling | 🟢 |  |  |
+| 22 | Author Image Padding | 🟢 |  |  |
+| 23 | Profile Image - Logged In State | 🟢 |  |  |
+| 24 | User Profile Image & Display Name | 🟢 |  |  |
+| 25 | Failed Deployment | 🟢 |  |  |
+| 26 | Placeholder Text Not Removed | 🟢 |  |  |
+| 27 | Button URL Failure | 🟢 |  |  |
+| 28 | Button Incorrect Object | 🟢 |  |  |
+| 29 | Home Page Section Overlap | 🟢 |  |  |
+| 30 | Profile Page Responsivity | 🟢 |  |  |
+| 31 | Edit Profile Styling | 🟢 |  |  |
+| 32 | Home Page Section Overlap | 🟢 |  |  |
+| 33 | AllAuth Page Styling | 🟢 |  |  |
+| 34 | Losing Styling On Deployment | 🟢 |  |  |
+
+</details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
@@ -1284,16 +1423,6 @@ Exception Value: No module named 'utils'
 - I also realised this was essentially creating a utils app, which seemed unnecessary if I could include **context_processor** as part of the blog app itself. 
 - I made this change and the fix continued to work, thus reducing the requirement of an additional app
 - I am sure that the addition of the utils app is possibly considered bet practice, and would be something I use as I gain a better understanding of working practices, but for the purpose of my own learning I chose this option. 
-
-</details>
-
-<details><summary>Bug # - </summary>
-
-Commit: []()
-
-**Identification**
-
-**Solution**
 
 </details>
 
