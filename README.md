@@ -70,8 +70,6 @@ This README and associated documentation serve as both technical documentaion an
 
 - [Features](#features)
 
-- [Future Scope & Features](#future-scope--features)
-
 - [Built With](#built-with)
   - [Technology & Languages](#technology-and-languages)
   - [Frameworks & Libraries](#frameworks--libraries)
@@ -700,17 +698,6 @@ Each page provides the user with information regarding the error and offers pote
 ![error](documentation/images/features/error.png)
 
 </details>
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Future Scope & Features
-
-With the completion of the project describe potential future implementations.\
-These could be outstanding issues, or new ideas that developed over the course of the project.
-
-| Title | Description |
-|:-:|:-|
-| Feature | A desirable feature to be included in future scope implementation |
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
