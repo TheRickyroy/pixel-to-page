@@ -36,7 +36,6 @@ This README and associated documentation serve as both technical documentaion an
   - [Agile Methodologies](#agile-methodologies)
     - [Project Issue Status](#project-issue-status)
     - [Project Prioritisation](#project-prioritisation)
-    - [Sprint Cycle](#sprint-cycle)
 
   - [User Stories](#user-stories)
     - [Epic: User Profile](#epic-user-profile)
@@ -68,12 +67,8 @@ This README and associated documentation serve as both technical documentaion an
   - [Color Contrast Score Table](#color-contrast-score-table)
 
 - [Typfaces](#typefaces)
-  - [Font Usage](#font-usage)
-
-- [Imagery](#imagery)
 
 - [Features](#features)
-  - [Feature](#)
 
 - [Future Scope & Features](#future-scope--features)
 
@@ -180,17 +175,6 @@ After ideation establish required prioritisation of tasks for **MVP** delivery.
 | 🔴 | **Won't Have** | Elements that are **out-of-scope**, **unfeasible** or actively **counterproductive** | None | 
 
 </details>
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-### Sprint Cycle
-
-| No. | Objective | Start | End |
-|:-:|:-|:-:|:-:|
-| #1 | Intended Objective | YYYY-MM-DD | YYYY-MM-DD |
-| #2 | Intended Objective | YYYY-MM-DD | YYYY-MM-DD |
-
-Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -450,9 +434,6 @@ I used these images to extract a plethora of color palettes using Adobe's [Color
 **Community Convention**\
 As mentioned I opted to use the seasons as part of the selection process for the chosen palette, something that is very common among the bullet journal community. Continuing this approach and taking inspiration from the wider community I also chose to adopt a common convention of using more muted, pastel like tones which is popular, especially among _Bullet Journal_ blogs. Although the specific approach for the websites is aimed toward programmers, I also opted to make the primary theme a dark theme, with the intention to implement an alternate light theme that would be more conventional to the bullet journal community. 
 
-**Accessibility**
-
-
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 ### Color Space
@@ -466,8 +447,6 @@ This brought me to the final decision of implementing HSL as my chosen color spa
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 ### Contrast
-
-![Contrast GIF](<documentation/images/Placeholder.png>)
 
 - [Colour Contrast Checker](https://colourcontrast.cc/) also has [Chrome Extension](https://chromewebstore.google.com/detail/colour-contrast-checker/nmmjeclfkgjdomacpcflgdkgpphpmnfe)
 
@@ -495,27 +474,10 @@ The table provides the contrast ratio score for each color combination used and 
 
 ## Typefaces
 
-Describe the selection process and reasoning behind the typefaces used in the _project_.\
-Identify any specific requirements, inspirations or difficulties faced. 
+I have opted to use clean sans-serif fonts as part of my design for both their aestetic appeal, especially as part of the tech community, but also due to their value as typefaces for accessibility.
 
 - [Righteous](https://fonts.google.com/specimen/Righteous) - Brand / Headings
 - [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans) - Primary Body
-- [Sour Gummy](https://fonts.google.com/specimen/Sour+Gummy) - Accessibility Body Alt (Currenty Unused)
-
-### Font Usage
-
-Specific reference to font usage would include decisions that influence accompanying CSS for the _project_
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
-
-## Imagery
-
-Description of the images and reason for their inclusion within the _project_.\
-If credit is required, refence to these within the credit section of the README.
-
-![Images](documentation/images/Placeholder.png)
-
-<p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -523,17 +485,219 @@ If credit is required, refence to these within the credit section of the README.
 
 This section should be used to showcase the features of the final _project_.
 
-### Feature - Example
-
 This heading provides an overview of a general feature group, providing context and description.
 
-<details>
-<summary>Specific Feature</summary>
+<details><summary>Alert Messages</summary>
 
-Include detail about the specific feature, purpose and implementation.
+Upon user interaction immediate feedback messages are provided detailing the interaction. 
 
-Add screenshots where appropriate.
-![Feature](documentation/images/Placeholder.png)
+As a consideration for accessibility these messages remain on screen until the user opts to remove them. This decision was made as result of learning more about how timed interactions cause issues for users with reduced motor function.
+
+![alert-message](documentation/images/features/alert-message.png)
+
+</details>
+
+<details><summary>Post Category</summary>
+
+As part of the post category page I chose to include all posts within cards that are fully responsive across devices. 
+
+At the top of the page is a responsive list that updates based upon categories within the database and will highlight the current page to the user identifying the categopry they are viewing. 
+
+Each card contains a featured image, which if not set for the post will default to the category image.\
+These images include alt text that can be input as part of the admin intercae to ensure accessibility is met.
+
+Within the **All Posts** category page each card includes a direct link to the category beneath the image.
+
+The title of the post directly links to the post detail page, as well as being able to use the read more button provided.
+
+The post date is included for the user to ensure to ensure they can easily identify the post irder and find the latest most relevant content.
+
+![post-category](documentation/images/features/category.png)
+
+</details>
+
+<details><summary>Comments</summary>
+
+As part of the post detail page registered users are able to engage with the content and post comments.
+
+This comment card includes the user profile image, which has a default if no image is provided. 
+
+The card includes the user's display name, but will revert to username if no display name is provided.
+
+Upon clicking to edit a comment, the user will be automatically scrolled to the form field to make their desired changes.
+
+Comments can be easily deleted but provide a confirmation modal to ensure no accidental changes occur. 
+
+![comments](documentation/images/features/comments.png)
+
+</details>
+
+<details><summary>Call To Action</summary>
+
+As part of the main page there are various call to actions available. 
+
+These update automatically to reflect the user logged in status ensuring they are seeing relevant content.
+
+Each aspect of the section can be easily updated within the admin panel, with the option of creating new cta / signup cards without publishing. 
+
+When wishing to activate a card, defensive design is implemented as part of the database to ensure that all other forms are deactivated upon activation of the desired card. 
+
+![cta](documentation/images/features/cta-1.png)
+
+</details>
+
+<details><summary>Edit Profile</summary>
+
+As part of the design for user interaction, users are able to update their information that will be used to populate features across the site. Currently the profile image and username and bio for authors. 
+
+Form inputs have a focus color change to easily identify the current location being edited.
+
+![edit-profile](documentation/images/features/edit-profile.png)
+
+</details>
+
+<details><summary>Featured Posts</summary>
+
+The home page includes a featured post bootstrap carousel. 
+
+These posts can be easily changed out within the admin panel by using the featured status check as part of the post panel.
+
+This ensure users are provided with the latest and most relevant content.
+
+The carousel provides direct links to the post, detail about the title and category as well as a visual change for hover effect to indicate the availablity of the link to the user.
+
+![featured-posts](documentation/images/features/featured-posts.png)
+
+</details>
+
+<details><summary>Footer</summary>
+
+The footer includes a category section that updates with content as created in the admin panel. 
+
+Various other links have been provided including credits to sources for the project.
+
+Social links provide access to my accounts on GitHub, Bluesky and LinkedIn for those wishing to conect.
+
+The copyright date is auto populated with the current year, which will be updated to state 2024-current once 2025 arrives.
+
+![footer](documentation/images/features/footer.png)
+
+</details>
+
+<details><summary>Home Page</summary>
+
+The Home Page greets the user with a bright hero image section that introduces the site and links to a relevant page, in this case all posts. As with the call to action section, this hero section can be easily updated and toggled active within the admin panel.
+
+Category links are present as part of the featured posts section to provide easy navigation, especially useful to mobile users who can quickly ;link through without the use of the hamburger menu.
+
+![homepage](documentation/images/features/homepage-1.png)
+
+</details>
+
+<details><summary>Info</summary>
+
+This info section has been included as a replacement for the about page that was initially intended as part of this project.
+
+It offers the user an insight into the project and provides a link to relevant content.
+Currently it links to All Posts.
+
+As with the hero and call to action, this can be easily updated from the admin panel. 
+
+![info](documentation/images/features/info.png)
+
+</details>
+
+<details><summary>Navbar</summary>
+
+The navbar as standard provides the user with an easy to navigate menu that utilises effective styling to encourage the sign up process. 
+
+Upon login the navbar updates to reflect this status and provides the user with a previes of their profile image. 
+This image can be updated easily using a Cloudinary upload, but defaults to a standard image if none is set. 
+
+![navbar-1](documentation/images/features/navbar-1.png)
+![navbar-2](documentation/images/features/navbar-2.png)
+
+</details>
+
+<details><summary>Post Call To Action</summary>
+
+As part of post detail view I have included a series of call to action elements.
+
+Previous and next post links are provided in form of a post title with font-awesome angles icon.
+These update based upon the content within the database / on page and will navigate through all posts in a chronological order.
+
+The author section provides some basic information about the post author. The intention for this is to replace the original about page and provide author profile pages as part of a future implementation. This data is populated from the profiles database model which includes a boolean field for author status. Upon implementation authors would gain the relevant access to created, update and delete posts within a front end form abd their user data would automatically populate this section of the page. 
+
+A simple set of category links are provided with a call to action prompt to encourage further engagement and reading of content. 
+
+The post comment count has been included here also as it helps to identify comments below being present without the need to scroll, thus encouraging further engagement and conversation.
+
+![post-cta](documentation/images/features/post-cta.png)
+
+</details>
+
+<details><summary>Profile</summary>
+
+The user profile page provides a clean interface for users to identify the data currently associated with their profile.
+
+Links are provided to the edit page as well as other user interactions such as change pass word and sign out.
+
+These pages would be updated in the future to also include author status, links to posts made/liked and any comments the user has made.
+
+![profile](documentation/images/features/profile.png)
+
+</details>
+
+<details><summary>Scrollbar</summary>
+
+On the post detail page I have opted to include a scrollbar.
+
+This has been included to provide a positive user experience with interaction feedback allowing the user to easily identify how much of the content they have read / is remaining. 
+
+![scrollbar](documentation/images/features/scrollbar.png)
+
+</details>
+
+<details><summary>Sign In</summary>
+
+The user sign in page as with other form inputs changes colour to provide feedback to the user.
+
+Familiar responsive form elements are provided to ease the sign in process. 
+
+Information and a relevant link are also provided for users that may wish to sign up if they do not have an account to sign in currently.
+
+![sign-in](documentation/images/features/sign-in.png)
+
+</details>
+
+<details><summary>Sign Out</summary>
+
+As with other AllAuth intraction pages, users are provided with a familar form for positive user experience.
+
+Upon sign out the user is returned to the home page with an alert message confirming the sign out has taken place.
+
+![sign-out](documentation/images/features/sign-out.png)
+![sign-out-2](documentation/images/features/sign-out-2.png)
+
+</details>
+
+<details><summary>Sign Up</summary>
+
+The sign up page uses the same form design as other pages.
+
+Upon form submission if any required elements are not met the user receives an updated message on screen on how to rectify the issue. This is provided as part of AllAuth and as such is a familiar inteface used across many websites. 
+
+![sign-up](documentation/images/features/sign-up.png)
+
+</details>
+
+<details><summary>Error</summary>
+
+As part of defensive design pages have been included for the 404, 404 and 500 error messages.
+
+Each page provides the user with information regarding the error and offers potential navigation options to other areas of the website.
+
+![error](documentation/images/features/error.png)
 
 </details>
 
