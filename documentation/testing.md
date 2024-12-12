@@ -23,6 +23,7 @@
   - [JavaScript Validation](#javascript-validation)
   - [Python Validation](#python-validation)
     - [Settings: Test 1](#settings-1)
+    - [Python Validation Pass](#python-validation-pass)
   - [CSS Validation](#css-validation)
   - [Lighthouse Scores](#lighthouse-scores)
   - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
@@ -45,6 +46,126 @@
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## HTML Validation
+
+<details><summary>Home</summary>
+
+<details><summary>Home</summary>
+
+![html-home](images/testing/html/html-home.webp)
+</details>
+
+<details><summary>Home 2</summary>
+
+![html-home-2](images/testing/html/html-home-2.webp)
+</details>
+</details>
+
+<details><summary>Blog</summary>
+
+<details><summary>Blog</summary>
+
+![html-blog](images/testing/html/html-blog.webp)
+</details>
+
+<details><summary>Blog 2</summary>
+
+![html-blog-2](images/testing/html/html-blog-2.webp)
+</details>
+</details>
+
+<details><summary>Category Bujo</summary>
+
+![html-category-bujo](images/testing/html/html-category-bujo.webp)
+</details>
+
+<details><summary>Category Ideas</summary>
+
+![html-category-ideas](images/testing/html/html-category-ideas.webp)
+</details>
+
+<details><summary>Category Inspiration</summary>
+
+![html-category-inspiration](images/testing/html/html-category-inspiration.webp)
+</details>
+
+<details><summary>Post Detail</summary>
+
+<details><summary>Post Detail Error</summary>
+
+![html-post-detail-error](images/testing/html/html-post-detail-error.webp)
+</details>
+<details><summary>Post Detail Pass</summary>
+
+![html-post-detail](images/testing/html/html-post-detail.webp)
+</details>
+</details>
+
+<details><summary>Profile</summary>
+
+![html-profile](images/testing/html/html-profile.webp)
+</details>
+
+<details><summary>Profile Edit</summary>
+
+![html-profile-edit](images/testing/html/html-profile-edit.webp)
+</details>
+
+<details><summary>Sign Out</summary>
+
+![html-sign-out](images/testing/html/html-sign-out.webp)
+</details>
+
+<details><summary>404</summary>
+
+![html-404](images/testing/html/html-404.webp)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
@@ -80,27 +201,321 @@ Using these resources for further supplemental learning I intend to return and f
 
 <details><summary>Original Code</summary>
 
-![settings: test-1.1](images/testing/settings-test1-1.webp)
+![settings: test-1.1](images/testing/python/settings-test1-1.webp)
 
 </details>
 
 <details><summary>Edited Code</summary>
 
-![settings: test-1.2](images/testing/settings-test1-2.webp)
+![settings: test-1.2](images/testing/python/settings-test1-2.webp)
 
+</details>
+<br>
+
+### Python Validation Pass
+
+<details><summary>Blog App</summary>
+
+<details><summary>Blog Admin</summary>
+
+![python-blog-admin](images/testing/python/python-blog-admin.webp)
+</details>
+
+<details><summary>Blog Apps</summary>
+
+![python-blog-apps](images/testing/python/python-blog-apps.webp)
+</details>
+
+<details><summary>Blog Context Processors</summary>
+
+![python-blog-context-processors](images/testing/python/python-blog-context-processors.webp)
+</details>
+
+<details><summary>Blog Forms</summary>
+
+![python-blog-forms](images/testing/python/python-blog-forms.webp)
+</details>
+
+<details><summary>Blog Models</summary>
+
+![python-blog-models](images/testing/python/python-blog-models.webp)
+</details>
+
+<details><summary>Blog Tests</summary>
+
+![python-blog-tests](images/testing/python/python-blog-tests.webp)
+</details>
+
+<details><summary>Blog URLs</summary>
+
+![python-blog-urls](images/testing/python/python-blog-urls.webp)
+</details>
+
+<details><summary>Blog Views</summary>
+
+![python-blog-views](images/testing/python/python-blog-views.webp)
+</details>
+
+</details>
+<br>
+
+<details><summary>Home App</summary>
+
+<details><summary>Home Admin</summary>
+
+![python-home-admin](images/testing/python/python-home-admin.webp)
+</details>
+
+<details><summary>Home Apps</summary>
+
+![python-home-apps](images/testing/python/python-home-apps.webp)
+</details>
+
+<details><summary>Home Models</summary>
+
+![python-home-models](images/testing/python/python-home-models.webp)
+</details>
+
+<details><summary>Home Tests</summary>
+
+![python-home-tests](images/testing/python/python-home-tests.webp)
+</details>
+
+<details><summary>Home URLs</summary>
+
+![python-home-urls](images/testing/python/python-home-urls.webp)
+</details>
+
+<details><summary>Home Views</summary>
+
+![python-home-views](images/testing/python/python-home-views.webp)
+</details>
+</details>
+<br>
+
+<details><summary>Profiles App</summary>
+
+<details><summary>Profiles Apps</summary>
+
+![python-profiles-apps](images/testing/python/python-profiles-apps.webp)
+</details>
+
+<details><summary>Profiles Forms</summary>
+
+![python-profiles-forms](images/testing/python/python-profiles-forms.webp)
+</details>
+
+<details><summary>Profiles Modeels</summary>
+
+![python-profiles-models](images/testing/python/python-profiles-models.webp)
+</details>
+
+<details><summary>Profiles Tests</summary>
+
+![python-profiles-tests](images/testing/python/python-profiles-tests.webp)
+</details>
+
+<details><summary>Profiles URLs</summary>
+
+![python-profiles-urls](images/testing/python/python-profiles-urls.webp)
+</details>
+
+<details><summary>Profiles Views</summary>
+
+![python-profiles-views](images/testing/python/python-profiles-views.webp)
+</details>
+</details>
+<br>
+
+<details><summary>Pixel To Page - Project</summary>
+
+<details><summary>Project ASGI</summary>
+
+![python-project-asgi](images/testing/python/python-project-asgi.webp)
+</details>
+
+<details><summary>Project Settings</summary>
+
+![python-project-settings](images/testing/python/python-project-settings.webp)
+</details>
+
+<details><summary>Project URLs</summary>
+
+![python-project-urls](images/testing/python/python-project-urls.webp)
+</details>
+
+<details><summary>Projects WSGI</summary>
+
+![python-project-wsgi](images/testing/python/python-project-wsgi.webp)
+</details>
+</details>
+<br>
+
+<details><summary>Root Directory</summary>
+
+<details><summary>Root ENV</summary>
+
+![python-root-env](images/testing/python/python-root-env.webp)
+</details>
+
+<details><summary>Root Manage</summary>
+
+![python-root-manage](images/testing/python/python-root-manage.webp)
+</details>
 </details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## CSS Validation
 
+<details><summary>CSS</summary>
+
+![css-validation](images/testing/css/css.webp)
+</details>
+
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
 ## Lighthouse Scores
 
+<details><summary>Accessibility</summary>
+
+<details><summary>Accessibility Score</summary>
+
+![lighthouse-accessibility-1](images/testing/lighthouse/lighthouse-accessibility-1.webp)
+</details>
+
+<details><summary>Accessibility - Contrast Issue</summary>
+
+Lighthouse return color contrast issues during testing, though due to rigerous testing as part of my previos contrast checks and a pass state as part of WAVE WCAG testing I felt comfortable accepting these within this report.
+
+![lighthouse-accessibility-2](images/testing/lighthouse/lighthouse-accessibility-2.webp)
+</details>
+</details>
+
+<details><summary>Best Practices</summary>
+
+<details><summary>Best Practices - Score</summary>
+
+![lighthouse-best-practices-1](images/testing/lighthouse/lighthouse-best-practices-1.webp)
+</details>
+
+<details><summary>Best Practices - Does not use HTTPS</summary>
+
+![lighthouse-best-practices-2](images/testing/lighthouse/lighthouse-best-practices-2.webp)
+</details>
+
+<details><summary>Best Practices - Uses third-party cookies</summary>
+
+![lighthouse-best-practices-3](images/testing/lighthouse/lighthouse-best-practices-3.webp)
+</details>
+
+<details><summary>Best Practices - Browser errors were logged to the console</summary>
+
+![lighthouse-best-practices-4](images/testing/lighthouse/lighthouse-best-practices-4.webp)
+</details>
+
+<details><summary>Best Practices - Issues were logged in the Issues panel in Chrome Devtools</summary>
+
+![lighthouse-best-practices-5](images/testing/lighthouse/lighthouse-best-practices-5.webp)
+</details>
+</details>
+
+<details><summary>Performance</summary>
+
+<details><summary>Performance - Score</summary>
+
+![lighthouse-perfomance-1](images/testing/lighthouse/lighthouse-performance-1.webp)
+</details>
+
+<details><summary>Performance - Preconnect to required origins</summary>
+
+![lighthouse-perfomance-2](images/testing/lighthouse/lighthouse-performance-2.webp)
+</details>
+
+<details><summary>Performance - Largest Contentful Paint element</summary>
+
+![lighthouse-perfomance-3](images/testing/lighthouse/lighthouse-performance-3.webp)
+</details>
+
+<details><summary>Performance - Enable text compression</summary>
+
+![lighthouse-perfomance-4](images/testing/lighthouse/lighthouse-performance-4.webp)
+</details>
+
+<details><summary>Performance - Properly size images</summary>
+
+![lighthouse-perfomance-5](images/testing/lighthouse/lighthouse-performance-5.webp)
+</details>
+
+<details><summary>Performance - Eliminate render-blocking resources</summary>
+
+![lighthouse-perfomance-6](images/testing/lighthouse/lighthouse-performance-6.webp)
+</details>
+</details>
+
+<details><summary>SEO Score</summary>
+
+![lighthouse-seo-score](images/testing/lighthouse/lighthouse-seo.webp)
+</details>
+
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
-## Wave Accessibility Evaluation
+## Accessibility Evaluation
+
+<details><summary>WAVE Accessibility</summary>
+
+<details><summary>Home</summary>
+
+![wave-home](images/testing/accessibility/wave-home.webp)
+</details>
+
+<details><summary>Blog</summary>
+
+![wave-blog](images/testing/accessibility/wave-blog.webp)
+</details>
+
+<details><summary>Category</summary>
+
+![wave-category](images/testing/accessibility/wave-category.webp)
+</details>
+
+<details><summary>Post Detail</summary>
+
+![wave-post-detail](images/testing/accessibility/wave-post-detail.webp)
+</details>
+
+<details><summary>Sign In</summary>
+
+![wave-sign-in](images/testing/accessibility/wave-sign-in.webp)
+</details>
+
+<details><summary>Error 404</summary>
+
+![wave-404](images/testing/accessibility/wave-404.webp)
+</details>
+
+</details>
+
+<details><summary>Toptal Colorblind Filter</summary>
+
+<details><summary>Home</summary>
+
+![colorblind-home-1](images/testing/accessibility/colorblind-home-1.webp)
+![colorblind-home-2](images/testing/accessibility/colorblind-home-2.webp)
+![colorblind-home-3](images/testing/accessibility/colorblind-home-3.webp)
+![colorblind-home-4](images/testing/accessibility/colorblind-home-4.webp)
+
+</details>
+
+<details><summary>Blog</summary>
+
+![colorblind-blog-1](images/testing/accessibility/colorblind-blog-1.webp)
+![colorblind-blog-2](images/testing/accessibility/colorblind-blog-2.webp)
+![colorblind-blog-3](images/testing/accessibility/colorblind-blog-3.webp)
+![colorblind-blog-4](images/testing/accessibility/colorblind-blog-4.webp)
+</details>
+
+</details>
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
@@ -142,8 +557,10 @@ Using [statcounter](https://gs.statcounter.com/screen-resolution-stats) to attai
 This being my first Full Stack Project, I anticipated running into bugs and issues throughout the process.\
 Though they caused difficulties at times, they have also offered up ample learning opportunity for debugging and grasping a better understanding of the core concepts and implementations required for developing a project such as _Pixel To Page_.
 
-As part of my learning experience, and for future reference, I chose to fully document all bugs encountered and the steps taken during the debugging process.\
-By doing so I hope to continue developing my understanding and thus increase my efficiency by having effective solutions to refer back to, but just as importantly, failed solutions to potentially avoid in future. 
+
+For future reference, I chose to fully document all bugs encountered and the steps taken during the debugging process.\
+By doing so I hope to continue developing my understanding and thus increase my efficiency by having effective solutions to refer back to, but just as importantly, failed solutions to potentially avoid in future.\
+As note a lot of these bugs were the result of trial and error / experimentation as part of my learning process and as such are not reflective of a development process using best practices and as such would not be encountered in many cases.
 
 ### Bug Status
 
@@ -177,7 +594,27 @@ Additional details about each bug, including screenshots, resolution steps and p
 | 12 | Footer Position | 🟢 | [Radu](https://radu.link/make-footer-stay-bottom-page-bootstrap/) | [e04fdb9](https://github.com/TheRickyroy/pixel-to-page/commit/e04fdb9c7d652469b8658a37031875ac70db079f) |
 | 13 | Blog & Category Slugs  | 🟢 | Debugging & Roo MacArthur - Slack Coding Coach Channel | [1032cff](https://github.com/TheRickyroy/pixel-to-page/commit/1032cffec8b7347a93132d0892f72b8cf152e869) |
 | 14 | Category Navigation Population | 🟢 | [Sarah Hudaib - Dev.to](https://dev.to/sarahhudaib/context-processors-in-django-15h2) | [53f2bbb](https://github.com/TheRickyroy/pixel-to-page/commit/53f2bbbdd0278efcf524d04d510c0e505a680ed1) |
-| # | - | - | [Credited Source](Link) | [Commit](Link) |
+| 15 | Comment CRUD Functionality | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 16 | Info Section Active State | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 17 | Django Objects Continuation Line | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 18 | Bootstrap Guttering | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 19 | Button Text 'Padding' | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 20 | Signup CTA Not Displaying | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 21 | Navbar Styling | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 22 | Author Image Padding | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 23 | Profile Image - Logged In State | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 24 | Default Profile Image | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 25 | User Display Name | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 25-2 | Failed Deployment | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 26 | Placeholder Text Not Removed | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 27 | Button URL Failure | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 28 | Button Incorrect Object | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 29 | Home Page Section Overlap | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 30 | Profile Page Responsivity | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 31 | Edit Profile Styling | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 32 | Home Page Section Overlap | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 33 | AllAuth Page Styling | 🟢 | [Credited Source](Link) | [Commit](Link) |
+| 34 | Losing Styling On Deployment | 🟢 | [Credited Source](Link) | [Commit](Link) |
 
 <p align="right"><a href="#testing--validation">🔺 Back To Top</a></p>
 
