@@ -1,5 +1,6 @@
 # Pixel To Page
-![Pixel To Page](documentation/images/Placeholder.png)
+
+![pixel-to-page](documentation/images/pixel-to-page.webp)
 
 <p align="center">
 | <a href="https://pixel-to-page-b4e4b9d4d8dd.herokuapp.com/">Live Project</a> |
@@ -118,32 +119,38 @@ This README and associated documentation serve as both technical documentaion an
 
 ## UX - User Experience
 
-Provide detail about the UX principles employed within the _project_ and describe how they have been implemented in order to improve user experience. 
+_Pixel To Page_ has offered a learning opportunity in how to deliver a positive user experience as part of a full stack application. 
+
+As part of this project I set out to create a final deliverable that offered a complete experience for the end user that was enjoyable across all devices through responsivity, but also a had greater consideration of UX features that have a positive impact on accessibility.
+
+As such my final product is slightly different to that of which I initially intended.\
+This is in part due to my learning more about accessibility and user experience and thus changing design to reflect this new knowledge, but more so the alterations have come through my learning as a developer. 
+
+Whilst implementing features I would have moments of realisation about how to more effectively use the feature, or how I could combine it with another approach in order to improve the user experience. As a result, this meant exploring many avenues of Django development that were not intended scope for this project, but I believe to be of great value to my learning and future as a developer.
+
+This exploration has meant the implementation of many features that greatly increase the user experience, but at times have taken time from other areas of the project I wished to deliver upon in more detail, this documentation being a prime example. With this new found knowledge I believe I would be able to generate a much more concise plan for a full stack project with greater use of user stories that were reflective of feature sets and development steps.
 
 ### Design Ideation
 
-Expanding upon the UX section above, describe how these best practices were combined with inspiration to be effectively implemented into the design of the final _project_.
+Setting out to create a blog with a very specific intended audience I took to researching and sourcing inspiration from the conventions of both the Bullet Journal community as well as the Tech Community to establish some general conventions.
 
-Reference any specific inspirations that heavily influenced this process.
+Taking these inspirations, I then began compiling basic ideas for color palette, potential layout and a list of features that would be beeneficial to the end user. 
+
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
 ## Strategy Plane
 
-This _README Template_ provides the essential information necessary for documenting the _project_.\
-This includes file & folder structure, basic placeholder information such as section headings, images, text, tables and shield buttons with links to common resources.
-
-Once implemented the _README Template_ can be easily amended to suit the _project_ needs.
-
-_Project Name_ was developed with the intention of - provide description of the project and scope expanding upon the introduction summary and lead into the key objectives listed below.
-
 ### Key Objectives
 
-A brief bullet point list of the key objectives for _Project Name_.\
-This could include _learning outcomes_, _stakeholder requirements_, _personal goals_ and more.
+A brief bullet point list of the key objectives for _Pixel To Page_.\
+This includes _learning outcomes_, _stakeholder requirements_, _personal goals_ and more.
 
-- Fulfil the primary [Learning Objectives](documentation/learning-objectives.md) as defined by _Code Institute_.
-- Objective 2
+- Fulfil the primary [Learning Objectives](documentation/learning-objectives.md) as defined by _Code Institute_.\
+_NOTE: Full details in the linked documentation._
+- Provide positive user experience across all devices
+- Maintain a focus on accessibility for delivered project
+- Document in detail the development and learning process
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -252,12 +259,25 @@ Dates formatted to [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.
 
 ## Security
 
-Fully describe all measures taken to ensure security and safety within the _project_.\
-Reference all implementations for front end and back end to project all users and stakeholders.
+_Pixel To Page_ adheres to security requirements by taking advantage of already well established security procedures.
+
+This includes the implementation of AllAuth and use of CSFR tokens.
 
 ### AllAuth
 
+[AllAuth](https://docs.allauth.org/en/latest/) is a free, well established authentication package for Django.
+
+Including AllAuth as part of this project allows users easy and familiar registration and associated features with the knowledge that their data is safe and secure. 
+
 ### Defensive Design
+
+Ensuring a positive user experience _Pixel To Page_ makes use of various design features to negate potential issues for the user.
+- Familiar registration user experience with AllAuth
+- Navigation using conventional design, including a profile image
+- Ability to create, edit and delete content through a responsive interface
+- Alert and error messages providing feedback
+- Auto scroll feature for ease of navigation
+- Custom error pages with information and relevant links
 
 ### CSFR Tokens
 
@@ -290,7 +310,20 @@ I have also included models that were part of my user stories for features of fu
 
 After creating the ERD I exported a PNG with transparency which was then modified using [Affinity Photo 2](https://affinity.serif.com/en-gb/) and exported in WEBP format.
 
-![ERD](documentation/images/ERD%20Pixel%20To%20Page.webp)
+During development I gained a much better understanding of how to build a full stack project and how to effectively utilise my database models. 
+
+As a result of thise I have included a number of models that allow for input of data that can be utilised by the admin for the update of content on the home page without requiring access to the code. The intention is for these to be included within a front end for in the future, along with forms applicable to authors to generate post content. 
+
+My other database models have also been updated to include additional data for ease of usability and implementation of future scope features.
+
+![ERD-pixel-to-page](<documentation/images/ERD Pixel To Page.webp>)
+
+<details><summary>Initial ERD</summary>
+
+![Initial ERD](<documentation/images/Initial ERD Pixel To Page.webp>)
+
+</details>
+
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
@@ -429,12 +462,6 @@ Though HEX is a commonly used color space within programming, and one I am comfo
 Reading articles via [daily.dev](https://daily.dev/), particularly with regards to _UX_, _UI_, _CSS_, _Front End_ and _Accessibility_, I began finding more information about recent changes and aditions available ans began to explore new posibilities opening up for developers in terms of styling and continued my research in hopes of learning more. 
 
 This brought me to the final decision of implementing HSL as my chosen color space, although I would like to pursue LCH in the future once I am more confident it is fully supported across all devices and broswers due to its increased color range and flexability.
-
-**Design Flexibility**
-
-**Code Maintainability**
-
-**Learning Opportunity**
 
 <p align="right"><a href="#pixel-to-page">🔺 Back To Top</a></p>
 
